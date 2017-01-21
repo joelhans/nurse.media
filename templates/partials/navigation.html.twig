@@ -1,0 +1,16 @@
+<nav>
+
+  <div class="me"><h1>{{ site.title }}</h1></div>
+
+  <div class="menu">
+    {% for page in pages.children.visible %}
+      {% set current_page = (page.active or page.activeChild)
+        ? 'active'
+        : '' %}
+      <a class="{{ current_page }}" href="{{ page.url }}">{{ page.menu }}</a>
+    {% endfor %}
+    <a class="right" href="//twitter.com/joelhans">@joelhans</a>
+    <a class="right" href="mailto:joel.g.hans@gmail.com">email</a>
+  </div>
+
+</nav>

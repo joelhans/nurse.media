@@ -1,0 +1,12 @@
+{% extends 'partials/base.html.twig' %}
+{% macro pageLinkName(text) %} {{ text|lower|replace({' ':'_'}) }} {% endmacro %}
+
+{% block content %}
+	{% for module in page.collection() %}
+		<section class="row {{module.slug}}">
+			<div class="container">
+				{{ module.content }}
+			</div>
+		</section>
+	{% endfor %}
+{% endblock %}

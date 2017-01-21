@@ -1,0 +1,51 @@
+name: Nurse
+version: 1.0
+description: The theme for Nurse.
+icon: nurse
+author:
+  name: Joel Hans
+  email: joel.g.hans@gmail.com
+  url: http://nurse.media
+homepage: http://nurse.media
+demo: http://nurse.media
+keywords: medium, theme, minimal, modern, fast, responsive, html5, css3, multilanguage
+license: MIT
+
+form:
+  validation: loose
+  fields:
+
+    default_lang:
+        type: text
+        size: small
+        label: Default lang
+        default: 'en'
+        validate:
+          type: text
+
+    infinite_scroll:
+        type: toggle
+        label: Infinite Scroll
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
+    analytics:
+        type: text
+        size: medium
+        label: Google Analytics Code
+        default: 'UA-YOURCODE'
+        validate:
+          type: text
+
+    social.twitter:
+        type: text
+        size: medium
+        label: Twitter
+        default: '@mblode'
+        validate:
+          type: text

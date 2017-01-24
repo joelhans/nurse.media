@@ -20,8 +20,6 @@
 
   {% block javascripts %}
       {% do assets.addJs('theme://bower_components/jquery/dist/jquery.min.js') %}
-      {% do assets.addJs('theme://bower_components/what-input/what-input.min.js') %}
-      {% do assets.addJs('theme://bower_components/foundation-sites/dist/foundation.min.js') %}
       {% do assets.addJs('theme://dist/scripts/main.min.js') %}
   {% endblock %}
   {{ assets.js() }}
@@ -32,6 +30,17 @@
 </head>
 
 <body class="{{ page.header.class }}--body">
+
+  <nav>
+    <div class="container nav--container">
+      <div class="nav--row nav--logo">
+        <img src="{{ url('theme://dist/images/nurse_logo.svg') }}" alt="Nurse Media logo">
+      </div>
+      <div class="nav--row nav--menu">
+        <a href="#">this is a menu item</a>
+      </div>
+    </div>
+  </nav>
 
   <header>
     <div class="container">

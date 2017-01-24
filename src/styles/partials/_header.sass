@@ -1,25 +1,99 @@
+/////////////////////////////////
+// NAVIGATION
+/////////////////////////////////
+
+nav
+  width: 100%
+  height: auto
+  position: absolute
+  top: 150px
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 10
+
+  .container.nav--container
+    transition: 0.5s all ease-in-out
+
+  .nav--row
+    @include span(12 of 12)
+    transition: 0.5s all ease-in-out
+
+  .nav--logo
+    position: relative
+    top: 0
+
+  img
+    width: 150px
+    height: auto
+    position: relative
+    top: 0px
+    left: 0
+    transition: 0.5s all ease-in-out
+
+nav.nav--small
+  position: fixed
+  top: 0px
+
+  .container.nav--container
+    max-width: 100%
+
+  .nav--row
+    width: 100%
+    margin: 0
+
+  img
+    width: 80px
+    left: 20px
+    top: 20px
+    &:hover
+      cursor: pointer
+
+nav.nav--mode
+  position: fixed
+  top: 0px
+  // overflow: scroll
+
+  img
+    width: 200px
+    top: 150px
+    left: 50%
+    transform: translateX(-50%)
+    &:hover
+      cursor: pointer
+
+
+.nav--menu
+  display: none
+
+/////////////////////////////////
+// HEADER
+/////////////////////////////////
+
 header
-  padding: 12rem 0 14rem 0
+  padding: 10rem 0 18rem 0
   background: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url('../images/storm.png')
   background-size: auto, cover
-  // background-attachment: fixed, fixed
   background-position: center, center
 
 .header--branding
   @include span(12 of 12)
-  padding-bottom: 5rem
+  height: 270px
+  position: relative
   border-bottom: 2px solid rgba(46, 49, 65, 0.6)
 
-.header--logo
-  width: 150px
-  height: auto
+.header--logo.logo--small
+  width: 80px
+  position: fixed
+  top: 10px
+  left: 10px
 
 .header--type
   width: 300px
   height: auto
-  position: relative
-  bottom: 35px
-  margin-left: 4rem
+  position: absolute
+  left: 240px
+  top: 55px
 
 .header--tagline
   @include span(12 of 12)

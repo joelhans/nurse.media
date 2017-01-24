@@ -414,12 +414,6 @@ body {
     display: block;
     clear: both; }
 
-.modular-row {
-  width: 96.42857%;
-  float: left;
-  margin-left: 1.78571%;
-  margin-right: 1.78571%; }
-
 body {
   font-size: 100%;
   font-family: 'Raleway', serif;
@@ -476,8 +470,40 @@ blockquote {
     text-align: justify;
     padding-left: 1.6rem; }
 
+nav {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 150px;
+  z-index: 10; }
+  nav .container.header--container {
+    transition: 0.5s all ease-in-out; }
+  nav .header--row {
+    width: 96.42857%;
+    float: left;
+    margin-left: 1.78571%;
+    margin-right: 1.78571%;
+    transition: 0.5s all ease-in-out; }
+  nav img {
+    width: 150px;
+    height: auto;
+    position: relative;
+    top: 20px;
+    left: 0;
+    transition: 0.5s all ease-in-out; }
+
+nav.logo--small {
+  position: fixed;
+  top: 0; }
+  nav.logo--small .container.header--container {
+    max-width: 100%; }
+  nav.logo--small img {
+    width: 80px;
+    left: 20px;
+    top: 20px; }
+
 header {
-  padding: 12rem 0 14rem 0;
+  padding: 10rem 0 18rem 0;
   background: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url("../images/storm.png");
   background-size: auto, cover;
   background-position: center, center; }
@@ -487,19 +513,22 @@ header {
   float: left;
   margin-left: 1.78571%;
   margin-right: 1.78571%;
-  padding-bottom: 5rem;
+  height: 270px;
+  position: relative;
   border-bottom: 2px solid rgba(46, 49, 65, 0.6); }
 
-.header--logo {
-  width: 150px;
-  height: auto; }
+.header--logo.logo--small {
+  width: 80px;
+  position: fixed;
+  top: 10px;
+  left: 10px; }
 
 .header--type {
   width: 300px;
   height: auto;
-  position: relative;
-  bottom: 35px;
-  margin-left: 4rem; }
+  position: absolute;
+  left: 240px;
+  top: 55px; }
 
 .header--tagline {
   width: 96.42857%;
@@ -514,3 +543,28 @@ header {
 
 ._do {
   background: black; }
+
+.row {
+  position: relative; }
+
+.row container {
+  width: 96.42857%;
+  float: left;
+  margin-left: 1.78571%;
+  margin-right: 1.78571%; }
+
+._do {
+  background: #0f3651;
+  padding: 12rem 0 14rem 0;
+  color: white; }
+  ._do::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6.5rem;
+    position: absolute;
+    top: -6.5rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewbox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpolygon%20fill%3D%22%230f3651%22%20points%3D%220%2C%20100%20100%2C%200%20100%2C%20100%22%2F%3E%3C%2Fsvg%3E");
+    transform: scaleX(-1); }

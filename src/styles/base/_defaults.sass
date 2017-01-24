@@ -1,18 +1,28 @@
 html
   box-sizing: border-box
 
+html,
+body
+  height: 100%
+
 *, *:before, *:after
   box-sizing: inherit
 
 body
-  overflow-y: scroll
-  overflow-x: auto
-  background-color: $bg
+  background-color: #4a4a4a
 
 $susy : (columns: 12, gutters: .75, gutter-position: split )
 
 .container
   @include container(70em)
 
-.modular-row
-  @include span(12 of 12)
+header,
+._do,
+._clients,
+._about,
+._contact
+  transition: all 0.3s linear
+  transform: translateZ(0)
+
+.blur
+  filter: blur(10px)

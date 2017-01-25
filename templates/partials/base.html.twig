@@ -50,6 +50,8 @@
 
   {% block content %}{% endblock %}
 
+  {% include 'partials/footer.html.twig' %}
+
   {% if site.analytics %}
   {% include 'partials/analytics.html.twig' %}
   {% endif %}

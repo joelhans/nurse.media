@@ -1,8 +1,10 @@
 .client
   +span(4 of 12)
+  position: relative
   height: 400px
   // padding: 1rem
   margin-bottom: 2rem
+  color: white
   background: $d-blue
   border-radius: 6px
 
@@ -10,8 +12,45 @@
     max-width: 100%
     border-radius: 6px 6px 0 0
 
+  a
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 100
+
+  &::before, &::after
+    content: ""
+    position: absolute
+    bottom: -2px
+    height: 2px
+    width: 0%
+    background: $yellow
+    transition: width 0.3s linear 0s, height 0.3s linear 0.3s, border-radius 0.3s linear 0.6s
+    z-index: -1
+  &::before
+    right: 50%
+    border-radius: 6px 0 0 6px
+  &::after
+    left: 50%
+    border-radius: 0 6px 6px 0
+  &:hover
+    color: $red
+    cursor: hover
+    &::before, &::after
+      width: calc(50% + 2px)
+      height: calc(100% + 4px)
+    &::before
+
+    &::after
+
 .client--meta
-  padding: 0 2rem
+  padding: 0 1.4rem
 
   h1
-    font-size:
+    +fontmake ($size: 2, $weight: 800, $margin: 0)
+
+  aside
+    +fontmake ($size: 0.8, $weight: 400)
+    color: white

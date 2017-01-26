@@ -23,7 +23,7 @@ params =
     dist : 'dist/styles/'
   images :
     src : 'src/images/**/*'
-    dist : 'src/styles/'
+    dist : 'dist/images/'
 
 sassPaths = [
   'bower_components/foundation-sites/scss'

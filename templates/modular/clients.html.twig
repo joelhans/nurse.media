@@ -1,10 +1,16 @@
 {% for client in page.collection() %}
 	<section class="client client--{{ client.slug }}">
+		<a href="#"></a>
 		{% for image in client.media.images %}
 			{{ image.cropResize(400,400).html }}
 		{% endfor %}
 		<div class="client--meta">
 			<h1>{{ client.title }}</h1>
+			<aside>
+				{% for tag in client.taxonomy.tag %}
+			    <span>{{ tag }}</span>
+				{% endfor %}
+			</aside>
 			{{ client.content }}
 		</div>
 	</section>

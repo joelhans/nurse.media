@@ -1,5 +1,8 @@
-@mixin fontmake ($size: 1, $line: $size * 1.5, $margin: $size * 1.5, $weight: 400, $family: "Arial", $serif: "sans-serif")
-  font-family   : "#{$family}" , #{$serif}
+@mixin fontmake ($size: 1, $line: $size * 1.5, $margin: $size * 1.5, $weight: 400, $family: null)
+  @if $family
+    font-family   : "#{$family}"
+  @else
+    font-family: inherit
   font-size     : $size + rem
   font-weight   : $weight
   line-height   : $line + rem

@@ -1,6 +1,11 @@
+<section class="modular--content clients--content">
+	{{ content }}
+</section>
+
 {% for client in page.collection() %}
 	<section class="client client--{{ client.slug }}">
 		<a href="#"></a>
+		<div class="hover--blocker"></div>
 		{% for image in client.media.images %}
 			{{ image.cropResize(400,400).html }}
 		{% endfor %}

@@ -1,71 +1,35 @@
 /////////////////////////////////
-// NAVIGATION
-/////////////////////////////////
+// STICKY
+////////////////////////////////
 
-nav
-  // width: 100%
-  // height: auto
-  // position: absolute
-  // top: 150px
-  // left: 0
-  // right: 0
-  // bottom: 0
-  z-index: 10
-  display: none
-
-  .container.nav--container
-    transition: 0.5s all ease-in-out
-
-  .nav--row
-    @include span(12 of 12)
-    transition: 0.5s all ease-in-out
-
-  .nav--logo
-    position: relative
-    top: 0
+.nurse--sticky
+  position: fixed
+  width: 150px
+  height: auto
+  z-index: 200
 
   img
-    width: 150px
-    height: auto
-    position: relative
-    top: 0px
-    left: 0
-    transition: 0.5s all ease-in-out
-
-nav.nav--small
-  position: fixed
-  top: 0px
-
-  .container.nav--container
     max-width: 100%
 
-  .nav--row
-    width: 100%
-    margin: 0
+/////////////////////////////////
+// LOGO
+/////////////////////////////////
+
+.nurse--logo
+  position: absolute
+  // top: 150px
+  left: 0px
+  width: 150px
+  height: auto
+  // transition: width 0.3s ease-in-out, left 0.3s ease-in-out
+  z-index: 200
 
   img
-    width: 80px
-    left: 20px
-    top: 20px
-    &:hover
-      cursor: pointer
+    max-width: 100%
 
-nav.nav--mode
-  position: fixed
-  top: 0px
-  // overflow: scroll
-
-  img
-    width: 200px
-    top: 150px
-    left: 50%
-    transform: translateX(-50%)
-    &:hover
-      cursor: pointer
-
-
-.nav--menu
-  display: none
+/////////////////////////////////
+// NAVIGATION
+/////////////////////////////////
 
 /////////////////////////////////
 // HEADER

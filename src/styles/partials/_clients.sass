@@ -1,16 +1,28 @@
+._clients
+  padding: 12rem 0 16rem 0
+
+.clients--content
+  +span(12 of 12)
+  margin-bottom: 2rem
+
 .client
   +span(4 of 12)
   position: relative
   height: 400px
   // padding: 1rem
-  margin-bottom: 2rem
+  margin-bottom: 8rem
   color: white
   background: $d-blue
   border-radius: 6px
+  transform: translateZ(0)
+  perspective: 1000
+  transition: color 0.3s ease-in-out
 
   img
+    position: relative
     max-width: 100%
     border-radius: 6px 6px 0 0
+    z-index: 2
 
   a
     position: absolute
@@ -20,6 +32,15 @@
     bottom: 0
     z-index: 100
 
+  .hover--blocker
+    position: absolute
+    top: -2px
+    left: 0
+    right: 0
+    height: 6px
+    background: $purple
+    z-index: 0
+
   &::before, &::after
     content: ""
     position: absolute
@@ -27,30 +48,43 @@
     height: 2px
     width: 0%
     background: $yellow
-    transition: width 0.3s linear 0s, height 0.3s linear 0.3s, border-radius 0.3s linear 0.6s
     z-index: -1
+    transition: height 0.2s linear 0s, width 0.2s linear 0.2s
+
   &::before
     right: 50%
     border-radius: 6px 0 0 6px
   &::after
     left: 50%
     border-radius: 0 6px 6px 0
-  &:hover
-    color: $red
-    cursor: hover
-    &::before, &::after
-      width: calc(50% + 2px)
-      height: calc(100% + 4px)
-    &::before
 
-    &::after
+.client:hover
+  color: $red
+  cursor: hover
+  transition: color 0.3s ease-in-out 0.2s
+  &::before, &::after
+    width: calc(50% + 2px)
+    height: calc(100% + 4px)
+    transition: width 0.2s linear 0s, height 0.2s linear 0.2s
+  .hover--blocker
+    left: 50%
+    right: 50%
+    transition: left 0.2s linear 0.4s, right 0.2s linear 0.4s
 
 .client--meta
   padding: 0 1.4rem
 
   h1
-    +fontmake ($size: 2, $weight: 800, $margin: 0)
+    +fontmake ($size: 2, $weight: 800, $margin: 0.2)
+    margin-top: 0.6rem
 
   aside
-    +fontmake ($size: 0.8, $weight: 400)
+    +fontmake ($size: 0.7, $weight: 300, $margin: 0.6)
     color: white
+    text-transform: uppercase
+    padding-bottom: 0.6rem
+    border-bottom: 1px solid $red
+    span
+      display: block
+  p
+    margin-top: 0.4rem

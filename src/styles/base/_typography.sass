@@ -20,13 +20,14 @@ h1,h2,h3,h4,h5,h6
   font-family: 'Overpass', sans-serif
   font-weight: 800
   font-style: italic
+  margin-top: 1rem
 
 a
   position: relative
   color: $seafoam
   font-weight: 500
   text-decoration: none
-  transition: color 0.3s ease-in-out
+  transition: color 0.3s linear
   // &::before, &::after
   //   content: ""
   //   position: absolute
@@ -46,14 +47,19 @@ a
   //   &::before, &::after
   //     width: 50%
 
-blockquote
-  border-left: 5px solid $red
-  margin: 0
-  p
-    font-family: 'Merriweather', sans-serif
-    font-size: 1rem
-    line-height: 1.5rem
-    font-weight: 700
-    color: $red
-    text-align: justify
-    padding-left: 1.6rem
+// blockquote
+//   border-left: 5px solid $red
+//   margin: 0
+//   p
+//     font-family: 'Merriweather', sans-serif
+//     font-size: 1rem
+//     line-height: 1.5rem
+//     font-weight: 700
+//     color: $red
+//     text-align: justify
+//     padding-left: 1.6rem
+
+
+.modular--content h1
+  font-size: 4rem
+  color: $yellow

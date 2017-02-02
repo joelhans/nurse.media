@@ -6,7 +6,8 @@
   position: relative
   padding: 12rem 0
 
-  &::before
+  &::before,
+  &::after
     content: ''
     display: block
     width: 100%
@@ -14,6 +15,7 @@
     position: absolute
     background-repeat: no-repeat
     background-size: 100% 100%
+    z-index: 10
 
   &::before
     top: -6.5rem
@@ -48,35 +50,81 @@
       +svg ('polygon', ( fill: $purple, points: (0,100 100,0 100,100) ) )
     transform: scaleX(1)
 
+._who
+  background-color: $d-blue
+
+  &::before
+    +svg ( 'svg', ( width: 100, height: 100, viewbox: 0 0 100 100, preserveAspectRatio: none ) )
+      +svg ('polygon', ( fill: $d-blue, points: (0,100 100,0 100,100) ) )
+    transform: scaleX(-1) scaleY(1)
+
 ._contact
   background-color: white
   color: $d-blue
 
-  &::before
-    +svg ( 'svg', ( width: 100, height: 100, viewbox: 0 0 100 100, preserveAspectRatio: none ) )
-      +svg ('polygon', ( fill: $purple, points: (0,100 100,0 100,100) ) )
-    transform: scaleX(1)
+footer
+  background-color: $orange
 
 ///////////////////////////////////////
 // MODULAR SECTIONS
 ///////////////////////////////////////
 
 .modular--content
-  +span(12 of 12)
+  // +span(12 of 12)
   color: white
 
+// DO
+
 ._do .modular--content p
-  +fontmake($size: 3)
-  // font-style: italic
+  +fontmake($size: 4, $weight: 800)
+  font-style: italic
   text-align: left
 
 ._do .modular--content code
-  +fontmake($family: 'Raleway', $size: 3.4, $weight: 300, $line: 0)
+  +fontmake($family: 'Raleway', $size: 4.4, $weight: 300, $line: 0)
   color: $yellow
 
 ._do .modular--content span
-  +fontmake($family: 'Merriweather', $size: 3.4, $weight: 700, $line: 0)
+  +fontmake($family: 'Merriweather', $size: 4.2, $weight: 700, $line: 0)
   color: $orange
 
-._clients
+// CLIENTS
+
+@import "partials/clients"
+
+// ABOUT
+
+._about
   padding: 12rem 0 16rem 0
+
+  .about--story
+    +span(6 of 12)
+
+    p
+      +fontmake($size: 1.4)
+
+  .about--scene
+    +span(6 of 12)
+    height: 700px
+    position: relative
+
+    img.scene--cactus
+      position: absolute
+      bottom: 0%
+      left: 10%
+
+// WHO
+
+._who
+  .who--headshot
+    +span(4 of 12)
+
+    img
+      max-width: 100%
+      border-radius: 50%
+
+  .who--bio
+    +span(8 of 12)
+
+    p
+      +fontmake($size: 1.4)

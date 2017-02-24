@@ -9,20 +9,54 @@ body
   box-sizing: inherit
 
 body
-  background-color: #4a4a4a
+  background-color: $orange
+  overflow-x: hidden
 
-$susy : (columns: 12, gutters: .75, gutter-position: split )
+$susy : ( container: 80rem, columns: 12, gutters: .25, box-sizing: border-box )
 
-.container
-  @include container(70em)
+.grid
+  +container()
+  padding: 2rem
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  @media (min-width: 0em) and (max-width: 40em)
+    flex-flow: column wrap
 
-header,
-._do,
-._clients,
-._about,
-._contact
-  transition: all 0.3s linear
-  // transform: translateZ(0)
+.col--12
+  width: span(12)
+  margin-bottom: gutter()
+  @media (min-width: 0em) and (max-width: 40em)
+    width: span(12)
 
-.blur
-  filter: blur(10px)
+.col--8
+  width: span(8)
+  margin-bottom: gutter()
+  @media (min-width: 0em) and (max-width: 40em)
+    width: span(12)
+
+.col--6
+  width: span(6)
+  margin-bottom: gutter()
+  @media (min-width: 0em) and (max-width: 45em)
+    width: span(12)
+  &:nth-last-of-type(2n)
+    margin-right: gutter()
+
+.col--4
+  width: span(4)
+  margin-bottom: gutter()
+  @media (min-width: 0em) and (max-width: 45em)
+    width: span(12)
+
+//
+// header,
+// ._do,
+// ._clients,
+// ._about,
+// ._contact
+//   transition: all 0.3s linear
+//   // transform: translateZ(0)
+//
+// .blur
+//   filter: blur(10px)

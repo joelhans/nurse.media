@@ -1,5 +1,25 @@
 $ ->
 
+  $('.client').mouseenter () ->
+    $(this)
+      .delay(200)
+      # .css('z-index','1000')/
+
+  $('.client').mouseleave () ->
+    console.log 'leaving'
+    $(this)
+      .delay(200)
+      .queue (next) ->
+        $(this).css('z-index', '')
+        next()
+
+
+    # setTimeout ($this)->
+    #   console.log $(this)
+    #   $(this).css('z-index','inherit')
+    # , 400
+
+
   # # scrollY = null
   # logoSmall = false
   # logoAbout = false

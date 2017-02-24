@@ -4,7 +4,7 @@
 {% block content %}
 	{% for module in page.collection() %}
 		<section class="modular--row {{module.slug}}">
-			<div class="container">
+			<div class="grid">
 				{{ module.content }}
 			</div>
 		</section>

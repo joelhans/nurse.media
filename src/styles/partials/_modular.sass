@@ -4,7 +4,7 @@
 
 .modular--row
   position: relative
-  padding: 12rem 0
+  // padding: 12rem 0
 
   &::before,
   &::after
@@ -23,24 +23,28 @@
   &::after
     bottom: -6.5rem
 
-.row container
-  +span(12 of 12)
-
 ._do
-  background: lighten($purple, 6)
+  background: #000
 
-  &::before
-    +svg ( 'svg', ( width: 100, height: 100, viewbox: 0 0 100 100, preserveAspectRatio: none ) )
-      +svg ('polygon', ( fill: lighten($purple, 6), points: (0,100 100,0 100,100) ) )
-    transform: scaleX(-1)
+._do .modular--content
+  margin-top: -18rem
 
-._clients
-  background-color: lighten($purple, 3)
+._do p
+  +fontmake($family: 'Overpass', $size: 2, $weight: 700, $margin: 1.8)
+  text-align: left
+  @media (min-width: 33em) and (max-width: 60em)
+    +fontmake($family: 'Overpass', $size: 1.6, $margin: 1.8)
+  @media (min-width: 0em) and (max-width: 33em)
+    +fontmake($family: 'Overpass', $size: 1.4, $margin: 1.8)
 
-  &::before
-    +svg ( 'svg', ( width: 100, height: 100, viewbox: 0 0 100 100, preserveAspectRatio: none ) )
-      +svg ('polygon', ( fill: lighten($purple, 3), points: (0,100 100,0 100,100) ) )
-    transform: scaleX(1)
+._do .modular--content code
+  color: $yellow
+
+._do .modular--content span
+  color: $orange
+
+
+
 
 ._about
   background-color: $purple
@@ -75,18 +79,7 @@ footer
 
 // DO
 
-._do .modular--content p
-  +fontmake($size: 4, $weight: 800)
-  font-style: italic
-  text-align: left
 
-._do .modular--content code
-  +fontmake($family: 'Raleway', $size: 4.4, $weight: 300, $line: 0)
-  color: $yellow
-
-._do .modular--content span
-  +fontmake($family: 'Merriweather', $size: 4.2, $weight: 700, $line: 0)
-  color: $orange
 
 // CLIENTS
 

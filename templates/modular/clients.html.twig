@@ -3,7 +3,7 @@
 </section>
 
 {% for client in page.collection() %}
-	<section class="client client--{{ client.slug }}">
+	<section class="client client--{{ client.slug }} col--6">
 		<a href="#"></a>
 		<div class="hover--blocker"></div>
 		{% for image in client.media.images %}

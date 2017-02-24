@@ -20,35 +20,26 @@
 
   {% block javascripts %}
       {% do assets.addJs('theme://bower_components/jquery/dist/jquery.min.js') %}
-      {% do assets.addJs('theme://bower_components/velocity/velocity.min.js') %}
-      {% do assets.addJs('theme://bower_components/waypoints/lib/jquery.waypoints.min.js') %}
+      <!-- {% do assets.addJs('theme://bower_components/velocity/velocity.min.js') %} -->
+      <!-- {% do assets.addJs('theme://bower_components/waypoints/lib/jquery.waypoints.min.js') %} -->
       {% do assets.addJs('theme://dist/scripts/main.min.js') %}
   {% endblock %}
   {{ assets.js() }}
 
   <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,800i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 
 </head>
 
 <body class="{{ page.header.class }}--body">
 
-  <!-- {% include 'partials/navigation.html.twig' %} -->
+  {% include 'partials/header.html.twig' %}
 
-  <!-- <div class="nurse--sticky">
-    <img src="{{ url('theme://dist/images/nurse_logo.svg') }}" alt="Nurse Media logo">
-  </div> -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
 
-  <header>
-    <div class="container">
-      {% include 'partials/header.html.twig' %}
-    </div>
-  </header>
-
-  {% block content %}{% endblock %}
-
-  {% include 'partials/footer.html.twig' %}
+  <!-- {% include 'partials/footer.html.twig' %} -->
 
   {% if site.analytics %}
   {% include 'partials/analytics.html.twig' %}

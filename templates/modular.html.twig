@@ -3,10 +3,18 @@
 
 {% block content %}
 	{% for module in page.collection() %}
+		{% if module.slug == '_do' %}
+		<header class="modular--row {{module.slug}}">
+			<div class="grid">
+				{{ module.content }}
+			</div>
+		</header>
+		{% else %}
 		<section class="modular--row {{module.slug}}">
 			<div class="grid">
 				{{ module.content }}
 			</div>
 		</section>
+		{% endif %}
 	{% endfor %}
 {% endblock %}

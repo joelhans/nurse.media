@@ -1,7 +1,40 @@
-<nav class="col--4">
+<nav>
+  <div class="grid">
 
-  <a href="#work">Work</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+  <div class="col--6">
+    <a href="#work" data-text="Work">Work</a>
+    <a href="#about" data-text="About">About</a>
+    <a href="#contact" data-text="Contact">Contact</a>
+  </div>
 
+  <div class="nav__type col--4">
+    <img src="{{ url('theme://dist/images/nurse_type.png') }}" />
+    <img src="{{ url('theme://dist/images/nurse_type_dark.png') }}" />
+  </div>
+
+  <svg class="clip-svg">
+    <defs>
+      <clipPath id="clip-polygon" clipPathUnits="objectBoundingBox" >
+        <polygon points="0 0.9, 1 0.9, 1 1, 0 1" />
+      </clipPath>
+    </defs>
+  </svg>
+
+  <svg class="clip-svg">
+    <defs>
+      <clipPath id="clip-full" clipPathUnits="objectBoundingBox" >
+        <polygon points="0 .1, 1 0.95, 1 1, 0 1" />
+      </clipPath>
+    </defs>
+  </svg>
+
+  <svg class="clip-svg">
+    <defs>
+      <clipPath id="clip-type" clipPathUnits="objectBoundingBox" >
+        <polygon points="1 1, 1 0, 0 0" />
+      </clipPath>
+    </defs>
+  </svg>
+
+  </div>
 </nav>

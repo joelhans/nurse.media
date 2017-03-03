@@ -1,47 +1,68 @@
 /////////////////////////////////
 // HEADER
-////////////////////////////////
+/////////////////////////////////
+
 header
   position: relative
-  min-height: 1075px
-  background: white
-  background: url('../images/lightning.png')
-  background-size: 2000px auto
-  background-position: 50% -260px
-  @media (max-width: 45em)
-    background-position: 55% -260px
+  height: 100vh
+
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
 
 header .grid
-  flex-direction: row-reverse
-  align-items: flex-start
-  padding-top: 10rem
+  height: 100%
+  margin-top: -50px
+  flex-direction: row
+  align-items: center
   @media (min-width: 0em) and (max-width: 45em)
     flex-direction: column-reverse
-    padding-top: 6rem
 
-/////////////////////////////////
-// HEADER__HERO
-/////////////////////////////////
 .header__hero
-  +fontmake($family: 'Overpass', $size: 3, $line: 7)
-  color: $yellow
-  @media (min-width: 0em) and (max-width: 80em)
-    +fontmake($family: 'Overpass', $size: 2.4, $line: 5)
-  @media (min-width: 0em) and (max-width: 45em)
-    margin-top: 4rem
+  margin-bottom: 0
 
-/////////////////////////////////
-// NAVIGATION
-/////////////////////////////////
-nav
-  margin-right: auto
-  padding: 4rem
-  background-color: $orange
+.header__logo
+  
 
-nav a
-  display: block
-  +fontmake($family: 'Quicksand', $size: 1.2, $weight: 700, $margin: 0)
-  color: white
+// header
+//   position: relative
+//   min-height: 940px
+//   background: white
+//   background: url('../images/lightning.png')
+//   background-size: 2000px auto
+//   background-position: 50% -260px
+//   @media (max-width: 45em)
+//     background-position: 55% -260px
+//
 
-  &:hover
-    color: $purple
+
+// /////////////////////////////////
+// // HEADER__HERO
+// /////////////////////////////////
+// .header__hero
+//   +fontmake($family: 'Overpass', $size: 3, $line: 7)
+//   color: $yellow
+//   @media (min-width: 0em) and (max-width: 80em)
+//     +fontmake($family: 'Overpass', $size: 2.4, $line: 5)
+//   @media (min-width: 0em) and (max-width: 45em)
+//     margin-top: 4rem
+//
+// /////////////////////////////////
+// // NAVIGATION
+// /////////////////////////////////
+// nav
+//   margin-right: auto
+//   padding: 4rem
+//   background-color: $orange
+//
+// nav a
+//   display: block
+//   +fontmake($family: 'Quicksand', $size: 1.2, $weight: 700, $margin: 0)
+//   color: white
+//
+//   &:hover
+//     color: $purple

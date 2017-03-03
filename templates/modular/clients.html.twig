@@ -3,20 +3,22 @@
 </section>
 
 {% for client in page.collection() %}
-	<section class="client client--{{ client.slug }} col--6">
+	<section class="client client--{{ client.slug }} col--6" style="background-image: url({{ client.media['client_bg.jpg'].url }})">
 		<a href="#"></a>
 		<div class="hover--blocker"></div>
-		{% for image in client.media.images %}
+		<!-- {% for image in client.media.images %}
 			{{ image.cropResize(400,400).html }}
-		{% endfor %}
+		{% endfor %} -->
 		<div class="client--meta">
 			<h1>{{ client.title }}</h1>
-			<aside>
+			<aside class="meta-tags">
 				{% for tag in client.taxonomy.tag %}
 			    <span>{{ tag }}</span>
 				{% endfor %}
 			</aside>
-			{{ client.content }}
 		</div>
+		<article class="client--content">
+			{{ client.content }}
+		</article>
 	</section>
 {% endfor %}

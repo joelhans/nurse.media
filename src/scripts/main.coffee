@@ -1,5 +1,41 @@
 $ ->
 
+  base      = $('body').attr 'data-base'
+  container = $('main')
+
+  getPage = (url) ->
+    container.load url + ' main', (data) ->
+      document.title = data.match("<title>(.*?)</title>")[1]
+
+  $('nav a').click (ev) ->
+    ev.preventDefault()
+
+    $this = $(this)
+    url   = $this.attr 'href'
+    title = $this.attr 'data-text'
+
+    history.pushState(
+      url: url
+      title: title
+    , title, url)
+
+    getPage(url)
+
+  $(window).on 'popstate', (e) ->
+    state = e.originalEvent.state
+    if state isnt null
+      getPage(state.url)
+    else
+      getPage(base)
+
+  # window.addEventListener 'popstate', (ev) ->
+  #   console.log ev.state
+  #   goURL = ev.state.url
+  #   thisURL = window.location.pathname
+  #   console.log 'Leaving ' + thisURL + ' for ' + goURL
+  #   getPage(goURL)
+
+
   # $('.client').mouseenter () ->
   #   $(this)
   #     .delay(200)

@@ -8,7 +8,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.metadata.description }}">
   <link rel="shortcut icon" href="{{ url('theme://dist/images/favicon.ico') }}" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/rss.xml">
@@ -31,7 +31,7 @@
 
 </head>
 
-<body class="{{ page.header.class }}--body">
+<body class="{{ page.slug }}--body" data-base="{{ base_url }}/">
 
   {% include 'partials/navigation.html.twig' %}
 
@@ -39,7 +39,7 @@
     {% block content %}{% endblock %}
   </main>
 
-  <!-- {% include 'partials/footer.html.twig' %} -->
+  {% include 'partials/footer.html.twig' %}
 
   {% if site.analytics %}
   {% include 'partials/analytics.html.twig' %}

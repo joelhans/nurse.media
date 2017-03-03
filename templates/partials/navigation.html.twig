@@ -2,14 +2,16 @@
   <div class="grid">
 
   <div class="col--6">
-    <a href="#work" data-text="Work">Work</a>
-    <a href="#about" data-text="About">About</a>
-    <a href="#contact" data-text="Contact">Contact</a>
+    <a href="{{ base_url }}/work" data-text="Work">Work</a>
+    <a href="{{ base_url }}/about" data-text="About">About</a>
+    <a href="{{ base_url }}/contact" data-text="Contact">Contact</a>
   </div>
 
   <div class="nav__type col--4">
-    <img src="{{ url('theme://dist/images/nurse_type.png') }}" />
-    <img src="{{ url('theme://dist/images/nurse_type_dark.png') }}" />
+    <a href="{{ base_url }}/" data-text="Nurse">
+      <img src="{{ url('theme://dist/images/nurse_type.png') }}" />
+      <img src="{{ url('theme://dist/images/nurse_type_dark.png') }}" />
+    </a>
   </div>
 
   <svg class="clip-svg">

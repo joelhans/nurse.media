@@ -35,7 +35,7 @@
 
   {% include 'partials/navigation.html.twig' %}
 
-  <main>
+  <main id="{{ page.slug }}">
     {% block content %}{% endblock %}
   </main>
 
@@ -44,6 +44,9 @@
   {% if site.analytics %}
   {% include 'partials/analytics.html.twig' %}
   {% endif %}
+
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgv-tqpV8IcQkA28d_gVrYEUcxDH52I2g&callback=initMap"
+  async defer></script> -->
 
 </body>
 </html>

@@ -1,32 +1,21 @@
 /////////////////////////////////
-// FRONT PAGE
+// HOME PAGE
 /////////////////////////////////
 
-main
-  position: relative
-  height: 100vh
-
-  &::after
-    content: ''
-    display: block
-    position: absolute
-    top: 0
-    right: 0
-    bottom: 0
-
-main .grid
-  height: 100%
-  margin-top: -50px
-  flex-direction: row
+#home .grid
   align-items: center
+  padding-top: inherit
+  padding-bottom: inherit
+
+.front__hero h1
+  color: $d-blue
+
+.front__logo img
+  display: block
+  width: 165px
   @media (min-width: 0em) and (max-width: 45em)
-    flex-direction: column-reverse
+    margin: 0 auto
 
-.header__hero
-  margin-bottom: 0
-
-.header__logo
-  margin-bottom: 0
 
 // header
 //   position: relative

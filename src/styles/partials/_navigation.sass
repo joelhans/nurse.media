@@ -6,7 +6,6 @@ nav
   position: relative
   background: $orange
   z-index: 100
-
   &::after
     content: ''
     display: block
@@ -17,13 +16,20 @@ nav
     left: 75%
     background: white
     z-index: -1
+  @media (min-width: 0em) and (max-width: 45em)
+    &::after
+      height: 90px
 
 nav .grid
   padding: 0rem 2rem
+  @media (min-width: 0em) and (max-width: 45em)
+    flex-direction: column-reverse
+
+// main nav
 
 nav .col--6
   margin-bottom: 0
-  padding: 1.2rem 0 1rem 0
+  padding: 2rem 0 1rem 0
 
 nav .col--6 a
   display: inline-block
@@ -40,13 +46,12 @@ nav .col--6 a
     position: absolute
     top: 0
     left: -5px
-    right: -5px
     padding-left: 5px
+    padding-right: 5px
     z-index: 1
     clip-path: url("#clip-polygon")
     clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0% 100%)
     transition: 0.2s clip-path ease-in-out
-    text-shadow: 1px 1px 1px 1px rgba(0,0,0,0.005)
   &:hover::after
     clip-path: url("#clip-full")
     clip-path: polygon(0 10%, 100% 95%, 100% 100%, 0% 100%)
@@ -54,6 +59,8 @@ nav .col--6 a
 nav svg
   position: absolute
   top: -9999px
+
+// nav__type
 
 .nav__type
   position: relative
@@ -67,7 +74,6 @@ nav svg
     position: absolute
     height: 40px
     z-index: 100
-    // left: -84px
     &:first-of-type
       clip-path: polygon(0 0, 100% 90%, 100% 100%, 0% 100%)
     &:last-of-type

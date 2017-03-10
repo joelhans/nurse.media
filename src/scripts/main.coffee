@@ -1,25 +1,76 @@
+root = exports ? this
+root.initMap = () ->
+  map = new google.maps.Map document.getElementById('map'),
+    center: {lat: 32.234, lng: -110.963}
+    zoom: 10
+    zoomControl: false
+    scaleControl: false
+    scrollwheel: false
+    disableDoubleClickZoom: true
+    disableDefaultUI: true
+    draggable : false
+    styles: [
+      {
+        elementType: 'labels',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'landscape',
+        elementType: 'geometry',
+        stylers: [{color: '#FFC95E'}]
+      },
+      {
+        featureType: 'landscape.natural',
+        elementType: 'geometry',
+        stylers: [{color: '#FE715D'}]
+      },
+      {
+        featureType: 'road',
+        elementType: 'geometry',
+        stylers: [{color: '#2d1f49'}]
+      },
+      {
+        featureType: 'water',
+        elementType: 'geometry',
+        stylers: [{color: '#0f3651'}]
+      },
+      {
+        featureType: 'poi.park',
+        elementType: 'geometry.fill',
+        stylers: [{color: '#FF5E5E'}]
+      }
+    ]
+
 $ ->
 
   base      = $('body').attr 'data-base'
   container = $('main')
 
   getPage = (url) ->
-    container.load url + ' main', (data) ->
+    container.load url + ' main .grid', (data) ->
       document.title = data.match("<title>(.*?)</title>")[1]
+      $('main').attr('id','').attr('id',history.state.slug)
+      if history.state.slug.includes('contact') is true
+        initMap()
+      # $('main').fadeIn(100)
 
-  $('nav a').click (ev) ->
+  $('a').click (ev) ->
     ev.preventDefault()
 
     $this = $(this)
     url   = $this.attr 'href'
     title = $this.attr 'data-text'
+    slug  = $this.attr 'data-slug'
 
     history.pushState(
-      url: url
-      title: title
+      url   : url
+      title : title
+      slug  : slug
     , title, url)
 
+    # $('main').fadeOut(100)
     getPage(url)
+
 
   $(window).on 'popstate', (e) ->
     state = e.originalEvent.state
@@ -27,6 +78,9 @@ $ ->
       getPage(state.url)
     else
       getPage(base)
+
+
+
 
   # window.addEventListener 'popstate', (ev) ->
   #   console.log ev.state

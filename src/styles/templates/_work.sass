@@ -1,0 +1,43 @@
+/////////////////////////////////
+// WORK PAGE
+/////////////////////////////////
+
+main#work
+  min-height: 100vh
+  height: auto
+  color: $gray
+
+.client
+  position: relative
+  min-height: 400px
+  padding: 2rem
+  margin-bottom: gutter() + .5%
+  color: white
+  background: $d-blue
+  transform: translateZ(0)
+  perspective: 1000
+  transition: color 0.3s ease-in-out
+  display: flex
+  flex-direction: column
+  // align-items: center
+  justify-content: center
+
+.client__name
+   align-self: flex-start
+   margin-bottom: 2rem
+
+.client__name h1
+  +fontmake ($size: 2, $weight: 800, $margin: 0)
+  margin-top: 0
+
+.client__meta
+  +fontmake ($size: 0.7, $weight: 300, $margin: 0.6)
+  color: white
+  text-transform: uppercase
+  order: 99
+  margin-top: auto
+  span
+    display: block
+
+.client__content
+  margin-top: 0.4rem

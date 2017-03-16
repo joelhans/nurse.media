@@ -4,38 +4,29 @@
 
   <div class="grid">
 
-    <div class="page__hero front__hero col--8">
+    <div class="page__hero col--8">
       <h1>{{ page.header.tagline }}</h1>
     </div>
 
-    <div class="col--6">
+    <div class="about__desc col--6">
       {{ page.content }}
     </div>
 
     <div class="about__logo col--4">
-      <img src="{{ url('theme://dist/images/nurse_logo_white.svg') }}" />
+      <img src="{{ url('theme://dist/images/nurse_logo_white.svg') }}" alt="Nurse Media logo" />
+    </div>
+
+    <div class="about__services col--12">
+      <h1>Our services</h1>
+      <p>This describes our services.</p>
     </div>
 
     <div class="about__clients col--12">
-      <div class="clients__logo col--4">
-        <img src="" />
-      </div>
-      <div class="clients__logo col--4">
-        <img src="" />
-      </div>
-      <div class="clients__logo col--4">
-        <img src="" />
-      </div>
-      <div class="clients__logo col--4">
-        <img src="" />
-      </div>
-      <div class="clients__logo col--4">
-        <img src="" />
-      </div>
-      <div class="clients__logo col--4">
-        <img src="" />
-      </div>
+      <h1>Some of our happy clients</h1>
     </div>
+    {% for image in page.media.images %}
+    <img class="about__client col--4" src="{{ image.cropResize(300,200).url }}" alt="{{ image.alt }}"/>
+    {% endfor %}
 
   </div>
 

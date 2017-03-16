@@ -4,16 +4,16 @@
 
   <div class="grid">
 
+    <div class="page__hero front__hero col--8">
+      <h1>{{ page.header.tagline }}</h1>
+    </div>
+
+    <div class="contact__img col--6"></div>
+
     <div class="contact__info col--6">
-      {{ page.content }}
+      <p>Send us an email&mdash;hi@nurse.media&mdash;or fill out the short form below.</p>
       {% include "forms/form.html.twig" with { form: forms('contact-form') } %}
     </div>
-
-    <div class="contact__img col--6">
-      <!-- <img src="{{ url('theme://dist/images/lightning.png') }}" /> -->
-    </div>
-
-    <div id="map" class="map col--8"></div>
 
   </div>
 

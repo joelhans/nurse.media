@@ -1,42 +1,25 @@
 <nav>
   <div class="grid">
 
-  <div class="col--6">
-    <a href="{{ base_url }}/work" data-text="Work" data-slug="work">Work</a>
+  <div class="nav__logo col--2">
+    <a href="{{ base_url }}/" data-text="Nurse" data-slug="home">
+      <img src="{{ url('theme://dist/images/nurse_logo.svg') }}" />
+      <img src="{{ url('theme://dist/images/nurse_logo_white.svg') }}" />
+    </a>
+  </div>
+
+  <div class="nav__main col--6">
+    <a href="{{ base_url }}/" data-text="Work" data-slug="home">Work</a>
     <a href="{{ base_url }}/about" data-text="About" data-slug="about">About</a>
     <a href="{{ base_url }}/contact" data-text="Contact" data-slug="contact">Contact</a>
   </div>
 
-  <div class="nav__type col--4">
+  <!-- <div class="nav__type col--2">
     <a href="{{ base_url }}/" data-text="Nurse" data-slug="home">
       <img src="{{ url('theme://dist/images/nurse_type.png') }}" />
       <img src="{{ url('theme://dist/images/nurse_type_dark.png') }}" />
     </a>
-  </div>
-
-  <svg class="clip-svg">
-    <defs>
-      <clipPath id="clip-polygon" clipPathUnits="objectBoundingBox" >
-        <polygon points="0 0.9, 1 0.9, 1 1, 0 1" />
-      </clipPath>
-    </defs>
-  </svg>
-
-  <svg class="clip-svg">
-    <defs>
-      <clipPath id="clip-full" clipPathUnits="objectBoundingBox" >
-        <polygon points="0 .1, 1 0.95, 1 1, 0 1" />
-      </clipPath>
-    </defs>
-  </svg>
-
-  <svg class="clip-svg">
-    <defs>
-      <clipPath id="clip-type" clipPathUnits="objectBoundingBox" >
-        <polygon points="1 1, 1 0, 0 0" />
-      </clipPath>
-    </defs>
-  </svg>
+  </div> -->
 
   </div>
 </nav>

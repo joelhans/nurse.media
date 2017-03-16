@@ -2,13 +2,10 @@
 // HOME PAGE
 /////////////////////////////////
 
-#home .grid
-  align-items: center
-  padding-top: inherit
-  padding-bottom: inherit
-
-.front__hero h1
-  color: $d-blue
+.front__logo
+  display: none
+  margin-left: auto
+  transform: translateY(-10%)
 
 .front__logo img
   display: block
@@ -16,42 +13,46 @@
   @media (min-width: 0em) and (max-width: 45em)
     margin: 0 auto
 
-
-// header
-//   position: relative
-//   min-height: 940px
-//   background: white
-//   background: url('../images/lightning.png')
-//   background-size: 2000px auto
-//   background-position: 50% -260px
-//   @media (max-width: 45em)
-//     background-position: 55% -260px
-//
+.front__featured
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
 
 
-// /////////////////////////////////
-// // HEADER__HERO
-// /////////////////////////////////
-// .header__hero
-//   +fontmake($family: 'Overpass', $size: 3, $line: 7)
-//   color: $yellow
-//   @media (min-width: 0em) and (max-width: 80em)
-//     +fontmake($family: 'Overpass', $size: 2.4, $line: 5)
-//   @media (min-width: 0em) and (max-width: 45em)
-//     margin-top: 4rem
-//
-// /////////////////////////////////
-// // NAVIGATION
-// /////////////////////////////////
-// nav
-//   margin-right: auto
-//   padding: 4rem
-//   background-color: $orange
-//
-// nav a
-//   display: block
-//   +fontmake($family: 'Quicksand', $size: 1.2, $weight: 700, $margin: 0)
-//   color: white
-//
-//   &:hover
-//     color: $purple
+/////////////////////////////////
+// WORK AREA
+/////////////////////////////////
+
+.client
+  position: relative
+  min-height: 400px
+  padding: 2rem
+  // margin-bottom: gutter() + .5%
+  color: white
+  background: $d-blue
+  transform: translateZ(0)
+  perspective: 1000
+  transition: color 0.3s ease-in-out
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.client__name
+   align-self: flex-start
+   margin-bottom: 2rem
+
+.client__name h1
+  +fontmake ($size: 2, $weight: 800, $margin: 0)
+  margin-top: 0
+
+.client__meta
+  +fontmake ($size: 0.7, $weight: 300, $margin: 0)
+  color: white
+  text-transform: uppercase
+  order: 99
+  margin-top: auto
+  span
+    display: block
+
+.client__content
+  margin-top: 0.4rem

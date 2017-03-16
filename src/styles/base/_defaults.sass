@@ -17,6 +17,17 @@ body
   background-color: $orange
   overflow-x: hidden
 
+::selection
+  background: $purple
+  color: white
+::-moz-selection
+  background: $purple
+  color: white
+
+svg.clip-svg
+  position: absolute
+  top: -9999px
+
 /////////////////////////////////
 // MAIN
 /////////////////////////////////
@@ -24,7 +35,8 @@ body
 main
   width: 100%
   position: relative
-  height: 100vh
+  min-height: 100vh
+  height: auto
   @media (min-width: 0em) and (max-width: 45em)
     height: auto
     min-height: 100vh
@@ -48,6 +60,7 @@ $susy : ( container: 80rem, columns: 12, gutters: .75, box-sizing: border-box )
   display: flex
   flex-flow: row wrap
   justify-content: space-between
+  perspective: 2000px
   @media (min-width: 0em) and (max-width: 40em)
     flex-flow: column wrap
 
@@ -83,3 +96,22 @@ main(:not(.home)) .grid
   width: span(2)
   @media (min-width: 0em) and (max-width: 45em)
     width: span(12)
+
+.col--half
+  width: 50%
+  margin-right: 0
+  margin-bottom: 0
+
+/////////////////////////////////
+// GRID
+/////////////////////////////////
+
+.page__hero
+  color: $d-blue
+  margin-bottom: 8rem
+  transform: translateY(0%) rotateY( 0deg )
+  transition: transform 0.5s 0s ease-in-out
+  transform-style: preserve-3d
+
+.hero--shifted
+  transform: translateY(-10%) rotateY( -30deg )

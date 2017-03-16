@@ -4,13 +4,37 @@
 
   <div class="grid">
 
-    <div class="front__hero col--6">
-      <h1>Where brands get shelter</h1>
-      {{ content }}
+    <div class="page__hero front__hero col--8">
+      <h1>{{ page.header.tagline }}</h1>
     </div>
 
-    <div class="front__logo col--2">
+    <!-- <div class="front__logo col--2">
       <img src="{{ url('theme://dist/images/nurse_logo_white.svg') }}" />
+    </div> -->
+
+    <div class="front__featured col--12">
+      {% for i in page.collection() %}
+      <section class="client client__{{ i.slug }} col--half" style="background-image: url({{ piece.media['client_bg.jpg'].url }})">
+
+        <a href="#"></a>
+        <div class="client__blocker"></div>
+
+        <div class="client__name">
+          <h1>{{ i.title }}</h1>
+        </div>
+
+        <div class="client__meta">
+          {% for tag in i.taxonomy.tag %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+
+        <article class="client__content">
+          {{ i.content }}
+        </article>
+
+      </section>
+      {% endfor %}
     </div>
 
   </div>

@@ -7,7 +7,7 @@ main#contact
   height: auto
 
 main#contact .grid
-  flex-direction: row-reverse
+  // flex-direction: row-reverse
   align-items: center
 
 // contact__img
@@ -56,6 +56,37 @@ label.inline
 
 .form-textarea-wrapper textarea
   min-height: 150px
+
+button.button
+  position: relative
+  +fontmake($family: 'Quicksand', $weight: 700, $margin: 0)
+  color: $orange
+  background-color: $purple
+  padding: 1rem
+  outline: 0
+  border: 0
+  &:hover
+    outline: 0
+    border: 0
+    cursor: pointer
+  &::after
+    content: 'Submit'
+    display: block
+    color: $orange
+    background: $yellow
+    position: absolute
+    top: 0px
+    left: 0
+    padding: 1rem
+    z-index: 1
+    clip-path: url("#clip-button")
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)
+    transition: 0.2s clip-path ease-in-out
+  &:hover::after
+    clip-path: url("#clip-button-hover")
+    clip-path: polygon(0 0%, 100% 100%, 100% 100%, 0% 100%)
+
+// thankyou page
 
 #thankyou a
   display: inline-block

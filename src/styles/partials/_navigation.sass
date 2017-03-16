@@ -6,36 +6,81 @@ nav
   position: relative
   background: $orange
   z-index: 100
-  &::after
-    content: ''
-    display: block
-    width: 1000px
-    height: 100%
-    position: absolute
-    top: 0
-    left: 75%
-    background: white
-    z-index: -1
-  @media (min-width: 0em) and (max-width: 45em)
-    &::after
-      height: 90px
 
 nav .grid
   padding: 0rem 2rem
   @media (min-width: 0em) and (max-width: 45em)
     flex-direction: column-reverse
+  // &::before
+  //   content: ''
+  //   display: block
+  //   width: 9600px
+  //   position: absolute
+  //   top: 0
+  //   bottom: 0
+  //   right: 95%
+  //   background: white
+  //   z-index: -1
+  // @media (min-width: 0em) and (max-width: 45em)
+  //   &::after
+  //     height: 90px
+
+// logo
+
+.nav__logo
+  position: relative
+  height: 90px
+  background: white
+  // margin-bottom: 0
+  margin-right: auto
+  padding: 0.6rem 0 1rem 0
+
+  a
+    display: block
+    background-color: $orange
+
+  img
+    position: absolute
+    height: 60px
+    z-index: 100
+    &:last-of-type
+      clip-path: url("#clip-type")
+      clip-path: polygon(0 0, 100% 0, 100% 38%, 0 62%)
+
+  &::before
+    content: ''
+    display: block
+    width: 400px
+    height: 90px
+    position: absolute
+    top: 0
+    left: -235px
+    background-color: $orange
+
+  &::after
+    content: ''
+    display: block
+    width: 600px
+    height: 180px
+    position: absolute
+    top: 0
+    left: -435px
+    z-index: 1
+    +svg ( 'svg', ( width: 600, height: 180, viewbox: 0 0 600 180, preserveAspectRatio: none ) )
+      +svg ('polygon', ( fill: white, points: (0,0 600,0 0,170) ) )
 
 // main nav
 
-nav .col--6
+.nav__main
   margin-bottom: 0
   padding: 2rem 0 1rem 0
+  text-align: right
 
-nav .col--6 a
+.nav__main a
   display: inline-block
   position: relative
   +fontmake($family: "Quicksand", $weight: 700, $margin: 0)
-  margin-right: 4rem
+  margin-left: 4rem
   color: white
   z-index: 0
   &::after
@@ -49,56 +94,9 @@ nav .col--6 a
     padding-left: 5px
     padding-right: 5px
     z-index: 1
-    clip-path: url("#clip-polygon")
+    clip-path: url("#clip-link")
     clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0% 100%)
     transition: 0.2s clip-path ease-in-out
   &:hover::after
-    clip-path: url("#clip-full")
-    clip-path: polygon(0 10%, 100% 95%, 100% 100%, 0% 100%)
-
-nav svg
-  position: absolute
-  top: -9999px
-
-// nav__type
-
-.nav__type
-  position: relative
-  height: 90px
-  background: white
-  margin-bottom: 0
-  margin-left: auto
-  padding: 1.6rem 0 1rem 0
-
-  img
-    position: absolute
-    height: 40px
-    z-index: 100
-    &:first-of-type
-      clip-path: polygon(0 0, 100% 90%, 100% 100%, 0% 100%)
-    &:last-of-type
-      clip-path: url("#clip-type")
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 0%)
-
-  &::before
-    content: ''
-    display: block
-    width: 262px
-    height: 100%
-    position: absolute
-    top: 0
-    left: 0
-    +svg ( 'svg', ( width: 262, height: 90, viewbox: 0 0 262 90, preserveAspectRatio: none ) )
-      +svg ('polygon', ( fill: $orange, points: (0,25 262,90 0,90) ) )
-
-  &::after
-    content: ''
-    display: block
-    width: 262px
-    height: 100%
-    position: absolute
-    top: -25px
-    left: -100px
-    z-index: 1
-    +svg ( 'svg', ( width: 262, height: 90, viewbox: 0 0 262 90, preserveAspectRatio: none ) )
-      +svg ('polygon', ( fill: white, points: (0,25 262,25 262,90) ) )
+    clip-path: url("#clip-link-hover")
+    clip-path: polygon(0 0%, 100% 100%, 100% 100%, 0% 100%)

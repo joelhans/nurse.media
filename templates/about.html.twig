@@ -1,0 +1,42 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+  <div class="grid">
+
+    <div class="page__hero front__hero col--8">
+      <h1>{{ page.header.tagline }}</h1>
+    </div>
+
+    <div class="col--6">
+      {{ page.content }}
+    </div>
+
+    <div class="about__logo col--4">
+      <img src="{{ url('theme://dist/images/nurse_logo_white.svg') }}" />
+    </div>
+
+    <div class="about__clients col--12">
+      <div class="clients__logo col--4">
+        <img src="" />
+      </div>
+      <div class="clients__logo col--4">
+        <img src="" />
+      </div>
+      <div class="clients__logo col--4">
+        <img src="" />
+      </div>
+      <div class="clients__logo col--4">
+        <img src="" />
+      </div>
+      <div class="clients__logo col--4">
+        <img src="" />
+      </div>
+      <div class="clients__logo col--4">
+        <img src="" />
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}

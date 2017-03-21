@@ -10,28 +10,14 @@ nav
 nav .grid
   padding: 0rem 2rem
   @media (min-width: 0em) and (max-width: 45em)
-    flex-direction: column-reverse
-  // &::before
-  //   content: ''
-  //   display: block
-  //   width: 9600px
-  //   position: absolute
-  //   top: 0
-  //   bottom: 0
-  //   right: 95%
-  //   background: white
-  //   z-index: -1
-  // @media (min-width: 0em) and (max-width: 45em)
-  //   &::after
-  //     height: 90px
+    // flex-direction: column-reverse
 
 // logo
 
 .nav__logo
   position: relative
   height: 90px
-  background: white
-  // margin-bottom: 0
+  background: $orange
   margin-right: auto
   padding: 0.6rem 0 1rem 0
 
@@ -50,12 +36,14 @@ nav .grid
   &::before
     content: ''
     display: block
-    width: 400px
-    height: 90px
+    width: 600px
+    height: 180px
     position: absolute
-    top: 0
-    left: -235px
-    background-color: $orange
+    top: 90px
+    left: -435px
+    z-index: 1
+    +svg ( 'svg', ( width: 600, height: 180, viewbox: 0 0 600 180, preserveAspectRatio: none ) )
+      +svg ('polygon', ( fill: $orange, points: (0,0 600,0 0,170) ) )
 
   &::after
     content: ''
@@ -65,7 +53,7 @@ nav .grid
     position: absolute
     top: 0
     left: -435px
-    z-index: 1
+    z-index: 2
     +svg ( 'svg', ( width: 600, height: 180, viewbox: 0 0 600 180, preserveAspectRatio: none ) )
       +svg ('polygon', ( fill: white, points: (0,0 600,0 0,170) ) )
 

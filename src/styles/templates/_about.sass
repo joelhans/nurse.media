@@ -2,6 +2,9 @@
 // ABOUT PAGE
 /////////////////////////////////
 
+main#about
+  background: white
+
 .about__desc
   align-self: center
   margin-bottom: 12rem
@@ -18,3 +21,34 @@
 
 .about__services
   margin-bottom: 12rem
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+
+.about__services .col--6
+  padding-top: 0.6rem
+
+.about__services .col--6:nth-of-type(1)
+  margin-bottom: 4rem
+
+.about__services ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.about__clients
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  margin-left: auto
+  margin-bottom: 12rem
+
+.about__client
+  width: 18%
+  margin-right: 10%
+  &:nth-of-type(3n)
+    margin-right: 0
+
+.about__client img
+  width: 100%
+  max-width: 100%

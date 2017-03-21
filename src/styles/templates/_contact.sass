@@ -5,6 +5,7 @@
 main#contact
   min-height: 100vh
   height: auto
+  background: white
 
 main#contact .grid
   // flex-direction: row-reverse
@@ -17,9 +18,7 @@ main#contact .grid
   background: url('../images/lightning.png')
   background-size: 300%
   background-position: 60% 80%
-
-.contact__img img
-  max-width: 100%
+  border-radius: 3px
 
 // contact__form
 
@@ -48,11 +47,12 @@ label.inline
   width: 100%
   padding: 12px
   margin-bottom: 2rem
-  border: 0px
+  border: 2px solid $orange
+  border-radius: 3px
   outline: 0
   &:focus
     border: 2px solid $yellow
-    padding: 10px
+    border-radius: 3px
 
 .form-textarea-wrapper textarea
   min-height: 150px

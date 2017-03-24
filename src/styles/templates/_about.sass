@@ -5,25 +5,29 @@
 main#about
   background: white
 
+// description + logo
+
 .about__desc
   align-self: center
-  margin-bottom: 12rem
+  margin-bottom: 16rem
 
 .about__desc p:last-of-type
   margin-bottom: 0
 
 .about__logo
   align-self: center
-  margin-bottom: 12rem
+  margin-bottom: 16rem
 
 .about__logo img
   height: 100%
 
+// services
+
 .about__services
-  margin-bottom: 12rem
   display: flex
   flex-flow: row wrap
   justify-content: center
+  margin-bottom: 16rem
 
 .about__services .col--6
   padding-top: 0.6rem
@@ -36,15 +40,18 @@ main#about
   margin: 0
   padding: 0
 
+// clients
+
 .about__clients
   display: flex
   flex-flow: row wrap
   justify-content: center
+  margin-top: -2rem
   margin-left: auto
-  margin-bottom: 12rem
+  margin-bottom: 16rem
 
 .about__client
-  width: 18%
+  width: 22%
   margin-right: 10%
   &:nth-of-type(3n)
     margin-right: 0
@@ -52,3 +59,32 @@ main#about
 .about__client img
   width: 100%
   max-width: 100%
+
+// who
+
+.about__headshot
+  padding-top: 2rem
+
+.about__headshot img
+  max-width: 100%
+
+.about__bio
+  margin-bottom: 16rem
+  padding-top: 1.8rem
+  text-align: right
+
+.about__bio ul
+  list-style-type: none
+  margin-top: 0
+  padding: 0
+
+.about__bio ul li
+  +fontmake($family: 'Quicksand', $weight: 500)
+
+.social--icon
+  display: inline-block
+  margin-bottom: 0
+
+.social--icon svg
+  max-width: 100%
+  width: 32px

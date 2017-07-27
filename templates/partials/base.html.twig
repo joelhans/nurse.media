@@ -20,8 +20,6 @@
 
   {% block javascripts %}
       {% do assets.addJs('theme://bower_components/jquery/dist/jquery.min.js') %}
-      <!-- {% do assets.addJs('theme://bower_components/velocity/velocity.min.js') %} -->
-      <!-- {% do assets.addJs('theme://bower_components/waypoints/lib/jquery.waypoints.min.js') %} -->
       {% do assets.addJs('theme://dist/scripts/main.min.js') %}
   {% endblock %}
   {{ assets.js() }}
@@ -31,21 +29,15 @@
 
 </head>
 
-<body class="{{ page.slug }}--body" data-base="{{ base_url }}/">
+<body>
 
-  {% include 'partials/navigation.html.twig' %}
+  {% include 'partials/header.html.twig' %}
 
-  <main id="{{ page.slug }}">
+  <main class="container">
     {% block content %}{% endblock %}
   </main>
 
   {% include 'partials/footer.html.twig' %}
-
-  {% if site.analytics %}
-  {% include 'partials/analytics.html.twig' %}
-  {% endif %}
-
-  {% include 'partials/svg.html.twig' %}
 
 </body>
 </html>

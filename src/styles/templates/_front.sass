@@ -2,8 +2,43 @@
 // HOME PAGE
 /////////////////////////////////
 
+.svg__logo
+  display: block
+  margin: 100px auto
+  width: 500px
+
+  path
+    animation: 12s trace forwards
+    fill: #fff
+    stroke: #fff
+    stroke-dasharray: 400
+    // stroke-miterlimit: 10
+    stroke-width: 2px
+    stroke-linecap: round
+
+@keyframes trace
+  0%
+    stroke-dashoffset: 400
+    fill: #fff
+  25%
+    stroke: $orange
+    fill: #fff
+  36%
+    stroke: $orange
+    fill: #fff
+  41%
+    stroke: $orange
+    fill: transparentize($orange, 0.8)
+  46%
+    stroke: $orange
+    fill: #fff
+  100%
+    stroke: $orange
+    stroke-dashoffset: 0
+    fill: #fff
+
 main#home
-  background: $orange
+  background: white
 
 .front__logo
   display: none
@@ -16,11 +51,30 @@ main#home
   @media (min-width: 0em) and (max-width: 45em)
     margin: 0 auto
 
+/////////////////////////////////
+// FEATURED ITEMS
+/////////////////////////////////
+
 .front__featured
   display: flex
-  flex-flow: row wrap
-  justify-content: space-between
+  flex-direction: row
+  justify-content: center
+  margin: 0
+  padding: 0
+  list-style-type: none
 
+.featured__item
+  position: relative
+  min-height: 400px
+  background: $d-blue
+  margin-bottom: gutter() + .5%
+
+.featured__item figure
+  overflow: hidden
+
+.featured__item figure img
+  display: block
+  width: 100%
 
 /////////////////////////////////
 // WORK AREA
@@ -30,7 +84,7 @@ main#home
   position: relative
   min-height: 400px
   padding: 2rem
-  // margin-bottom: gutter() + .5%
+  margin-bottom: gutter() + .5%
   color: white
   background: $d-blue
   transform: translateZ(0)

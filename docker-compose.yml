@@ -1,0 +1,22 @@
+version: '2'
+services:
+  site:
+    image: evns/grav
+    restart: always
+    ports:
+      - "5000:80"
+      - "443:443"
+    environment:
+      - ADMIN_USER=admin
+      - ADMIN_PASSWORD=admin
+      - ADMIN_EMAIL=admin@example.com
+      - ADMIN_PERMISSIONS=b
+      - ADMIN_FULLNAME=Admin
+      - ADMIN_TITLE=Nurse Media
+      - DOMAIN=example.com    # set to your root/apex domain
+    volumes:
+      - backup:/var/www/grav-admin/
+      - .:/var/www/grav-admin/user/themes/nurse
+volumes:
+  backup:
+    external: false

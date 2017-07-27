@@ -5,6 +5,12 @@
 main#about
   background: white
 
+// header image
+
+.about__image
+  margin: 0
+  max-width: 100%
+
 // description + logo
 
 .about__desc
@@ -35,10 +41,25 @@ main#about
 .about__services .col--6:nth-of-type(1)
   margin-bottom: 4rem
 
+.about__services .col--6:nth-of-type(2n-1)
+  margin-right: gutter()
+
+.about__services .col--6:nth-of-type(2n)
+  margin-right: 0
+  margin-left: auto
+
 .about__services ul
   list-style-type: none
   margin: 0
   padding: 0
+
+// image breaker
+
+figure
+  margin: 0 0 16rem 0
+
+figure img
+  max-width: 100%
 
 // clients
 
@@ -69,17 +90,15 @@ main#about
   max-width: 100%
 
 .about__bio
-  margin-bottom: 16rem
   padding-top: 1.8rem
-  text-align: right
 
 .about__bio ul
   list-style-type: none
-  margin-top: 0
+  margin-top: 4rem
   padding: 0
 
 .about__bio ul li
-  +fontmake($family: 'Quicksand', $weight: 500)
+  +fontmake($family: 'Quicksand', $weight: 500, $margin: 0.5)
 
 .social--icon
   display: inline-block
@@ -88,3 +107,6 @@ main#about
 .social--icon svg
   max-width: 100%
   width: 32px
+
+.about__bio figure
+  margin-bottom: 0rem

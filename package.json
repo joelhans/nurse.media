@@ -1,11 +1,10 @@
 {
-  "name": "grav-theme-medium",
-  "version": "2.0.2",
-  "description": "Medium is a simple and modern blogging theme based on Medium's design language, built for Grav CMS.",
+  "name": "nurse-media-theme",
+  "version": "0.1.0",
+  "description": "This is the theme for the Nurse Media website, built on the Grav VMS.",
   "main": "gulpfile.js",
   "devDependencies": {
-    "browser-sync": "^2.17.3",
-    "susy": "^2.2.12"
+    "browser-sync": "^2.18.13"
   },
   "scripts": {
     "start": "gulp",
@@ -13,29 +12,31 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mblode/grav-theme-medium"
+    "url": "https://github.com/joelhans/nurse.media"
   },
   "bugs": {
-    "url": "https://github.com/mblode/grav-theme-medium/issues",
-    "email": "m.blode@gmail.com"
+    "url": "https://github.com/joelhans/nurse.media/issues",
+    "email": "joel.g.hans@gmail.com"
   },
-  "author": "Matthew Blode",
+  "author": "Joel Hans",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.4.2",
+    "gulp-clean-css": "^3.7.0",
     "gulp-coffee": "^2.3.3",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.1",
     "gulp-imagemin": "^2.4.0",
-    "gulp-minify-css": "^1.2.3",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^1.5.2",
     "gulp-util": "^3.0.8",
-    "sass-svg": "^1.0.1"
+    "merge-stream": "^1.0.1",
+    "normalize.css": "^7.0.0",
+    "sass-svg": "^1.0.1",
+    "wingcss": "^1.0.0-beta"
   }
 }

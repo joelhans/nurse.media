@@ -5,11 +5,28 @@
   <div class="grid">
 
     <div class="page__hero front__hero col--8">
-      <h1>{{ page.header.tagline }}arstarst</h1>
+      <h1>{{ page.header.tagline }}</h1>
     </div>
 
+    <ul class="front__featured">
     {% for i in page.collection() %}
-    <section class="client client__{{ i.slug }} col--half" style="background-image: url({{ piece.media['client_bg.jpg'].url }})">
+      <li class="featured__item col--6">
+        <figure>
+          <img src="" />
+          <figcaption>{{ i.content }}</figcaption>
+        </figure>
+        <h3>{{ i.title }}</h3>
+        <p class="featured__item--meta">
+          {% for tag in i.taxonomy.tag %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </p>
+      </li>
+    {% endfor %}
+    </ul>
+
+    {% for i in page.collection() %}
+    <section class="client client__{{ i.slug }} col--6" style="background-image: url({{ piece.media['client_bg.jpg'].url }})">
 
       <a href="#"></a>
       <div class="client__blocker"></div>

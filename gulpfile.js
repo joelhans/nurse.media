@@ -26,7 +26,11 @@ params = {
     ]
   },
   'images' : {
-    'src' : 'src/images/**/*',
+    'src' : [
+      'src/images/**/*',
+      '!src/images/**/*.gvdesign',
+      '!src/images/old/**/*'
+    ],
     'dist' : 'dist/images/'
   }
 };

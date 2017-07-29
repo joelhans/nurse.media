@@ -4,13 +4,18 @@
   <div class="col-8">
 
     <svg id="nurse__type" xmlns="http://www.w3.org/2000/svg" width="400" height="60">
-      <text x="-5" y="50" font-size="50">
+      <defs>
+        <linearGradient id="nurse__gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#9F5B82" />
+          <stop offset="100%" stop-color="#442b75" />
+        </linearGradient>
+      </defs>
+      <text x="-5" y="50" font-size="50" fill="url(#nurse__gradient)" d>
         Nurse
       </text>
     </svg>
 
-    <h2>Is a copywriting and marketing agency in Tucson, Arizona.</h2>
-    <h2>Where brands <span>get shelter</span>.</h2>
+    <h2>A copywriting and marketing agency in Tucson, Arizona.</h2>
 
   </div>
 
@@ -22,37 +27,35 @@
           <stop offset="0" stop-color="#ffc375">
             <animate attributeName="stop-color" values="#ffc375; #fe875d; #ffc375" dur="8s" repeatCount="indefinite"></animate>
           </stop>
-          <stop offset="1" stop-color="#fe875d">
-            <!-- <animate attributeName="stop-color" values="#fe875d; #ffc375; #fe875d" dur="8s" repeatCount="indefinite"></animate> -->
-          </stop>
+          <stop offset="1" stop-color="#fe875d"></stop>
         </linearGradient>
         <linearGradient id="side-gradient" x1="20%" y1="0%" x2="40%" y2="100%" >
           <stop offset="0" stop-color="#fe875d"></stop>
           <stop offset="1" stop-color="#f24430"></stop>
         </linearGradient>
-        <linearGradient id="top-gradient" x1="0%" y1="0%" x2="100%" y2="50%" gradientTransform="rotate(0)">
-          <stop offset="0" stop-color="#fe875d"></stop>
-          <stop offset="1" stop-color="#f24430"></stop>
+        <linearGradient id="top-gradient" x1="0%" y1="0%" x2="60%" y2="60%" gradientTransform="rotate(0)">
+          <stop offset="0" stop-color="#ffc375"></stop>
+          <stop offset="1" stop-color="#fe875d"></stop>
         </linearGradient>
       </defs>
       <g id="left">
         <path fill="url(#side-gradient)" d=" M 100 60 L 100 150 L 60 170 L 60 80 L 100 60 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
-        <path fill="url(#side-gradient)" d=" M 10 70 L 50 50 L 100 60 L 60 80 L 10 70 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
+        <path fill="url(#top-gradient)" d=" M 10 70 L 50 50 L 100 60 L 60 80 L 10 70 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
       </g>
       <g id="main">
         <path fill="url(#side-gradient)" d=" M 170 20 L 170 250 L 130 270 L 130 40 L 170 20 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
-        <path fill="url(#side-gradient)" d=" M 80 30 L 120 10 L 170 20 L 130 40 L 80 30 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
+        <path fill="url(#top-gradient)" d=" M 80 30 L 120 10 L 170 20 L 130 40 L 80 30 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
       </g>
       <g id="bridges">
-        <path fill="url(#top-gradient)" d=" M 120 180 L 160 160 L 210 170 L 170 190 L 120 180 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
-        <path fill="url(#top-gradient)" d=" M 40 130 L 80 110 L 130 120 L 90 140 L 40 130 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
+        <path fill="url(#side-gradient)" d=" M 120 180 L 160 160 L 210 170 L 170 190 L 120 180 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
+        <path fill="url(#side-gradient)" d=" M 40 130 L 80 110 L 130 120 L 90 140 L 40 130 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
       </g>
       <g id="right">
-        <path fill="url(#side-gradient)" d=" M 240 110 L 240 220 L 200 240 L 200 130 L 240 110 Z " />
-        <path fill="url(#top-gradient)" d=" M 150 120 L 190 100 L 240 110 L 200 130 L 150 120 Z " />
+        <path fill="url(#side-gradient)" d=" M 240 110 L 240 220 L 200 240 L 200 130 L 240 110 Z " vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round"/>
+        <path fill="url(#top-gradient)" d=" M 150 120 L 190 100 L 240 110 L 200 130 L 150 120 Z " vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round"/>
       </g>
       <g id="front">
-        <path fill="url(#front-gradient)" d="M 80 124 L 80 30 L 130 40 L 130 176 L 150 180 L 150 120 L 200 130 L 200 190 L 200 239 L 200 240 L 130 226 L 130 270 L 80 260 L 80 174 L 10 160 L 10 70 L 60 80 L 60 120 L 80 124 Z" vector-effect="non-scaling-stroke" stroke-width="0.5" stroke="rgb(254,113,93)" stroke-linejoin="round" />
+        <path fill="url(#front-gradient)" d="M 80 124 L 80 30 L 130 40 L 130 176 L 150 180 L 150 120 L 200 130 L 200 190 L 200 239 L 200 240 L 130 226 L 130 270 L 80 260 L 80 174 L 10 160 L 10 70 L 60 80 L 60 120 L 80 124 Z" vector-effect="non-scaling-stroke" stroke-width="0.2" stroke="rgb(254,113,93)" stroke-linejoin="round" />
       </g>
     </svg>
 

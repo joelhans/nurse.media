@@ -1,16 +1,18 @@
 // VARIABLES AND SETUP
 
-var gulp          = require('gulp'),
-    plumber       = require('gulp-plumber'),
-    rename        = require('gulp-rename'),
-    concat        = require('gulp-concat'),
-    uglify        = require('gulp-uglify'),
-    imagemin      = require('gulp-imagemin'),
-    cache         = require('gulp-cache'),
-    cssnano       = require('gulp-cssnano'),
-    sass          = require('gulp-sass'),
-    merge         = require('merge-stream'),
-    browserSync   = require('browser-sync').create();
+var gulp          = require('gulp');
+var plumber       = require('gulp-plumber');
+var rename        = require('gulp-rename');
+var concat        = require('gulp-concat');
+var uglify        = require('gulp-uglify');
+var imagemin      = require('gulp-imagemin');
+var cache         = require('gulp-cache');
+var cssnano       = require('gulp-cssnano');
+var gutil         = require('gulp-util');
+var sass          = require('gulp-sass');
+var merge         = require('merge-stream');
+var browserSync   = require('browser-sync').create();
+var reload        = browserSync.reload;
 
 params = {
   'scripts' : {
@@ -37,7 +39,10 @@ params = {
 
 // ERROR HANDLING
 
-onError = function(err) {
+var onError = function(err) {
+  // gutil.beep();
+  // gutil.log(err.message);
+  // browserSync.notify(err.message);
   console.log(err.message);
   this.emit('end');
 };
@@ -74,10 +79,7 @@ gulp.task('styles', function() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
     .pipe(gulp.dest(params.styles.dist))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-
+    .pipe(browserSync.stream());
 });
 
 // ## IMAGES
@@ -97,11 +99,11 @@ gulp.task('images', function() {
 
 gulp.task('default', function() {
   browserSync.init({
-    files: ['{templates}/**/*.twig'],
     proxy: 'http://localhost:5000',
     port: 5001,
     open: false
   });
+  gulp.watch("*.twig").on("change", reload);
   gulp.watch(params.styles.src, ['styles']);
   gulp.watch(params.images.src, ['images']);
   // gulp.watch params.scripts.src, ['scripts']

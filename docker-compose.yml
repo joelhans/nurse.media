@@ -13,7 +13,8 @@ services:
       - ADMIN_PERMISSIONS=b
       - ADMIN_FULLNAME=Admin
       - ADMIN_TITLE=Nurse Media
-      - DOMAIN=example.com    # set to your root/apex domain
+      - DOMAIN=localhost:5000
+      - GENERATE_CERTS=false
     volumes:
       - backup:/var/www/grav-admin/
       - .:/var/www/grav-admin/user/themes/nurse

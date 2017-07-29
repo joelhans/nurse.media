@@ -1,38 +1,34 @@
 footer
-  background: white
 
-footer .col--6
-  margin-bottom: 0
+  p
+    font: 400 2rem/1.5 "Quicksand", sans-serif
 
-.footer__copyright p
-  +fontmake($family: "Quicksand", $weight: 700, $margin: 0)
-  color: $gray
-  margin-top: 0
-
-.footer__nav
-  text-align: right
-
-.footer__nav a
-  display: inline-block
-  position: relative
-  +fontmake($family: "Quicksand", $weight: 700, $margin: 0)
-  margin-left: 4rem
-  color: $purple
-  z-index: 0
-  &::after
-    content: attr(data-text)
-    display: block
-    color: $yellow
-    background: $orange
-    position: absolute
-    top: 0
-    left: -5px
-    padding-left: 5px
-    padding-right: 5px
-    z-index: 1
-    clip-path: url("#clip-link")
-    clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0% 100%)
-    transition: 0.2s clip-path ease-in-out
-  &:hover::after
-    clip-path: url("#clip-link-hover")
-    clip-path: polygon(0 10%, 100% 95%, 100% 100%, 0% 100%)
+// .footer__copyright p
+//   +fontmake($family: "Quicksand", $weight: 700, $margin: 0)
+//   color: $gray
+//   margin-top: 0
+//
+// .footer__nav a
+//   display: inline-block
+//   position: relative
+//   +fontmake($family: "Quicksand", $weight: 700, $margin: 0)
+//   // margin-left: 4rem
+//   color: $purple
+//   z-index: 0
+//   &::after
+//     content: attr(data-text)
+//     display: block
+//     color: $yellow
+//     background: $orange
+//     position: absolute
+//     top: 0
+//     left: -5px
+//     padding-left: 5px
+//     padding-right: 5px
+//     z-index: 1
+//     clip-path: url("#clip-link")
+//     clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0% 100%)
+//     transition: 0.2s clip-path ease-in-out
+//   &:hover::after
+//     clip-path: url("#clip-link-hover")
+//     clip-path: polygon(0 10%, 100% 95%, 100% 100%, 0% 100%)

@@ -1,0 +1,75 @@
+
+
+.alert.notices
+  margin: 0 0 3rem
+
+  p
+    margin: 1.4rem 0 1.3rem
+
+.alert.notices.red
+  background: transparentize($orange, 0.95)
+  border-left: 10px solid $orange
+  border-radius: 4px
+  color: $orange
+
+.alert.notices.green
+  background: transparentize($purple, 0.95)
+  border-left: 10px solid $purple
+  border-radius: 4px
+  color: $purple
+
+.form-field
+  margin-bottom: 2rem
+
+  .required
+    color: $orange
+
+  input,
+  textarea
+    background: transparentize($d-blue, 0.95)
+    border: 0
+    border-radius: 4px
+    font: 400 1.4rem/1.5 "Quicksand", sans-serif
+    padding: 1.4rem 1rem
+
+    &:hover,
+    &:focus
+     border: 0
+     outline: 0
+
+.button
+  background: none
+  border: 0
+  border-radius: 4px
+  box-shadow: rgba(0,0,0,0.2) 0 6px 18px
+  color: white
+  font: 700 1.86rem/1.5 "Quicksand", sans-serif
+  padding: 1.2rem 1.8rem
+  position: relative
+
+  &:before,
+  &:after
+    border-radius: 4px
+    content: ''
+    display: block
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: -1
+
+  &:before
+    background: linear-gradient(160deg, $orange, $purple)
+
+  &:after
+    background: linear-gradient(160deg, $pink 30%, $purple)
+    opacity: 1
+    transition: opacity 0.5s ease
+
+  &:hover
+    background: none
+    cursor: pointer
+
+    &:after
+      opacity: 0

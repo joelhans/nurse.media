@@ -3,11 +3,26 @@
 {% block content %}
 
   <div class="row">
-
     <div class="col">
-      {{ page.content }}
-    </div>
 
+      <!-- {{ page.content }} -->
+
+    </div>
+  </div>
+
+  <div id="about" class="row">
+    <div class="col">
+
+      <p>Nurse is currently a one-person operation.</p>
+
+      <figure class="me">
+        <img
+        src="{{ url('theme://dist/images/joel_hans_headshot_web.jpg') }}"
+        alt="Joel Hans">
+        <figcaption>Joel Hans</figcaption>
+      </figure>
+
+    </div>
   </div>
 
 {% endblock %}

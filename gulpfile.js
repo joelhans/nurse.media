@@ -24,7 +24,8 @@ params = {
     'dist' : 'dist/styles/',
     'vendor' : [
       'node_modules/normalize.css/normalize.css',
-      'node_modules/wingcss/dist/wing.css'
+      // 'node_modules/wingcss/dist/wing.css',
+      'node_modules/milligram/dist/milligram.css'
     ]
   },
   'images' : {
@@ -103,7 +104,7 @@ gulp.task('default', function() {
     port: 5001,
     open: false
   });
-  gulp.watch("*.twig").on("change", reload);
+  gulp.watch("**/*.twig").on("change", reload);
   gulp.watch(params.styles.src, ['styles']);
   gulp.watch(params.images.src, ['images']);
   // gulp.watch params.scripts.src, ['scripts']

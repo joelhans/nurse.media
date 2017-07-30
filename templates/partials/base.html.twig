@@ -31,11 +31,13 @@
 
 <body>
 
-  {% include 'partials/header.html.twig' %}
+  <header>
+    {% include 'partials/header.html.twig' %}
+  </header>
 
-  <main class="container">
-    {% block content %}{% endblock %}
-
+  <main>
+    {% include 'partials/work.html.twig' %}
+    {% include 'partials/about.html.twig' %}
     {% include 'partials/contact.html.twig' %}
   </main>
 

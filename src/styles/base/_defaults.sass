@@ -21,26 +21,40 @@ body
   color: white
 
 //------------------------------------------------------------
+//  Overrides
+//------------------------------------------------------------
+
+.container
+  max-width: 96rem
+
+textarea
+  height: auto
+  min-height: 12rem
+
+//------------------------------------------------------------
 //  Main
 //------------------------------------------------------------
 
 main
   position: relative
 
+main .container
+  margin-bottom: 12rem
+
 //------------------------------------------------------------
 //  Header
 //------------------------------------------------------------
 
 header
-  padding-top: 5rem
+  margin-bottom: 12rem
+
+header .row
+  padding-top: 8rem
+  align-items: center
 
 #nurse__type
   fill: $purple
   font-family: 'Anders'
-
-header h1
-  font: 700 4.4rem/1.5 "Quicksand", sans-serif
-  margin-top: 1rem
 
 header h2
   font: 400 2.6rem/1.5 "Quicksand", sans-serif
@@ -55,8 +69,26 @@ header h2
   max-width: 100%
   width: 100%
 
-
-
 //------------------------------------------------------------
-//  Footer
+//  Stripes
 //------------------------------------------------------------
+
+.stripes
+  height: 160px
+  margin-bottom: 12rem
+  overflow: hidden
+  transform: skewY(-8deg)
+  transform-origin: 50%
+  width: 100%
+
+.stripes--work
+  background: linear-gradient(181deg, transparentize($pink, 0.8), rgb(250,250,250) 70%)
+  height: 160px
+  margin-bottom: 12rem
+  overflow: hidden
+  transform: skewY(-8deg)
+  transform-origin: 50%
+  width: 100%
+
+.stripes--about
+  background: linear-gradient(181deg, transparentize($orange, 0.8), rgb(250,250,250) 70%)

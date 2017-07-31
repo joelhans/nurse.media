@@ -24,7 +24,6 @@ params = {
     'dist' : 'dist/styles/',
     'vendor' : [
       'node_modules/normalize.css/normalize.css',
-      // 'node_modules/wingcss/dist/wing.css',
       'node_modules/milligram/dist/milligram.css'
     ]
   },
@@ -80,7 +79,9 @@ gulp.task('styles', function() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
     .pipe(gulp.dest(params.styles.dist))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 // ## IMAGES
@@ -100,6 +101,7 @@ gulp.task('images', function() {
 
 gulp.task('default', function() {
   browserSync.init({
+    files: ['{templates}/**/*.twig'],
     proxy: 'http://localhost:5000',
     port: 5001,
     open: false

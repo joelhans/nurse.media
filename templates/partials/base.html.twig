@@ -8,10 +8,10 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title }}</title>
+  <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.metadata.description }}">
   <link rel="shortcut icon" href="{{ url('theme://dist/images/favicon.ico') }}" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/rss.xml">
+  <!-- <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/rss.xml"> -->
 
   {% block stylesheets %}
     {% do assets.addCss('theme://dist/styles/app.min.css',100) %}
@@ -19,13 +19,11 @@
   {{ assets.css() }}
 
   {% block javascripts %}
-      {% do assets.addJs('theme://bower_components/jquery/dist/jquery.min.js') %}
-      {% do assets.addJs('theme://dist/scripts/main.min.js') %}
+    {% do assets.addJs('theme://dist/scripts/main.min.js') %}
   {% endblock %}
   {{ assets.js() }}
 
-  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,800i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:400,400i|Quicksand:400,500,700" rel="stylesheet">
 
 </head>
 

@@ -1,20 +1,24 @@
-//------------------------------------------------------------
+//---------------------------------------------------------
 //  About
-//------------------------------------------------------------
+//---------------------------------------------------------
 
-.me
-  margin: 0
-  text-align: center
-  width: 150px
+// Story --------------------------------------------------
+
+.story
+  align-items: center
+  margin-bottom: 6rem
+
+  h1
+    font: 400 2.6rem/1.5 "Quicksand", sans-serif
 
   img
-    border-radius: 80px
-    width: 150px
+    border-radius: 4px
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2)
 
-  figcaption
-    font: 400 1.7rem/1.5 "Quicksand"
+// Services -----------------------------------------------
 
 .services
+  margin-bottom: 6rem
 
   h1
     font: 400 2.2rem/1.5 "Quicksand", sans-serif
@@ -24,3 +28,40 @@
 
   ul li
     font: 500 1.6rem/1.5 "Quicksand", sans-serif
+
+// People -------------------------------------------------
+
+.people
+  align-items: center
+
+  ul
+    background: transparentize($purple, 0.95)
+    border-left: 10px solid $purple
+    border-radius: 4px
+    display: inline-block
+    list-style-type: none
+    padding: 1px 30px
+
+  ul li
+    margin: 1rem 0
+
+  a
+    color: $pink
+
+    &:hover
+      color: $purple
+
+// My bio -------------------------------------------------
+
+.me
+  margin: 0
+  text-align: center
+  width: 100%
+
+  img
+    border-radius: 200px
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2)
+    width: 100%
+
+  figcaption
+    font: 400 1.7rem/1.5 "Quicksand"

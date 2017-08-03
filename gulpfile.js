@@ -108,6 +108,6 @@ gulp.task('default', function() {
   });
   gulp.watch("**/*.twig").on("change", reload);
   gulp.watch(params.styles.src, ['styles']);
-  gulp.watch(params.images.src, ['images']);
+  // gulp.watch(params.images.src, ['images']);
   // gulp.watch params.scripts.src, ['scripts']
 });

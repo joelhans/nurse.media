@@ -1,0 +1,47 @@
+<header>
+
+  <div class="columns">
+    <div class="breadcrumbs column col-4 col-ml-auto text-center">
+
+      <a href="/">Joel Hans</a> › {{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
+     
+    </div>
+    <nav class="navigation column col-4 text-right">
+
+      <a href="/blog/">Blog</a>
+      <a href="/stories/">Stories</a>
+
+    </nav>
+  </div>
+
+  <div class="hero text-center">
+
+    <h1>
+      <a href="/" text="Joel Hans">
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="80">
+          <defs>
+            <linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="30%" stop-color="#9F5B82"></stop>
+              <stop offset="100%" stop-color="#442b75"></stop>
+            </linearGradient>
+          </defs>
+          <text x="300" y="70" fill="url(#a)" text-anchor="middle">
+            Joel Hans
+          </text>
+        </svg>
+      </a>
+    </h1>
+
+  </div>
+</header>
+
+<!-- templates -->
+{{ define "breadcrumb" }}
+  {{ if .currentPage.Parent }}
+    {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
+  {{ end }}
+  {{ if eq .id .currentPage.UniqueID }}
+    {{ .currentPage.Title }}
+  {{ end }}
+{{ end }}
+

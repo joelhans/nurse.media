@@ -1,0 +1,103 @@
+$primary-color: #22559c;
+$secondary-color: #f27370;
+$dark-color: #22559c;
+
+@import "node_modules/spectre.css/src/spectre";
+
+@font-face {
+  font-family: 'Anders';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/Anders.woff') format('woff');
+}
+
+body {
+  overflow-y: scroll;
+  background: white;
+  color: $dark-color;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 100%;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  height: 200px;
+  margin: 2rem 0 3rem;
+
+  &:before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 250px;
+    background: linear-gradient(-45deg, #6c567b, #c06c84, #f67280, #f8b195);
+    content: '';
+    background-size: 400% 400%;
+    animation: Gradient 20s ease infinite;
+  }
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+header a,
+header a:visited {
+  color: white;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.breadcrumbs {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.navigation {
+  margin: 0 0 2rem;
+  font-size: 0.7rem;
+
+  a {
+    color: white;
+  }
+  
+  a:last-of-type {
+    margin: 0 0 0 1rem;
+  }
+}
+
+.hero h1 {
+  font-family: 'Anders';
+  font-size: 3rem;
+  font-weight: 700;
+
+  text {
+    fill: white;
+  }
+}
+
+a {
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}

@@ -86,12 +86,14 @@ a, button {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  transition: filter 0.3s ease;
+  transition: all 0.3s ease;
   min-height: 20rem;
+  border-radius: 32% 84% 67% 27% / 81% 41% 71% 35%;
 }
 
 .blog_latest a:hover {
   filter: grayscale(1);
+  border-radius: 40% 60%;
 }
 
 /* Blog / single post

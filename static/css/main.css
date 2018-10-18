@@ -6407,15 +6407,15 @@ button {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  transition: -webkit-filter .3s ease;
-  transition: filter .3s ease;
-  transition: filter .3s ease, -webkit-filter .3s ease;
+  transition: all .3s ease;
   min-height: 20rem;
+  border-radius: 32% 84% 67% 27% / 81% 41% 71% 35%;
 }
 
 .blog_latest a:hover {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+  border-radius: 40% 60%;
 }
 
 /* Blog / single post

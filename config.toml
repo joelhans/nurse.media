@@ -1,3 +1,9 @@
-baseURL = "http://nurse.media/"
+baseURL = "https://nurse.media/"
 languageCode = "en-us"
-title = "Nurse Media"
+title = "Nurse - Nurtured content for brands that need to grow"
+
+[params]
+  favicon = "img/favicon.ico"
+  description = "It's a harsh world for content out there. Let's nurture yours. Nurse is content for brands that need to grow."
+  images = ["site-feature-image.jpg"]
+  title = "Nurse - Nurtured content for brands that need to grow"

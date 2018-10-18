@@ -1,0 +1,129 @@
+/* Initial tailwind imports
+=============================================================== */
+
+@tailwind preflight;
+@tailwind components;
+
+/* Custom utilities
+=============================================================== */
+
+a, button {
+  transition: 0.3s all ease;
+  @apply no-underline;
+}
+
+.button {
+  @apply inline-block rounded-sm;
+}
+
+/* Tailwind utilities
+=============================================================== */
+
+@tailwind utilities;
+
+/* Other customizations/standards
+=============================================================== */
+
+.text-display {
+  background: linear-gradient(to bottom right, config('colors.orange'), config('colors.purple'));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.3;
+  @apply font-display;
+}
+
+/* Homepage
+=============================================================== */
+
+@font-face {
+  font-family: 'Anders';
+  font-style: normal; 
+  font-weight: 400;
+  src: url('../font/Anders.woff') format('woff'), url('../font/Anders.ttf') format('ttf');
+}
+
+.logo {
+  max-height: 50px;
+}
+
+.logo svg {
+  max-height: 50px;
+  font-family: 'Anders';
+}
+
+.logo text {
+  dominant-baseline: middle;
+  text-anchor: left; 
+}
+
+.tagline span {
+  -webkit-text-fill-color: config('colors.green');
+}
+
+.cta_course a {
+  width: 360px;
+  height: 66px;
+}
+
+.cta_course input {
+  width: 360px;
+  height: 66px;
+  margin-right: -5px;
+}
+
+.cta_course button {
+  height: 66px;
+}
+
+/* Homepage / latest blog section
+=============================================================== */
+
+.blog_latest {
+  min-height: 20rem;
+}
+
+.blog_latest a {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: filter 0.3s ease;
+  min-height: 20rem;
+}
+
+.blog_latest a:hover {
+  filter: grayscale(1);
+}
+
+/* Blog / single post
+=============================================================== */
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
+  @apply leading-normal mt-10 mb-6;
+}
+
+.content > *:first-of-type {
+  @apply mt-0;
+}
+
+.content p, .content ul, .content ol {
+  @apply text-lg leading-normal mb-6;
+}
+
+/* Blog / single post / storytelling sidebar
+=============================================================== */
+
+@screen md {
+  .sidebar_storytelling {
+    top: 0%;
+  }
+}
+
+@screen lg {
+  .sidebar_storytelling {
+    top: 50%;
+  }
+}

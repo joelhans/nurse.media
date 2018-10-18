@@ -1,9 +1,167 @@
 {{ define "main" }}
 
-<p>This is my main page. Cool.</p>
+<div id="intro" class="container mx-auto mt-32 mb-32">
+  <div class="flex flex-wrap items-center md:-mx-6">
 
-{{ range .Data.Pages }}
-  <a href="{{ .Permalink }}">{{ .Title }}</a>
-{{ end }}
+    <div class="sm:w-full md:w-3/4 px-6">
+
+      <h1 class="tagline text-display text-3xl lg:text-6xl font-display text-orange mb-8">{{ .Params.header | safeHTML }}</h1>
+      <p class="text-lg lg:text-2xl mb-8">{{ .Params.subhead | safeHTML }}</p>
+      <div class="sm:w-full md:w-2/3">
+        <a class="button inline-block text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
+        <br />
+        <div class="cta_course mt-4">
+          <a class="button inline-block text-grey-darker font-bold hover:text-orange" href="#" target="_blank">Free storytelling course<span class="block font-normal mt-1">I'll show you how to tell your brand's story to maximize conversions in 7 simple steps.</span></a>
+          <div class="course_input mt-4 hidden">
+            <input class="button inline-block text-grey-dark font-bold border border-grey p-6 rounded-r-none hover:text-orange cursor-pointer" placeholder="Enter your email" />
+            <button class="button inline-block text-white bg-orange p-6 hover:bg-green">Show me how ⚡</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+</div>
+
+<!-- <div id="quotes" class="container mx-auto mb-32">
+  <div class="flex flex-wrap items-center md:-mx-6">
+
+    <div class="sm:w-full md:w-1/2 lg:w-1/3 px-6 md:mb-4">
+
+      <blockquote class="text-xl text-grey-darkest bg-white p-12 shadow-md rounded">Our experience with Joel was wonderful. He was very professional and took the time to really understand what we wanted. The communication about edits went very smoothly as well and we are really happy with the final copy. <cite class="block text-lg mt-4"><span class="font-bold text-orange">&mdash;</span> Jeremie Paulus, <span class="text-green italic">Travelti</span></cite></blockquote>
+
+    </div>
+    <div class="sm:w-full md:w-1/2 lg:w-1/3 px-6 sm:mt-12 md:mt-0">
+
+      <blockquote class="text-xl text-grey-darkest bg-white p-12 shadow-md rounded">Terrific consultant. <cite class="block text-lg mt-4"><span class="font-bold text-orange">&mdash;</span> XXXX, <span class="text-green italic">AutoDesk</span></cite></blockquote>
+      
+      <blockquote class="text-xl text-grey-darkest bg-white p-12 mt-12 shadow-md rounded">Delivered on-time and exceeded our expectations&mdash;look forward to working with Joel again. <cite class="block text-lg mt-4"><span class="font-bold text-orange">&mdash;</span> Philip Gracias, <span class="text-green italic">EEMC</span></cite></blockquote>
+
+    </div>
+    <div class="sm:w-full lg:w-1/3 px-6 sm:mt-12">
+
+      <blockquote class="text-xl text-grey-darkest bg-white p-12 shadow-md rounded">Joel killed it! He's a great writer and you can tell he really did his research. He finished on schedule and provided everything I asked for. I highly recommend him for your blog posts and I look forward to hiring him again. <cite class="block text-lg mt-4"><span class="font-bold text-orange">&mdash;</span> XXXX, <span class="text-green italic">Drone 55</span></cite></blockquote>
+
+    </div>
+    
+  </div> 
+</div> -->
+
+<div id="blog" class="container mx-auto mb-32">
+  <div class="flex flex-wrap items-center md:-mx-6">
+
+    {{ range first 1 .Pages }}
+    <div class="blog_latest w-full lg:w-2/3 mx-auto px-6" >
+      <a href="{{ .Permalink }}" class="block flex flex-col justify-center p-6" style="background-image: linear-gradient(to bottom right, rgba(33,33,33,0.7), rgba(33,33,33,0.9)), url({{ .RelPermalink }}{{ .Params.image }});">
+
+        <h2 class="relative w-full text-xl text-white text-center mb-6 px-6 z-10">Latest from <em>The Sproutling</em>, our blog:</h2>
+        <h3 class="relative w-full text-4xl text-orange text-center px-6 z-10" href="{{ .Permalink }}">{{ .Title }}</h3>
+
+      </a>
+      
+    </div>
+    {{ end }}
+
+  </div>
+</div>
+
+
+<div id="process" class="container mx-auto mb-32">
+  <div class="flex flex-wrap items-center md:-mx-6">
+
+    <div class="sm:w-full lg:w-2/3 mx-auto px-6">
+    
+      <h2 class="text-5xl text-display text-center">People first buy into your story. Then they start to believe in your solution.</h2>
+
+    </div>
+
+    <div class="sm:w-full lg:w-1/2 mx-auto mt-12 px-6">
+    
+      <h3 class="text-2xl text-grey-darker">"Joel killed it! He's a great writer and you can tell he really did his research. I highly recommend him and I look forward to hiring him again." <div class="block"><span class="font-bold text-orange">&mdash;</span> XXXX, <span class="text-green italic">Drone 55</span></div></h3>
+    
+    </div>
+    
+  </div>
+  <div class="flex flex-wrap md:-mx-6 mt-32">
+
+    <div class="sm:w-full md:w-1/2 px-6">
+    
+      <h3 class="text-4xl">The problem: 99% of your visitors don't become customers.</h3>
+
+    </div>
+    <div class="sm:w-full md:w-1/2 px-6 mt-4">
+    
+      <p>Simply put, they don't understand your story. </p>
+
+    </div>
+    
+  </div> 
+</div>
+
+<div id="clients" class="bg-green mb-32">
+  <div class="container mx-auto">
+    <div class="md:-mx-6">
+
+      <div class="md:w-full lg:w-3/4 flex mx-auto align-center justify-center flex-wrap text-white py-20 px-6">
+
+        <h2 class="w-full flex-grow font-display text-4xl font-bold text-white text-center mt-4 mb-10">Brands I've helped nurture through content:</h2>
+        <div class="text-3xl ml-8 mr-8 mb-4">Johnson & Johnson</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">IBM</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">Autodesk</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">SSD Nodes</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">IMG SRVR</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">OpenText</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">ClickCapital</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">LogicGate</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">RTInsights</div>
+        <div class="text-3xl ml-8 mr-8 mb-4">Camden Gear</div>
+      
+      </div>
+      
+    </div> 
+  </div> 
+</div>
+
+<div id="about" class="container mx-auto mb-32">
+  <div class="flex flex-wrap md:-mx-6">
+
+    <div class="sm:w-full md:w-1/2 lg:w-3/5 px-6">
+
+      <h2 class="text-5xl text-display mb-8">Who, or what, is Nurse?</h2>
+      <h3 class="text-3xl font-bold font-display text-green mb-8">It's a miracle anything lives here.</h3>
+      <p class="text-xl mb-6">High elevation, 280-something days of intense sun every year, 110°F summers, an average of 12 inches of rain every year. And yet, the legendary saguaro cactus, the universal symbol for <em>all</em> deserts (it's even an emoji! 🌵) only grows in the Sonoran Desert in Arizona, California, and Mexico.</p>
+      <p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
+      <p class="text-xl mb-6">As a vulnerable seedling, the young saguaro has next to no chance of surviving the desert's extreme conditions. It needs the help of a mature mesquite, ironwood, or palo verde tree, otherwise known as a <em>nurse tree</em>. Over the next few decades (unlike your business, saguaros tend to be slow-growers), the cactus benefits from the nurse tree's microclimate of shade and humidity.</p>
+      <p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p>
+
+    </div>
+    <div class="sm:w-1/2 md:w-1/2 lg:w-2/5 px-6 sm:mx-auto">
+    
+      <img src="{{ "/img/saguaro.jpg" | absURL }}" />
+    
+    </div>
+    
+  </div> 
+</div>
+
+<div id="final" class="container mx-auto mb-32">
+  <div class="flex align-center md:-mx-6">
+
+    <div class="w-1/2 px-6">
+    
+      <h2 class="text-5xl text-display">Last chance!</h2>
+      <p class="text-2xl text-grey-darkest mt-8">Let's use content to turn your visitors into your users. After a 20-minute call, you'll walk away with some important new knowledge:</p>
+      <ul class="text-xl text-grey-darkest mt-8 mb-12">
+        <li class="mb-2">A short-term path to growth through content</li>
+        <li class="mb-2">Pointers on what's working and what isn't with your content</li>
+        <li>Whether we're right for each other!</li>
+      </ul>
+      <a class="button inline-block text-xl font-bold text-white bg-orange p-6 hover:bg-green" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one }}</a>
+    
+    </div>
+
+  </div>
+</div>
 
 {{ end }}

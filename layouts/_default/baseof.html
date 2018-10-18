@@ -4,35 +4,37 @@
   <head>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>{{ block "title" . }}
       {{ .Site.Title }}
     {{ end }}</title>
 
-    <link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i" rel="stylesheet"> 
+    {{ if .Site.Params.favicon }}
+      <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />
+    {{ end }}
+
+    <link rel="stylesheet" href="{{ "/css/main.css" | absURL }}" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700|Karla:400,400i,700" rel="stylesheet">  
     
-    {{ with .OutputFormats.Get "rss" -}}
-      {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
   </head>
-  <body>
+  <body class="text-grey-darkest font-sans bg-grey-lightest">
 
-    <main>
-      <div class="container">
+  {{ partial "header.html" . }}
 
-        {{ partial "header.html" . }}
+  <main>
+    
+    {{ block "main" . }}{{ end }}
 
-        <!-- Code that all your templates share, like a header -->
-        {{ block "main" . }}
-          <!-- The part of the page that begins to differ between templates -->
-        {{ end }}
-        {{ block "footer" . }}
-        <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-        {{ end }}
+  </main>
 
-      </div>
-    </main>
+  {{ partial "footer.html" . }}
+
+  <script src="{{ "/js/main.js" | absURL }}"></script>
   
   </body>
 </html>

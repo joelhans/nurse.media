@@ -24,12 +24,15 @@ a, button {
 /* Other customizations/standards
 =============================================================== */
 
-.text-display {
+.font-display {
+  line-height: 1.3;
+}
+
+.text-grad {
   background: linear-gradient(to bottom right, config('colors.orange'), config('colors.purple'));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.3;
-  @apply font-display;
 }
 
 /* Homepage
@@ -54,6 +57,10 @@ a, button {
 .logo text {
   dominant-baseline: middle;
   text-anchor: left; 
+}
+
+.tagline {
+  line-height: 1.1;
 }
 
 .tagline span {
@@ -94,6 +101,26 @@ a, button {
 .blog_latest a:hover {
   filter: grayscale(1);
   border-radius: 40% 60%;
+}
+
+/* Homepage / latest blog section
+=============================================================== */
+
+.rad {
+  background: linear-gradient(to bottom left, config('colors.green') -40%, transparent 50%), linear-gradient(to bottom right, config('colors.purple'), config('colors.orange'));
+  border-radius: 32% 84% 67% 27% / 81% 41% 71% 35%;
+}
+
+/* Homepage / clients
+=============================================================== */
+
+.client {
+  // filter: grayscale(1);
+  max-height: 50px;
+}
+
+.imgsrvr {
+  filter: invert(1);
 }
 
 /* Blog / single post

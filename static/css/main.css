@@ -6345,12 +6345,15 @@ button {
 /* Other customizations/standards
 =============================================================== */
 
-.text-display {
+.font-display {
+  line-height: 1.3;
+}
+
+.text-grad {
   background: linear-gradient(to bottom right, #f27370, #442b75);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.3;
-  font-family: Poppins, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 /* Homepage
@@ -6375,6 +6378,10 @@ button {
 .logo text {
   dominant-baseline: middle;
   text-anchor: left;
+}
+
+.tagline {
+  line-height: 1.1;
 }
 
 .tagline span {
@@ -6416,6 +6423,27 @@ button {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   border-radius: 40% 60%;
+}
+
+/* Homepage / latest blog section
+=============================================================== */
+
+.rad {
+  background: linear-gradient(to bottom left, #00a891 -40%, transparent 50%), linear-gradient(to bottom right, #442b75, #f27370);
+  border-radius: 32% 84% 67% 27% / 81% 41% 71% 35%;
+}
+
+/* Homepage / clients
+=============================================================== */
+
+.client {
+  //: grayscale(1);
+  max-height: 50px;
+}
+
+.imgsrvr {
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 /* Blog / single post

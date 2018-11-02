@@ -28,7 +28,6 @@ a, button {
   background: linear-gradient(to bottom right, config('colors.orange'), config('colors.purple'));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.3;
 }
 
 /* Homepage

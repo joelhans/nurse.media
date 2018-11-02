@@ -4461,6 +4461,10 @@ button {
   padding: 8rem;
 }
 
+.p-40 {
+  padding: 10rem;
+}
+
 .p-px {
   padding: 1px;
 }
@@ -4603,6 +4607,16 @@ button {
 .px-32 {
   padding-left: 8rem;
   padding-right: 8rem;
+}
+
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.px-40 {
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .py-px {
@@ -4837,6 +4851,22 @@ button {
 
 .pl-32 {
   padding-left: 8rem;
+}
+
+.pt-40 {
+  padding-top: 10rem;
+}
+
+.pr-40 {
+  padding-right: 10rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
+}
+
+.pl-40 {
+  padding-left: 10rem;
 }
 
 .pt-px {
@@ -6353,7 +6383,6 @@ button {
   background: linear-gradient(to bottom right, #f27370, #442b75);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.3;
 }
 
 /* Homepage
@@ -6378,10 +6407,6 @@ button {
 .logo text {
   dominant-baseline: middle;
   text-anchor: left;
-}
-
-.tagline {
-  line-height: 1.1;
 }
 
 .tagline span {
@@ -10270,6 +10295,10 @@ svg tspan {
     padding: 8rem;
   }
 
+  .sm\:p-40 {
+    padding: 10rem;
+  }
+
   .sm\:p-px {
     padding: 1px;
   }
@@ -10412,6 +10441,16 @@ svg tspan {
   .sm\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .sm\:py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .sm\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .sm\:py-px {
@@ -10646,6 +10685,22 @@ svg tspan {
 
   .sm\:pl-32 {
     padding-left: 8rem;
+  }
+
+  .sm\:pt-40 {
+    padding-top: 10rem;
+  }
+
+  .sm\:pr-40 {
+    padding-right: 10rem;
+  }
+
+  .sm\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .sm\:pl-40 {
+    padding-left: 10rem;
   }
 
   .sm\:pt-px {
@@ -15928,6 +15983,10 @@ svg tspan {
     padding: 8rem;
   }
 
+  .md\:p-40 {
+    padding: 10rem;
+  }
+
   .md\:p-px {
     padding: 1px;
   }
@@ -16070,6 +16129,16 @@ svg tspan {
   .md\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .md\:py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .md\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .md\:py-px {
@@ -16304,6 +16373,22 @@ svg tspan {
 
   .md\:pl-32 {
     padding-left: 8rem;
+  }
+
+  .md\:pt-40 {
+    padding-top: 10rem;
+  }
+
+  .md\:pr-40 {
+    padding-right: 10rem;
+  }
+
+  .md\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .md\:pl-40 {
+    padding-left: 10rem;
   }
 
   .md\:pt-px {
@@ -21586,6 +21671,10 @@ svg tspan {
     padding: 8rem;
   }
 
+  .lg\:p-40 {
+    padding: 10rem;
+  }
+
   .lg\:p-px {
     padding: 1px;
   }
@@ -21728,6 +21817,16 @@ svg tspan {
   .lg\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .lg\:py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .lg\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .lg\:py-px {
@@ -21962,6 +22061,22 @@ svg tspan {
 
   .lg\:pl-32 {
     padding-left: 8rem;
+  }
+
+  .lg\:pt-40 {
+    padding-top: 10rem;
+  }
+
+  .lg\:pr-40 {
+    padding-right: 10rem;
+  }
+
+  .lg\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .lg\:pl-40 {
+    padding-left: 10rem;
   }
 
   .lg\:pt-px {
@@ -27244,6 +27359,10 @@ svg tspan {
     padding: 8rem;
   }
 
+  .xl\:p-40 {
+    padding: 10rem;
+  }
+
   .xl\:p-px {
     padding: 1px;
   }
@@ -27386,6 +27505,16 @@ svg tspan {
   .xl\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .xl\:py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .xl\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .xl\:py-px {
@@ -27620,6 +27749,22 @@ svg tspan {
 
   .xl\:pl-32 {
     padding-left: 8rem;
+  }
+
+  .xl\:pt-40 {
+    padding-top: 10rem;
+  }
+
+  .xl\:pr-40 {
+    padding-right: 10rem;
+  }
+
+  .xl\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .xl\:pl-40 {
+    padding-left: 10rem;
   }
 
   .xl\:pt-px {

@@ -67,45 +67,38 @@
 </div> */}}
 
 
-<div id="process" class="container mx-auto mb-32 pt-32 border-t-2">
-  <div class="flex flex-wrap items-center md:-mx-6">
+<div id="process" class="py-40 border-t-2">
+  <div class="container mx-auto">
+    <div class="flex md:-mx-10">
 
-    <div class="sm:w-full lg:w-2/3 px-6">
-    
-      <h2 class="rad text-5xl font-bold text-white leading-tighter -ml-12 pl-12 pt-16 pb-12">People buy stories, not products. Let's clarify yours.</h2>
-      <p>I use a proven framework that helps you create a clearer message for your customers and your company.</p>
-      <a class="button inline-block text-lg font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
-
-    </div>
-
-    <div class="sm:w-full lg:w-1/3 px-6">
-    
-      <h3>1. Develop a clear story.</h3>
-      <p>Your brand has power. Leverage my proven framework to say what you do with clarity and confidence.</p>
-      <h3>2. Free up your time.</h3>
-      <p>You know how to run your business. Work with an expert so you can focus on the tasks you know best.</p>
-      <h3>3. Find more customers.</h3>
-      <p>When customers believe in you <em>and</em> your products, 
-
-    </div>
-
-    
-  </div>
-  <div class="flex flex-wrap md:-mx-6 mt-16">
-
-    <div class="sm:w-full md:w-1/2 px-6">
-    
+      <div class="w-full lg:w-2/3 px-10">
       
+        <h2 class="rad text-5xl font-bold text-white leading-tighter -ml-12 pl-12 pt-16 pb-12">People buy stories, not products. Let's clarify yours.</h2>
+        <p class="text-xl leading-tight mt-12 mb-8">I use a proven framework that helps you create a clearer message for your customers and your company.</p>
+        <a class="button inline-block text-lg font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
+
+      </div>
+
+      <div class="w-full lg:w-1/3 px-10 pt-16">
+      
+        <h3 class="text-3xl text-green mb-4">1. Develop a clear story.</h3>
+        <p class="text-xl leading-tight mb-6">Your brand has power. Leverage my proven framework to say what you do with clarity and confidence.</p>
+        <h3 class="text-3xl text-green mb-4">2. Free up your time.</h3>
+        <p class="text-xl leading-tight mb-6">You know how to run your business. Work with an expert so you can focus on the tasks you know best.</p>
+        <h3 class="text-3xl text-green mb-4">3. Find more customers.</h3>
+        <p class="text-xl leading-tight mb-6">When customers believe in you <em>and</em> your products, your marketing makes sense and your business grows.</p>
+
+      </div>
+
     </div>
-    
   </div>
 </div>
 
-<div id="clients" class="mb-32">
+<div id="clients" class="border-t-2 py-40">
   <div class="container mx-auto">
-    <div class="md:-mx-6">
+    <div class="flex flex-wrap md:-mx-10">
 
-      <div class="w-full flex mx-auto align-center justify-center flex-wrap text-white px-6">
+      <div class="w-full flex mx-auto align-center justify-center flex-wrap text-white px-10">
 
         <h2 class="w-full flex-grow font-display text-2xl font-bold text-green text-center mt-4 mb-10">Brands I've helped nurture through content:</h2>
         <img class="client max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/autodesk.svg" | absURL }}" />
@@ -114,12 +107,20 @@
 
       </div>
 
-    </div>
-    <div class="md:-mx-6">
+      <div class="flex align-center w-full lg:w-2/3 mx-auto mt-20 px-10">
 
-      <div class="sm:w-full lg:w-1/2 mx-auto mt-20 px-6">
+        <div class="w-1/3">
 
-        <h3 class="text-3xl text-grey-darker font-normal">"Joel killed it! He's a great writer and you can tell he really did his research. I highly recommend him and I look forward to hiring him again." <div class="block font-bold mt-4"><span class="text-orange">&mdash;</span> XXXX, <span class="text-green italic">Drone 55</span></div></h3>
+          <img class="rad" src="{{ "/img/brands/cassidy_warren.jpg" | absURL }}" alt="Cassidy Warren picture" />
+
+        </div>
+        <div class="w-2/3 pl-10">
+          
+          <blockquote class="text-3xl text-grey-darker font-normal">Our experience with Joel was wonderful. He was very professional and took the time to really understand what we wanted. The communication about edits went very smoothly as well and we are really happy with the final copy. <cite class="block font-bold mt-4"><span class="font-bold text-orange">&mdash;</span> Cassidy Warren, <span class="text-green italic">Travelti</span></cite></blockquote>
+        
+        </div>
+
+        {{/* <h3 class="text-3xl text-grey-darker font-normal">"Joel killed it! He's a great writer and you can tell he really did his research. I highly recommend him and I look forward to hiring him again." <div class="block font-bold mt-4"><span class="text-orange">&mdash;</span> XXXX, <span class="text-green italic">Drone 55</span></div></h3> */}}
 
       </div>
 
@@ -127,25 +128,31 @@
   </div>
 </div>
 
-<div id="process" class="container mx-auto mb-32">
-  <div class="flex flex-wrap items-center md:-mx-6">
+<div id="about" class="border-t-2 py-40">
+  <div class="container mx-auto">
+    <div class="flex flex-wrap md:-mx-10">
 
-    <div class="rad sm:w-full lg:w-2/3 mx-auto px-6">
+      <div class="sm:w-full md:w-1/2 lg:w-3/5 px-10">
+
+        <h2 class="text-5xl font-display text-grad leading-tight mb-8">Who is Nurse?</h2>
+        <h3 class="text-3xl font-bold font-display text-green mb-8">It's a miracle anything lives here.</h3>
+        <p class="text-xl mb-6">High elevation, 280-something days of intense sun every year, 110°F summers, an average of 12 inches of rain every year. And yet, the legendary saguaro cactus, the universal symbol for <em>all</em> deserts (it's even an emoji! 🌵) only grows in the Sonoran Desert in Arizona, California, and Mexico.</p>
+        <p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
+        <p class="text-xl mb-6">As a vulnerable seedling, the young saguaro has next to no chance of surviving the desert's extreme conditions. It needs the help of a mature mesquite, ironwood, or palo verde tree, otherwise known as a <em>nurse tree</em>. Over the next few decades (unlike your business, saguaros tend to be slow-growers), the cactus benefits from the nurse tree's microclimate of shade and humidity.</p>
+        <p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p>
+
+      </div>
+      <div class="sm:w-1/2 md:w-1/2 lg:w-2/5 px-10 sm:mx-auto">
+      
+        <img class="rad" src="{{ "/img/joel_hans_headshot_web.jpg" | absURL }}" />
+      
+      </div>
     
-      <h2 class="px-8 p-20 text-5xl font-display text-white leading-tight  text-center">This is way more than a nice vision statement.</h2>
-
     </div>
-
-    <div class="sm:w-full lg:w-1/2 mx-auto mt-16 px-6">
-    
-      <p class="text-xl">This is some text.</p>
-    
-    </div>
-    
-  </div>
+  </div> 
 </div>
 
-<div id="moreclients" class="mb-32">
+<div id="moreclients" class="border-t-2 py-32">
   <div class="container mx-auto">
     <div class="md:-mx-6">
 
@@ -163,28 +170,6 @@
       </div>
       
     </div> 
-  </div> 
-</div>
-
-<div id="about" class="container mx-auto mb-32">
-  <div class="flex flex-wrap md:-mx-6">
-
-    <div class="sm:w-full md:w-1/2 lg:w-3/5 px-6">
-
-      <h2 class="text-5xl font-display text-grad leading-tight mb-8">Who is Nurse?</h2>
-      <h3 class="text-3xl font-bold font-display text-green mb-8">It's a miracle anything lives here.</h3>
-      <p class="text-xl mb-6">High elevation, 280-something days of intense sun every year, 110°F summers, an average of 12 inches of rain every year. And yet, the legendary saguaro cactus, the universal symbol for <em>all</em> deserts (it's even an emoji! 🌵) only grows in the Sonoran Desert in Arizona, California, and Mexico.</p>
-      <p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
-      <p class="text-xl mb-6">As a vulnerable seedling, the young saguaro has next to no chance of surviving the desert's extreme conditions. It needs the help of a mature mesquite, ironwood, or palo verde tree, otherwise known as a <em>nurse tree</em>. Over the next few decades (unlike your business, saguaros tend to be slow-growers), the cactus benefits from the nurse tree's microclimate of shade and humidity.</p>
-      <p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p>
-
-    </div>
-    <div class="sm:w-1/2 md:w-1/2 lg:w-2/5 px-6 sm:mx-auto">
-    
-      <img src="{{ "/img/joel_hans_headshot_web.jpg" | absURL }}" />
-    
-    </div>
-    
   </div> 
 </div>
 

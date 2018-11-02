@@ -55,10 +55,6 @@ a, button {
   text-anchor: left; 
 }
 
-.tagline {
-  line-height: 1.1;
-}
-
 .tagline span {
   -webkit-text-fill-color: config('colors.green');
 }

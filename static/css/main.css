@@ -3247,6 +3247,10 @@ button {
   line-height: 1;
 }
 
+.leading-tighter {
+  line-height: 1.1;
+}
+
 .leading-tight {
   line-height: 1.25;
 }
@@ -9060,6 +9064,10 @@ svg tspan {
     line-height: 1;
   }
 
+  .sm\:leading-tighter {
+    line-height: 1.1;
+  }
+
   .sm\:leading-tight {
     line-height: 1.25;
   }
@@ -14712,6 +14720,10 @@ svg tspan {
 
   .md\:leading-none {
     line-height: 1;
+  }
+
+  .md\:leading-tighter {
+    line-height: 1.1;
   }
 
   .md\:leading-tight {
@@ -20368,6 +20380,10 @@ svg tspan {
     line-height: 1;
   }
 
+  .lg\:leading-tighter {
+    line-height: 1.1;
+  }
+
   .lg\:leading-tight {
     line-height: 1.25;
   }
@@ -26020,6 +26036,10 @@ svg tspan {
 
   .xl\:leading-none {
     line-height: 1;
+  }
+
+  .xl\:leading-tighter {
+    line-height: 1.1;
   }
 
   .xl\:leading-tight {

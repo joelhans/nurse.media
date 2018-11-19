@@ -5,7 +5,7 @@
 
     <div class="sm:w-full md:w-3/4 px-6">
 
-      <h1 class="tagline text-grad text-3xl lg:text-6xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
+      <h1 class="tagline text-grad text-5xl lg:text-6xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
       <p class="text-lg lg:text-2xl leading-normal mb-8">{{ .Params.subhead | safeHTML }}</p>
       <div class="sm:w-full md:w-2/3">
         <a class="button inline-block text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
@@ -67,19 +67,22 @@
 </div> */}}
 
 
-<div id="process" class="py-40 border-t-2">
-  <div class="container mx-auto">
-    <div class="flex md:-mx-10">
+<div id="process" class="section">
+  <div class="container">
+    <div class="rad rad-what"></div>
 
-      <div class="w-full lg:w-2/3 px-10">
-      
-        <h2 class="rad text-5xl font-bold text-white leading-tighter -ml-12 pl-12 pt-16 pb-12">People buy stories, not products. Let's clarify yours.</h2>
-        <p class="text-xl leading-tight mt-12 mb-8">I use a proven framework that helps you create a clearer message for your customers and your company.</p>
+    <div class="columns">
+      <div class="column lg:w-2/3">
+        
+        <h2 class="text-5xl font-display text-grad leading-tighter mb-8">People fall in love with stories, not features or products.</h2>
+        <p class="text-2xl leading-tight mb-8">If your brand gets visitors but not customers, it's probably because they don't understand your story.</p>
+        <p class="text-2xl leading-tight mb-8">A brand's story is many things, but first and foremost it's a clear, simple message about how your product can help make someone's life better.</p>
+        <p class="text-2xl leading-tight mb-8">Not sure how to tell your story? I use a proven framework that helps you create a clearer message that turns visitors into customers.</p>
         <a class="button inline-block text-lg font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
 
       </div>
 
-      <div class="w-full lg:w-1/3 px-10 pt-16">
+      <div class="column lg:w-1/3 mt-20 lg:mt-2">
       
         <h3 class="text-3xl text-green mb-4">1. Develop a clear story.</h3>
         <p class="text-xl leading-tight mb-6">Your brand has power. Leverage my proven framework to say what you do with clarity and confidence.</p>
@@ -94,33 +97,24 @@
   </div>
 </div>
 
-<div id="clients" class="border-t-2 py-40">
-  <div class="container mx-auto">
-    <div class="flex flex-wrap md:-mx-10">
+<div id="clients" class="section">
+  <div class="container">
+    <div class="columns">
 
-      <div class="w-full flex mx-auto align-center justify-center flex-wrap text-white px-10">
+      <div class="column flex mx-auto items-center justify-center flex-wrap text-white">
 
         <h2 class="w-full flex-grow font-display text-2xl font-bold text-green text-center mt-4 mb-10">Brands I've helped nurture through content:</h2>
-        <img class="client max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/autodesk.svg" | absURL }}" />
-        <img class="client max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/ibm.svg" | absURL }}" />
+        
+        <img class="client client-ibm max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/ibm.svg" | absURL }}" />
         <img class="client max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/johnson-and-johnson.svg" | absURL }}" />
+        <img class="client max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/autodesk.svg" | absURL }}" />
+        <img class="client client-redhat max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/redhat.svg" | absURL }}" />
 
       </div>
 
-      <div class="flex align-center w-full lg:w-2/3 mx-auto mt-20 px-10">
+      <div class="column lg:w-3/5 mx-auto mt-12">
 
-        <div class="w-1/3">
-
-          <img class="rad" src="{{ "/img/brands/cassidy_warren.jpg" | absURL }}" alt="Cassidy Warren picture" />
-
-        </div>
-        <div class="w-2/3 pl-10">
-          
-          <blockquote class="text-3xl text-grey-darker font-normal">Our experience with Joel was wonderful. He was very professional and took the time to really understand what we wanted. The communication about edits went very smoothly as well and we are really happy with the final copy. <cite class="block font-bold mt-4"><span class="font-bold text-orange">&mdash;</span> Cassidy Warren, <span class="text-green italic">Travelti</span></cite></blockquote>
-        
-        </div>
-
-        {{/* <h3 class="text-3xl text-grey-darker font-normal">"Joel killed it! He's a great writer and you can tell he really did his research. I highly recommend him and I look forward to hiring him again." <div class="block font-bold mt-4"><span class="text-orange">&mdash;</span> XXXX, <span class="text-green italic">Drone 55</span></div></h3> */}}
+        <blockquote class="text-3xl text-grey-darker font-normal">Our experience with Joel was wonderful. He was very professional and took the time to really understand what we wanted. The communication about edits went very smoothly as well and we are really happy with the final copy. <cite class="block font-bold mt-4"><span class="font-bold text-orange">&mdash;</span> Cassidy Warren, <span class="text-green italic">Travelti</span></cite></blockquote>
 
       </div>
 
@@ -128,13 +122,13 @@
   </div>
 </div>
 
-<div id="about" class="border-t-2 py-40">
-  <div class="container mx-auto">
-    <div class="flex flex-wrap md:-mx-10">
+<div id="longform" class="section">
+  <div class="container">
+    <div class="columns items-center">
 
-      <div class="sm:w-full md:w-1/2 lg:w-3/5 px-10">
+      <div class="column md:w-1/2 lg:w-1/3">
 
-        <h2 class="text-5xl font-display text-grad leading-tight mb-8">Who is Nurse?</h2>
+        <h2 class="text-5xl font-display text-grad leading-tighter mb-8">Stories inspire us.</h2>
         <h3 class="text-3xl font-bold font-display text-green mb-8">It's a miracle anything lives here.</h3>
         <p class="text-xl mb-6">High elevation, 280-something days of intense sun every year, 110°F summers, an average of 12 inches of rain every year. And yet, the legendary saguaro cactus, the universal symbol for <em>all</em> deserts (it's even an emoji! 🌵) only grows in the Sonoran Desert in Arizona, California, and Mexico.</p>
         <p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
@@ -142,53 +136,73 @@
         <p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p>
 
       </div>
-      <div class="sm:w-1/2 md:w-1/2 lg:w-2/5 px-10 sm:mx-auto">
+      <div class="column md:w-1/2 lg:w-1/3">
+
+        <p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
+        <p class="text-xl mb-6">As a vulnerable seedling, the young saguaro has next to no chance of surviving the desert's extreme conditions. It needs the help of a mature mesquite, ironwood, or palo verde tree, otherwise known as a <em>nurse tree</em>. Over the next few decades (unlike your business, saguaros tend to be slow-growers), the cactus benefits from the nurse tree's microclimate of shade and humidity.</p>
+        <p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p>
+
+      </div>
+      <div class="column sm:w-1/2 md:w-1/2 lg:w-1/3 sm:mx-auto">
       
-        <img class="rad" src="{{ "/img/joel_hans_headshot_web.jpg" | absURL }}" />
+        <div class="headshot relative">
+          <img src="{{ "/img/joel_hans_headshot_web.jpg" | absURL }}" />
+        </div>
       
+      </div>
+
+      <div class="w-full px-10">
+
+        <a class="button inline-block text-lg font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
+
       </div>
     
     </div>
   </div> 
 </div>
 
-<div id="moreclients" class="border-t-2 py-32">
+<div id="moreclients" class="section">
   <div class="container mx-auto">
-    <div class="md:-mx-6">
+    <div class="columns">
 
-      <div class="w-full flex mx-auto align-center justify-center flex-wrap text-white py-20 px-6">
+      <div class="column flex mx-auto items-center justify-center flex-wrap text-white">
 
-        <h2 class="w-full flex-grow font-display text-2xl font-bold text-green text-center mt-4 mb-10">Join other happy clients:</h2>
-        <img class="client max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/ssd-nodes.svg" | absURL }}" />
-        <img class="client imgsrvr max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/img-srvr.png" | absURL }}" />
-        <div class="text-3xl ml-8 mr-8 mb-4">OpenText</div>
-        <div class="text-3xl ml-8 mr-8 mb-4">ClickCapital</div>
-        <div class="text-3xl ml-8 mr-8 mb-4">LogicGate</div>
-        <div class="text-3xl ml-8 mr-8 mb-4">RTInsights</div>
-        <div class="text-3xl ml-8 mr-8 mb-4">Camden Gear</div>
+        <h2 class="w-full flex-grow font-display text-3xl font-bold text-green text-center mb-10">Ready to join other happy clients?</h2>
+        <img class="client client-ssdnodes" src="{{ "/img/brands/ssd-nodes.svg" | absURL }}" />
+        <img class="client client-imgsrvr" src="{{ "/img/brands/img-srvr.png" | absURL }}" />
+        <img class="client client-opentext" src="{{ "/img/brands/open-text.svg" | absURL }}" />
+        <img class="client client-logicgate" src="{{ "/img/brands/logic-gate.png" | absURL }}" />
       
       </div>
+
+      <div class="column text-center">
+
+        <a class="button inline-block text-lg font-bold text-white bg-orange p-6 hover:bg-green" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
+
+      </div>
       
-    </div> 
+    </div>
   </div> 
 </div>
 
-<div id="final" class="container mx-auto mb-32">
-  <div class="flex align-center md:-mx-6">
+<div id="final" class="border-t-2 py-32">
+  <div class="container mx-auto">
+    <div class="flex align-center md:-mx-10">
 
-    <div class="w-1/2 px-6">
-    
-      <h2 class="text-5xl text-grad">Last chance!</h2>
-      <p class="text-2xl text-grey-darkest mt-8">Let's use content to turn your visitors into your users. After a 20-minute call, you'll walk away with some important new knowledge:</p>
-      <ul class="text-xl text-grey-darkest mt-8 mb-12">
-        <li class="mb-2">A short-term path to growth through content</li>
-        <li class="mb-2">Pointers on what's working and what isn't with your content</li>
-        <li>Whether we're right for each other!</li>
-      </ul>
-      <a class="button inline-block text-xl font-bold text-white bg-orange p-6 hover:bg-green" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one }}</a>
-    
+      <div class="w-1/2 px-10">
+      
+        <h2 class="text-5xl text-grad">Last chance!</h2>
+        <p class="text-2xl text-grey-darkest mt-8">Let's use content to turn your visitors into your users. After a 20-minute call, you'll walk away with some important new knowledge:</p>
+        <ul class="text-xl text-grey-darkest mt-8 mb-12">
+          <li class="mb-2">A short-term path to growth through content</li>
+          <li class="mb-2">Pointers on what's working and what isn't with your content</li>
+          <li>Whether we're right for each other!</li>
+        </ul>
+        <a class="button inline-block text-xl font-bold text-white bg-orange p-6 hover:bg-green" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one }}</a>
+      
+      </div>
+
     </div>
-
   </div>
 </div>
 

@@ -663,6 +663,45 @@ button {
   border-radius: .125rem;
 }
 
+.section {
+  border-top-width: 2px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columns {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .columns {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+  }
+}
+
+.column {
+  position: relative;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .column {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
 /* Tailwind utilities
 =============================================================== */
 
@@ -6399,6 +6438,14 @@ button {
   max-height: 50px;
 }
 
+.logo:hover svg text {
+  fill: black;
+}
+
+.cactus {
+  margin-left: -1px;
+}
+
 .logo svg {
   max-height: 50px;
   font-family: 'Anders';
@@ -6454,8 +6501,34 @@ button {
 =============================================================== */
 
 .rad {
+  display: block;
   background: linear-gradient(to bottom left, #00a891 -40%, transparent 50%), linear-gradient(to bottom right, #442b75, #f27370);
-  border-radius: 32% 84% 67% 27% / 81% 41% 71% 35%;
+  position: absolute;
+}
+
+.rad-what {
+  width: 800px;
+  height: 700px;
+  z-index: -1;
+  border-radius: 94% 40% 45% 81% / 97% 82% 48% 41%;
+  left: -600px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.rad-what:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, transparent -20%, #f8fafc 95%);
+}
+
+h2,
+p {
+  mix-blend-mode: multiply;
 }
 
 svg tspan {
@@ -6466,13 +6539,62 @@ svg tspan {
 =============================================================== */
 
 .client {
-  //: grayscale(1);
+  max-width: 20rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 3rem;
   max-height: 50px;
+  -webkit-filter: grayscale(1) brightness(.5);
+          filter: grayscale(1) brightness(.5);
 }
 
-.imgsrvr {
+.client-ibm {
+  max-height: 40px;
+}
+
+.client-redhat {
+  height: 50px;
+}
+
+.client-ssdnodes {
+  -webkit-filter: grayscale(1) brightness(.3);
+          filter: grayscale(1) brightness(.3);
+}
+
+.client-imgsrvr {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+.client-opentext {
+  max-height: 34px;
+}
+
+.client-logicgate {
+  max-height: 38px;
+}
+
+/* Homepage / longform
+=============================================================== */
+
+.headshot img {
+  border-radius: 44% 100% 84% 64% / 90% 63% 85% 55%;
+  position: relative;
+}
+
+.headshot:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom left, #00a891 -40%, transparent 50%), linear-gradient(to bottom right, #442b75, #f27370);
+  border-radius: 44% 100% 84% 64% / 90% 63% 85% 55%;
+  top: 0;
+  opacity: .4;
+  z-index: -1;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 /* Blog / single post
@@ -6513,6 +6635,13 @@ svg tspan {
   .sidebar_storytelling {
     top: 50%;
   }
+}
+
+/* Footer
+=============================================================== */
+
+.logo-footer {
+  width: 2rem;
 }
 
 @media (min-width: 576px) {

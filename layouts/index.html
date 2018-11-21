@@ -1,26 +1,28 @@
 {{ define "main" }}
 
-<div id="intro" class="container mx-auto mt-32 mb-32">
-  <div class="flex flex-wrap items-center md:-mx-6">
+<div id="intro" class="section border-t-0">
+  <div class="container">
+    <div class="columns">
 
-    <div class="sm:w-full md:w-3/4 px-6">
+      <div class="column md:w-3/4">
 
-      <h1 class="tagline text-grad text-5xl lg:text-6xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
-      <p class="text-lg lg:text-2xl leading-normal mb-8">{{ .Params.subhead | safeHTML }}</p>
-      <div class="sm:w-full md:w-2/3">
-        <a class="button inline-block text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
-        <br />
-        <div class="cta_course mt-4">
-          <a class="button inline-block text-grey-darker font-bold hover:text-orange" href="#" target="_blank">Free storytelling course<span class="block font-normal mt-1">I'll show you how to tell your brand's story to maximize conversions in 7 simple steps.</span></a>
-          <div class="course_input mt-4 hidden">
-            <input class="button inline-block text-grey-dark font-bold border border-grey p-6 rounded-r-none hover:text-orange cursor-pointer" placeholder="Enter your email" />
-            <button class="button inline-block text-white bg-orange p-6 hover:bg-green">Show me how ⚡</button>
+        <h1 class="tagline text-grad text-5xl lg:text-6xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
+        <p class="text-lg lg:text-2xl leading-normal mb-8">{{ .Params.subhead | safeHTML }}</p>
+        <div class="sm:w-full md:w-2/3">
+          <a class="button inline-block text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
+          <br />
+          <div class="cta_course mt-4">
+            <a class="button inline-block text-grey-darker font-bold hover:text-orange" href="#" target="_blank">Free storytelling course<span class="block font-normal mt-1">I'll show you how to tell your brand's story to maximize conversions in 7 simple steps.</span></a>
+            <div class="course_input mt-4 hidden">
+              <input class="button inline-block text-grey-dark font-bold border border-grey p-6 rounded-r-none hover:text-orange cursor-pointer" placeholder="Enter your email" />
+              <button class="button inline-block text-white bg-orange p-6 hover:bg-green">Show me how ⚡</button>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
+    
     </div>
-  
   </div>
 </div>
 
@@ -48,26 +50,7 @@
   </div> 
 </div> -->
 
-{{/* <div id="blog" class="container mx-auto mb-32">
-  <div class="flex flex-wrap items-center md:-mx-6">
-
-    {{ range first 1 .Pages }}
-    <div class="blog_latest w-full lg:w-2/3 mx-auto px-6" >
-      <a href="{{ .Permalink }}" class="block flex flex-col justify-center p-6" style="background-image: linear-gradient(to bottom right, rgba(33,33,33,0.7), rgba(33,33,33,0.9)), url({{ .RelPermalink }}{{ .Params.image }});">
-
-        <h2 class="relative w-full text-xl text-white text-center mb-6 px-6 z-10">Latest from <em>The Sproutling</em>, our blog:</h2>
-        <h3 class="relative w-full text-4xl text-orange text-center px-6 z-10" href="{{ .Permalink }}">{{ .Title }}</h3>
-
-      </a>
-      
-    </div>
-    {{ end }}
-
-  </div>
-</div> */}}
-
-
-<div id="process" class="section">
+<div id="explainer" class="section">
   <div class="container">
     <div class="rad rad-what"></div>
 
@@ -104,11 +87,10 @@
       <div class="column flex mx-auto items-center justify-center flex-wrap text-white">
 
         <h2 class="w-full flex-grow font-display text-2xl font-bold text-green text-center mt-4 mb-10">Brands I've helped nurture through content:</h2>
-        
-        <img class="client client-ibm max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/ibm.svg" | absURL }}" />
-        <img class="client max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/johnson-and-johnson.svg" | absURL }}" />
-        <img class="client max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/autodesk.svg" | absURL }}" />
-        <img class="client client-redhat max-w-xs ml-8 mr-8 mb-4" src="{{ "/img/brands/redhat.svg" | absURL }}" />
+        <img class="client client-ibm" src="{{ "/img/brands/ibm.svg" | absURL }}" />
+        <img class="client" src="{{ "/img/brands/johnson-and-johnson.svg" | absURL }}" />
+        <img class="client client-autodesk" src="{{ "/img/brands/autodesk.svg" | absURL }}" />
+        <img class="client client-redhat" src="{{ "/img/brands/redhat.svg" | absURL }}" />
 
       </div>
 
@@ -124,26 +106,37 @@
 
 <div id="longform" class="section">
   <div class="container">
-    <div class="columns items-center">
+    <div class="columns">
 
-      <div class="column md:w-1/2 lg:w-1/3">
+      <div class="column">
 
-        <h2 class="text-5xl font-display text-grad leading-tighter mb-8">Stories inspire us.</h2>
-        <h3 class="text-3xl font-bold font-display text-green mb-8">It's a miracle anything lives here.</h3>
-        <p class="text-xl mb-6">High elevation, 280-something days of intense sun every year, 110°F summers, an average of 12 inches of rain every year. And yet, the legendary saguaro cactus, the universal symbol for <em>all</em> deserts (it's even an emoji! 🌵) only grows in the Sonoran Desert in Arizona, California, and Mexico.</p>
-        <p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
-        <p class="text-xl mb-6">As a vulnerable seedling, the young saguaro has next to no chance of surviving the desert's extreme conditions. It needs the help of a mature mesquite, ironwood, or palo verde tree, otherwise known as a <em>nurse tree</em>. Over the next few decades (unlike your business, saguaros tend to be slow-growers), the cactus benefits from the nurse tree's microclimate of shade and humidity.</p>
-        <p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p>
+        <h2 class="text-5xl font-display text-grad leading-tighter mb-8">Hi, I'm Joel Hans.</h2>
 
       </div>
-      <div class="column md:w-1/2 lg:w-1/3">
+      <div class="column md:w-2/3">
+        <div class="columns">
 
-        <p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
-        <p class="text-xl mb-6">As a vulnerable seedling, the young saguaro has next to no chance of surviving the desert's extreme conditions. It needs the help of a mature mesquite, ironwood, or palo verde tree, otherwise known as a <em>nurse tree</em>. Over the next few decades (unlike your business, saguaros tend to be slow-growers), the cactus benefits from the nurse tree's microclimate of shade and humidity.</p>
-        <p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p>
+          <div class="column w-1/2">
+          
+            <h3 class="text-xl font-normal text-green mb-8">And I know how to find a story. If you're just starting a business or looking to grow what you already have, you might be trying to figure out how and why your marketing doesn't always click. That's where I come in. Let's try it.</h3>
+            <p class="text-xl mb-6">High elevation, 280-something days of intense sun every year, 110°F summers, an average of 12 inches of rain every year: The Sonoran Desert is a remarkably harsh place. And yet, the saguaro cactus thrives here.</p>
+            <p class="text-xl mb-6">It's an iconic emoji, too! 🌵</p>
+            <p class="text-xl mb-6">How does the saguaro survive these conditions? Young cacti lucky enough to take root beneath mature mesquite, ironwood, or palo verde trees take advantage of shade and humidity. They prosper under the protection of their <em class="text-grad font-bold">nurse tree</em>.</p>
 
+          </div>
+          <div class="column w-1/2">
+
+            <p class="text-xl mb-6">Over the next few decades (unlike your business, saguaros tend to be slow-growers), the saguaro grows and strenghtens its southfacing skin enough to take on the desert sun.</p>
+            <p class="text-xl mb-6">Now that's what I call growth.</p>
+            <p class="text-xl mb-6">Confusing content burns a hole in your pocket and prevents your business from growing, much like a young saguaro without its nurse tree.</p>
+            <p class="text-xl mb-6">After working with dozens of high-profile companies to help clarify their story and generate content that creates growth, I know how to help you boldly tell your story.</p>
+            <p class="text-xl mb-6">Get your own nurse tree. Stop languishing in the sun. <strong class="text-grad">See what your nurtured business can really do</strong>.</p>
+           
+          </div>
+
+        </div>
       </div>
-      <div class="column sm:w-1/2 md:w-1/2 lg:w-1/3 sm:mx-auto">
+      <div class="column md:w-1/2 lg:w-1/3 mx-auto md:mx-0 self-center">
       
         <div class="headshot relative">
           <img src="{{ "/img/joel_hans_headshot_web.jpg" | absURL }}" />
@@ -151,9 +144,9 @@
       
       </div>
 
-      <div class="w-full px-10">
+      <div class="column text-center mt-12">
 
-        <a class="button inline-block text-lg font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
+         <a class="button inline-block text-lg font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
 
       </div>
     
@@ -161,35 +154,73 @@
   </div> 
 </div>
 
-<div id="moreclients" class="section">
-  <div class="container mx-auto">
+
+<div id="blog" class="section">
+  <div class="container">
     <div class="columns">
 
-      <div class="column flex mx-auto items-center justify-center flex-wrap text-white">
+      <h2 class="relative w-full text-4xl text-orange text-center mb-16 px-6 z-10">Latest from <em>The Sproutling</em>, my blog:</h2>
 
-        <h2 class="w-full flex-grow font-display text-3xl font-bold text-green text-center mb-10">Ready to join other happy clients?</h2>
-        <img class="client client-ssdnodes" src="{{ "/img/brands/ssd-nodes.svg" | absURL }}" />
-        <img class="client client-imgsrvr" src="{{ "/img/brands/img-srvr.png" | absURL }}" />
-        <img class="client client-opentext" src="{{ "/img/brands/open-text.svg" | absURL }}" />
-        <img class="client client-logicgate" src="{{ "/img/brands/logic-gate.png" | absURL }}" />
-      
+      {{ range first 3 .Pages }}
+      <div class="blog_latest column lg:w-1/3">
+
+        <a href="{{ .Permalink }}" class="block flex flex-col justify-center p-6" style="background-image: linear-gradient(to bottom right, rgba(33,33,33,0.7), rgba(33,33,33,0.9)), url({{ .RelPermalink }}{{ .Params.image }});">
+          
+          <h3 class="relative w-full text-4xl text-orange text-center px-6 z-10" href="{{ .Permalink }}">{{ .Title }}</h3>
+
+        </a>
+        
       </div>
+      {{ end }}
 
-      <div class="column text-center">
-
-        <a class="button inline-block text-lg font-bold text-white bg-orange p-6 hover:bg-green" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
-
-      </div>
-      
     </div>
-  </div> 
+  </div>
 </div>
 
-<div id="final" class="border-t-2 py-32">
-  <div class="container mx-auto">
-    <div class="flex align-center md:-mx-10">
+<div id="explainer" class="section">
+  <div class="container">
+    <div class="rad rad-process"></div>
 
-      <div class="w-1/2 px-10">
+    <div class="columns">
+
+      <div class="column lg:w-2/3">
+
+        <h2 class="text-5xl font-display text-grad leading-tighter pb-2 mb-6">How we'll work together:</h2>
+        <p class="text-xl">We discuss your business, your needs, and how we could better tell your story, together. You'll leave with actionable pointers plus a vision of what's to come next.</p>
+
+      </div>
+
+    </div>
+    <div class="columns mt-16">
+
+      <div class="column lg:w-1/3">
+
+        <h3 class="text-3xl text-green mb-4">1. Schedule a call</h3>
+        <p class="text-xl">We discuss your business, your needs, and how we could better tell your story, together. You'll leave with actionable pointers plus a vision of what's to come next.</p>
+
+      </div>
+      <div class="column lg:w-1/3">
+
+        <h3 class="text-3xl text-green mb-4">2. Nurture clarity</h3>
+        <p class="text-xl">I'll walk you through my framework for creating clear messaging based on storytelling fundamentals. You'll learn how to translate this message to any business context.</p>
+
+      </div>
+      <div class="column lg:w-1/3">
+
+        <h3 class="text-3xl text-green mb-4">3. Grow your business</h3>
+        <p class="text-xl">Visitors will start to fall in love with your story because they finally understand exactly how it helps them. Then they'll start to fall in love with your product, too.</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="final" class="section">
+  <div class="container">
+    <div class="columns items-center">
+
+      <div class="column lg:w-1/2">
       
         <h2 class="text-5xl text-grad">Last chance!</h2>
         <p class="text-2xl text-grey-darkest mt-8">Let's use content to turn your visitors into your users. After a 20-minute call, you'll walk away with some important new knowledge:</p>
@@ -202,8 +233,26 @@
       
       </div>
 
+      <div class="column lg:w-1/2 text-center mt-24 lg:mt-4">
+
+        <h2 class="w-full flex-grow font-display text-xl font-bold text-green text-center mb-8">Ready to join other happy clients?</h2>
+        <img class="client client-ssdnodes no-mb" src="{{ "/img/brands/ssd-nodes.svg" | absURL }}" />
+        <img class="client client-imgsrvr no-mb" src="{{ "/img/brands/img-srvr.png" | absURL }}" />
+        <img class="client client-opentext no-mb" src="{{ "/img/brands/open-text.svg" | absURL }}" />
+        <img class="client client-logicgate no-mb" src="{{ "/img/brands/logic-gate.png" | absURL }}" />
+      
+      </div>
+
     </div>
   </div>
 </div>
 
 {{ end }}
+
+{{/* <p class="text-xl mb-6">High elevation, 280-something days of intense sun every year, 110°F summers, an average of 12 inches of rain every year. And yet, the legendary saguaro cactus, the universal symbol for <em>all</em> deserts (it's even an emoji! 🌵) only grows in the Sonoran Desert in Arizona, California, and Mexico.</p>
+<p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
+<p class="text-xl mb-6">As a vulnerable seedling, the young saguaro has next to no chance of surviving the desert's extreme conditions. It needs the help of a mature mesquite, ironwood, or palo verde tree, otherwise known as a <em>nurse tree</em>. Over the next few decades (unlike your business, saguaros tend to be slow-growers), the cactus benefits from the nurse tree's microclimate of shade and humidity.</p>
+<p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p> */}}
+{{/* <p class="text-xl mb-6">How, you might ask? Through chance, and a bit of help.</p> 
+<p class="text-xl mb-6">As a vulnerable seedling, the young saguaro has next to no chance of surviving the desert's extreme conditions. It needs the help of a mature mesquite, ironwood, or palo verde tree, otherwise known as a <em>nurse tree</em>. Over the next few decades (unlike your business, saguaros tend to be slow-growers), the cactus benefits from the nurse tree's microclimate of shade and humidity.</p>
+<p class="text-xl mb-6">That relationship is the foundation of Nurse, and why I do want I do.</p> */}}

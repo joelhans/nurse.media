@@ -1,7 +1,7 @@
 ---
 title: "Your first draft is your MVP"
 date: 2018-10-16T10:25:26-07:00
-description: ""
+description: "One of the foundations of the startup world is the *minimal viable product*, most often referred to as the *MVP*."
 image: "first-draft.jpg"
 alt: ""
 draft: false

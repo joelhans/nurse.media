@@ -165,8 +165,13 @@
       <div class="blog_latest column lg:w-1/3">
 
         <a href="{{ .Permalink }}" class="block flex flex-col justify-center p-6" style="background-image: linear-gradient(to bottom right, rgba(33,33,33,0.7), rgba(33,33,33,0.9)), url({{ .RelPermalink }}{{ .Params.image }});">
+          <div class="block" style="background-image: linear-gradient(to bottom right, rgba(33,33,33,0.7), rgba(33,33,33,0.9)), url({{ .RelPermalink }}{{ .Params.image }});">
           
-          <h3 class="relative w-full text-4xl text-orange text-center px-6 z-10" href="{{ .Permalink }}">{{ .Title }}</h3>
+            <h3 class="relative w-full text-4xl text-orange text-center px-6 z-10" href="{{ .Permalink }}">{{ .Title }}</h3>
+
+          </div>
+          
+          <p>{{ .Description }}</p>
 
         </a>
         
@@ -186,7 +191,8 @@
       <div class="column lg:w-2/3">
 
         <h2 class="text-5xl font-display text-grad leading-tighter pb-2 mb-6">How we'll work together:</h2>
-        <p class="text-xl">We discuss your business, your needs, and how we could better tell your story, together. You'll leave with actionable pointers plus a vision of what's to come next.</p>
+        <p class="text-2xl mb-6">The process of clarifying your story and improving your marketing across the board isn't a simple one, but I use a proven storytelling framework to make it as seamless as possible. That frees you to work on the parts of the business you love most.</p>
+        <p class="text-2xl mb-6">Here's how it works:</p>
 
       </div>
 
@@ -211,6 +217,26 @@
         <p class="text-xl">Visitors will start to fall in love with your story because they finally understand exactly how it helps them. Then they'll start to fall in love with your product, too.</p>
 
       </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="course" class="section">
+  <div class="container">
+    <div class="rad rad-course"></div>
+
+    <div class="columns bg-green">
+
+      <div class="column lg:w-2/3 py-20">
+
+        <h2 class="text-5xl font-display text-grad leading-tighter pb-2 mb-6">Get my free 7-day storytelling course!</h2>
+        <p class="text-2xl mb-6">The process of clarifying your story and improving your marketing across the board isn't a simple one, but I use a proven storytelling framework to make it as seamless as possible. That frees you to work on the parts of the business you love most.</p>
+        <p class="text-2xl mb-6">Here's how it works:</p>
+
+      </div>
+
+    </div>
 
     </div>
   </div>

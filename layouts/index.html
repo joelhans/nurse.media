@@ -8,7 +8,8 @@
 
         <h1 class="tagline text-grad text-5xl lg:text-6xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
         <p class="text-lg lg:text-2xl leading-normal mb-8">{{ .Params.subhead | safeHTML }}</p>
-        <div class="sm:w-full md:w-2/3">
+
+        <div class="w-full">
           <a class="button inline-block text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
           <br />
           <div class="cta_course mt-4">
@@ -113,7 +114,7 @@
         <h2 class="text-5xl font-display text-grad leading-tighter mb-8">Hi, I'm Joel Hans.</h2>
 
       </div>
-      <div class="column md:w-2/3">
+      <div class="column lg:w-2/3">
         <div class="columns">
 
           <div class="column w-1/2">
@@ -136,7 +137,7 @@
 
         </div>
       </div>
-      <div class="column md:w-1/2 lg:w-1/3 mx-auto md:mx-0 self-center">
+      <div class="column md:w-1/2 lg:w-1/3 mx-auto self-center">
       
         <div class="headshot relative">
           <img src="{{ "/img/joel_hans_headshot_web.jpg" | absURL }}" />
@@ -157,21 +158,21 @@
 
 <div id="blog" class="section">
   <div class="container">
-    <div class="columns">
+    <div class="columns -mb-12">
 
       <h2 class="relative w-full text-4xl text-orange text-center mb-16 px-6 z-10">Latest from <em>The Sproutling</em>, my blog:</h2>
 
       {{ range first 3 .Pages }}
-      <div class="blog_latest column lg:w-1/3">
+      <div class="blog_latest column md:w-1/2 lg:w-1/3 mx-auto mb-12">
 
-        <a href="{{ .Permalink }}" class="block flex flex-col justify-center p-6" style="background-image: linear-gradient(to bottom right, rgba(33,33,33,0.7), rgba(33,33,33,0.9)), url({{ .RelPermalink }}{{ .Params.image }});">
-          <div class="block" style="background-image: linear-gradient(to bottom right, rgba(33,33,33,0.7), rgba(33,33,33,0.9)), url({{ .RelPermalink }}{{ .Params.image }});">
+        <a href="{{ .Permalink }}" class="block flex flex-col justify-center rounded-sm">
+          <div class="flex items-center content-center" style="background-image: linear-gradient(to bottom right, rgba(33,33,33,0.7), rgba(33,33,33,0.9)), url({{ .RelPermalink }}{{ .Params.image }});">
           
             <h3 class="relative w-full text-4xl text-orange text-center px-6 z-10" href="{{ .Permalink }}">{{ .Title }}</h3>
 
           </div>
           
-          <p>{{ .Description }}</p>
+          <p class="text-xl text-grey-darkest py-8 px-6">{{ .Description }}</p>
 
         </a>
         
@@ -222,7 +223,7 @@
   </div>
 </div>
 
-<div id="course" class="section">
+<div id="course" class="">
   <div class="container">
     <div class="rad rad-course"></div>
 
@@ -242,7 +243,7 @@
   </div>
 </div>
 
-<div id="final" class="section">
+<div id="final" class="section border-t-0">
   <div class="container">
     <div class="columns items-center">
 

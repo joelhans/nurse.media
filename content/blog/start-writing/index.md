@@ -1,6 +1,6 @@
 ---
 title: "How to start writing"
-date: 2018-10-16T10:25:26-07:00
+date: 2018-11-26T08:01:15-07:00
 description: "Writers tend to struggle against three main sources of stress: 1) a disinterest in learning how or continuing to write on a regular basis, 2) a lack of time or energy, and 3) *worry*."
 image: "start-writing.jpg"
 alt: "How to start writing: A practical guide"
@@ -61,7 +61,7 @@ The only difference with experienced writers is that the architecture of worries
 
 By forcing you to write only by hand, and giving you no opportunities to either compare yourself to others or think about the precise end product, this exercise should help you settle into productive writing sessions that aren't weighed down by worry. You deserve an opportunity to *practice* your writing, not only *project* it.
 
-**Goals don't cause us to fail. Worry about those goals does. Let's cut the worry and get back to work.**
+> Goals don't cause us to fail. Worry about those goals does. Let's cut the worry and get back to work.
 
 ---
 

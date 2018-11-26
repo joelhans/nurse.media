@@ -6594,10 +6594,10 @@ p {
 
 .blog_latest a {
   background: linear-gradient(to bottom, transparent 40%, rgba(0, 168, 145, .2));
-  background-position: 50% 150%;
+  background-position: 50% 220%;
   background-size: 100% 50%;
   background-repeat: no-repeat;
-  transition: all .3s ease;
+  transition: all .5s ease;
 }
 
 .blog_latest a:hover {
@@ -6612,12 +6612,6 @@ p {
   min-height: 14rem;
 }
 
-.blog_latest a:hover > div {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  border-radius: 40% 60%;
-}
-
 .blog_latest:first-of-type a > div {
   border-radius: 32% 68% 47% 53% / 47% 22% 78% 53%;
 }
@@ -6628,6 +6622,12 @@ p {
 
 .blog_latest:nth-of-type(3) a > div {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.blog_latest a:hover > div {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  border-radius: 40% 60%;
 }
 
 /* Homepage / process
@@ -6666,7 +6666,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.content > *:first-of-type {
+.content :first-child {
   margin-top: 0;
 }
 
@@ -6676,6 +6676,21 @@ p {
   font-size: 1.125rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
+}
+
+.content blockquote p {
+  font-size: 1.5rem;
+  color: #00a891;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.content hr {
+  border-color: #dae1e7;
+  border-top-width: 2px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 /* Blog / single post / storytelling sidebar
@@ -6698,6 +6713,42 @@ p {
 
 .logo-footer {
   width: 2rem;
+}
+
+/* Mailchimp subscribe
+=============================================================== */
+
+.button-input,
+.button-submit {
+  height: 66px;
+}
+
+.form-mc input[type=email] {
+  box-shadow: none;
+}
+
+.form-mc input[type=submit] {
+  /* margin-left: -4px; */
+}
+
+.mc-status.success-message {
+  display: block;
+  color: #00a891;
+  background-color: #e3fcec;
+}
+
+.mc-status.error-message {
+  display: block;
+  color: #e3342f;
+  background-color: #fcebea;
+}
+
+.mc-status.error-message a {
+  color: #442b75;
+}
+
+.mc-status.error-message a:hover {
+  color: #9f5b82;
 }
 
 @media (min-width: 576px) {

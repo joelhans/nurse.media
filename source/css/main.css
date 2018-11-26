@@ -209,10 +209,10 @@ h2, p {
 
 .blog_latest a {
   background: linear-gradient(to bottom, transparent 40%, rgba(0, 168, 145, 0.2));
-  background-position: 50% 150%;
+  background-position: 50% 220%;
   background-size: 100% 50%;
   background-repeat: no-repeat;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .blog_latest a:hover {
@@ -227,11 +227,6 @@ h2, p {
   min-height: 14rem;
 }
 
-.blog_latest a:hover > div {
-  filter: grayscale(1);
-  border-radius: 40% 60%;
-}
-
 .blog_latest:first-of-type a > div {
   border-radius: 32% 68% 47% 53% / 47% 22% 78% 53%;
 }
@@ -242,6 +237,11 @@ h2, p {
 
 .blog_latest:nth-of-type(3) a > div {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.blog_latest a:hover > div {
+  filter: grayscale(1);
+  border-radius: 40% 60%;
 }
 
 /* Homepage / process
@@ -277,12 +277,20 @@ h2, p {
   @apply leading-normal mt-10 mb-6;
 }
 
-.content > *:first-of-type {
+.content :first-child {
   @apply mt-0;
 }
 
 .content p, .content ul, .content ol {
   @apply text-lg leading-normal mb-6;
+}
+
+.content blockquote p {
+  @apply text-2xl text-green font-bold leading-tight mb-6;
+}
+
+.content hr {
+  @apply border-grey-light border-t-2 mt-16 mb-16;
 }
 
 /* Blog / single post / storytelling sidebar
@@ -305,4 +313,36 @@ h2, p {
 
 .logo-footer {
   width: 2rem;
+}
+
+/* Mailchimp subscribe
+=============================================================== */
+
+.button-input,
+.button-submit {
+  height: 66px;
+}
+
+.form-mc input[type=email] {
+  box-shadow: none;
+}
+
+.form-mc input[type=submit] {
+  /* margin-left: -4px; */
+}
+
+.mc-status.success-message {
+  @apply block text-green bg-green-lightest;
+}
+
+.mc-status.error-message {
+  @apply block text-red bg-red-lightest;
+}
+
+.mc-status.error-message a {
+  @apply text-purple;
+}
+
+.mc-status.error-message a:hover {
+  @apply text-pink;
 }

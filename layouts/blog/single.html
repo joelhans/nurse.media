@@ -3,45 +3,56 @@
 {{- end }}
 {{ define "main" }}
 
-<div id="post" class="container mx-auto mt-32 mb-32">
-  <div class="flex flex-wrap md:-mx-6">
+<div id="post" class="section border-t-0">
+  <div class="container">
+    <div class="columns">
 
-    <div class="sm:w-full lg:w-2/3 px-6">
+      <div class="column lg:w-2/3">
 
-      <h1 class="text-6xl text-display mb-12">{{ .Title }}</h1>
-      <p class="text-sm mb-24">Published: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time> / Last modified: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .Lastmod }}</p>
+        <h1 class="text-6xl text-display mb-12">{{ .Title }}</h1>
+        <p class="text-sm mb-24">Published: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time> / Last modified: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .Lastmod }}</p>
 
-      <img class="mb-24" src="{{ .Params.image }}" alt="{{ .Params.alt }}" />
+        <img class="mb-24" src="{{ .Params.image }}" alt="{{ .Params.alt }}" />
 
-      <article class="content mb-16">
+        <article class="content">
 
-        {{ .Content }}
+          {{ .Content }}
 
-      </article>
+        </article>
 
-      <footer class="flex items-center">
+      </div>
 
-        <img class="w-32 h-32 rounded-full" src="{{ "/img/joel_hans_headshot_web.jpg" | absURL }}" alt="A picture of Joel Hans" />
-        <p class="text-2xl italic ml-6">by <span class="text-green">Joel Hans</span></p>
+      <div class="sidebar column relative lg:w-1/3">
 
-      </footer>
+        <div class="sidebar_storytelling absolute border p-6 sm:relative sm:mt-16">
 
-    </div>
+          <p class="button inline-block text-grey-darker font-bold" href="#" target="_blank">Free storytelling course<span class="block font-normal mt-1">I'll show you how to tell your brand's story to maximize conversions in 7 simple steps.</span></p>
+          <div class="course_input mt-4">
+            <input class="button w-full inline-block text-grey-dark font-bold border border-grey p-6 rounded-r-none hover:text-orange cursor-pointer" placeholder="Enter your email" />
+            <button class="button inline-block text-white bg-orange mt-4 p-6 hover:bg-green">Show me how ⚡</button>
+          </div>
 
-    <div class="sidebar relative sm:w-full lg:w-1/3 px-6">
-
-      <div class="sidebar_storytelling absolute border p-6 sm:relative sm:mt-16">
-
-        <p class="button inline-block text-grey-darker font-bold" href="#" target="_blank">Free storytelling course<span class="block font-normal mt-1">I'll show you how to tell your brand's story to maximize conversions in 7 simple steps.</span></p>
-        <div class="course_input mt-4">
-          <input class="button w-full inline-block text-grey-dark font-bold border border-grey p-6 rounded-r-none hover:text-orange cursor-pointer" placeholder="Enter your email" />
-          <button class="button inline-block text-white bg-orange mt-4 p-6 hover:bg-green">Show me how ⚡</button>
         </div>
 
       </div>
 
     </div>
 
+    <footer class="columns items-center">
+
+      <div class="column lg:w-2/3">
+
+        {{ partial "subscribe.html" . }}
+
+      </div>
+      <div class="column flex items-center">
+
+        <img class="w-32 h-32 rounded-full" src="{{ "/img/joel_hans_headshot_web.jpg" | absURL }}" alt="A picture of Joel Hans" />
+        <p class="text-2xl italic ml-6">by <span class="text-green">Joel Hans</span></p>
+
+      </div>
+
+    </footer>
   </div>
 </div>
   

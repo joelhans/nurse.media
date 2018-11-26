@@ -6434,15 +6434,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-h2,
-p {
-  mix-blend-mode: multiply;
-}
-
-.mix-none {
-  mix-blend-mode: normal;
-}
-
 /* Homepage
 =============================================================== */
 
@@ -6519,6 +6510,11 @@ p {
   background: linear-gradient(to right, transparent -20%, #f8fafc 95%);
 }
 
+h2,
+p {
+  mix-blend-mode: multiply;
+}
+
 /* Homepage / clients
 =============================================================== */
 
@@ -6593,15 +6589,7 @@ p {
 }
 
 .blog_latest a {
-  background: linear-gradient(to bottom, transparent 40%, rgba(0, 168, 145, .2));
-  background-position: 50% 150%;
-  background-size: 100% 50%;
-  background-repeat: no-repeat;
-  transition: all .3s ease;
-}
-
-.blog_latest a:hover {
-  background-position: 50% 100%;
+  background-image: linear-gradient(to bottom, transparent 40%, rgba(0, 168, 145, .2));
 }
 
 .blog_latest a > div {
@@ -6610,12 +6598,6 @@ p {
   background-repeat: no-repeat;
   transition: all .3s ease;
   min-height: 14rem;
-}
-
-.blog_latest a:hover > div {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  border-radius: 40% 60%;
 }
 
 .blog_latest:first-of-type a > div {
@@ -6628,6 +6610,16 @@ p {
 
 .blog_latest:nth-of-type(3) a > div {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.blog_latest a:hover {
+  background-image: linear-gradient(to bottom, transparent 20%, rgba(0, 168, 145, .3));
+}
+
+.blog_latest a:hover > div {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  border-radius: 40% 60%;
 }
 
 /* Homepage / process

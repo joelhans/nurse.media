@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Nurse - Nurtured content for brands that need to grow</title>
+    <link>https://nurse.media/</link>
+    <description>Recent content on Nurse - Nurtured content for brands that need to grow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Jun 2018 20:25:26 -0700</lastBuildDate>
+    <atom:link href="https://nurse.media/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A start.</title>
+      <link>https://nurse.media/blog/a-start/</link>
+      <pubDate>Tue, 16 Oct 2018 10:25:26 -0700</pubDate>
+      
+      <guid>https://nurse.media/blog/a-start/</guid>
+      <dc:creator></dc:creator>
+      <description><![CDATA[
+        <img src="https://nurse.media/" style="width:200px; float: left;"/>
+        Why you&rsquo;re not writing Writers have a tendency to struggle against three main sources of stress: 1) a disinterest in learning how or continuing to write on a regular basis, 2) a lack of time or energy, and 3) worry.
+These stressors aren&rsquo;t mutually exclusive. You can have a disinterest that&rsquo;s founded in worry, or you can feel so overwhelmed by the process of learning how to write that you feel completely drained of creativity.
+        ]]>
+    </description>
+      
+      
+    </item>
+    
+    <item>
+      <title>How to start writing</title>
+      <link>https://nurse.media/blog/start-writing/</link>
+      <pubDate>Tue, 16 Oct 2018 10:25:26 -0700</pubDate>
+      
+      <guid>https://nurse.media/blog/start-writing/</guid>
+      <dc:creator></dc:creator>
+      <description><![CDATA[
+        <img src="https://nurse.media/" style="width:200px; float: left;"/>
+        Why you&rsquo;re not writing Writers tend to struggle against three main sources of stress: 1) a disinterest in learning how or continuing to write on a regular basis, 2) a lack of time or energy, and 3) worry.
+These stressors aren&rsquo;t mutually exclusive. You might have based your disinterest in worry, or you can feel so overwhelmed by the process of learning how to write that you feel completely drained of creativity.
+        ]]>
+    </description>
+      
+      
+    </item>
+    
+    <item>
+      <title>Your first draft is your MVP</title>
+      <link>https://nurse.media/blog/first-draft-mvp/</link>
+      <pubDate>Tue, 16 Oct 2018 10:25:26 -0700</pubDate>
+      
+      <guid>https://nurse.media/blog/first-draft-mvp/</guid>
+      <dc:creator></dc:creator>
+      <description><![CDATA[
+        <img src="https://nurse.media/" style="width:200px; float: left;"/>
+        One of the foundations of the startup world is the minimal viable product, most often referred to as the MVP. This product has just the essential features needed to launch the product, and no others—the goal is to confirm there&rsquo;s market potential without spending an inordinate amount of time or money on the initial launch.
+The perfect MVP is one that takes the least amount of time, gathers the most customers, and gets the most feedback.
+        ]]>
+    </description>
+      
+      
+    </item>
+    
+  </channel>
+</rss>

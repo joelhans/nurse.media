@@ -553,7 +553,7 @@ window.displayMailChimpStatus = function (data) {
 	}
 
 	// Otherwise, add success class
-  mcStatus.innerHTML = "You're in! 🌵 Thanks for sub"
+  mcStatus.innerHTML = "You're in! 🌵 We'll talk soon."
 	mcStatus.classList.remove('error-message');
 	mcStatus.classList.add('success-message');
 };

@@ -103,13 +103,13 @@ h2, p {
   height: 66px;
 }
 
-.cta_course input {
+.cta_course input[type=email] {
   width: 360px;
   height: 66px;
-  margin-right: -5px;
+  /* margin-right: -5px; */
 }
 
-.cta_course button {
+.cta_course input[type=submit] {
   height: 66px;
 }
 
@@ -318,17 +318,55 @@ h2, p {
 /* Mailchimp subscribe
 =============================================================== */
 
-.button-input,
-.button-submit {
+.form-input,
+.form-submit {
+  @apply inline-block font-bold p-6;
   height: 66px;
 }
 
-.form-mc input[type=email] {
+.form-input {
+  @apply text-grey-dark border border-grey;
   box-shadow: none;
 }
 
-.form-mc input[type=submit] {
-  /* margin-left: -4px; */
+.form-submit {
+  @apply text-white cursor-pointer;
+}
+
+.form-input.form-vertical {
+  @apply mb-4;
+}
+
+.form-input.form-horizontal {
+  @apply border-r-0 rounded-r-none mb-0;
+}
+
+.form-submit.form-horizontal {
+  @apply rounded-l-none;
+}
+
+.form-input.form-borderless {
+  @apply border-0;
+}
+
+.button-orange {
+  @apply bg-orange;
+}
+
+.button-orange:hover {
+  @apply bg-green;
+}
+
+.button-purple {
+  @apply bg-purple;
+}
+
+.button-purple:hover {
+  @apply bg-pink;
+}
+
+.form-borderless {
+
 }
 
 .mc-status.success-message {

@@ -6480,13 +6480,13 @@ p {
   height: 66px;
 }
 
-.cta_course input {
+.cta_course input[type=email] {
   width: 360px;
   height: 66px;
-  margin-right: -5px;
+  /* margin-right: -5px; */
 }
 
-.cta_course button {
+.cta_course input[type=submit] {
   height: 66px;
 }
 
@@ -6718,17 +6718,63 @@ p {
 /* Mailchimp subscribe
 =============================================================== */
 
-.button-input,
-.button-submit {
+.form-input,
+.form-submit {
+  display: inline-block;
+  font-weight: 700;
+  padding: 1.5rem;
   height: 66px;
 }
 
-.form-mc input[type=email] {
+.form-input {
+  color: #8795a1;
+  border-width: 1px;
+  border-color: #b8c2cc;
   box-shadow: none;
 }
 
-.form-mc input[type=submit] {
-  /* margin-left: -4px; */
+.form-submit {
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-input.form-vertical {
+  margin-bottom: 1rem;
+}
+
+.form-input.form-horizontal {
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+.form-submit.form-horizontal {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-input.form-borderless {
+  border-width: 0;
+}
+
+.button-orange {
+  background-color: #f27370;
+}
+
+.button-orange:hover {
+  background-color: #00a891;
+}
+
+.button-purple {
+  background-color: #442b75;
+}
+
+.button-purple:hover {
+  background-color: #9f5b82;
+}
+
+.form-borderless {
 }
 
 .mc-status.success-message {

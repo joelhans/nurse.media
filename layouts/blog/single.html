@@ -12,7 +12,7 @@
         <h1 class="text-5xl lg:text-6xl text-grad text-display mb-8">{{ .Title }}</h1>
         <p class="text-sm mb-12">Published: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time> / Last modified: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .Lastmod }}</p>
 
-        <img class="mb-24" src="{{ .Params.image }}" alt="{{ .Params.alt }}" />
+        <img class="mb-24" src="{{ .Params.cover }}" alt="{{ .Params.alt }}" />
 
         <article class="content">
 

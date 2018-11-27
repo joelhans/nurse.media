@@ -5,7 +5,7 @@
 
     <div class="w-full px-6 mb-24">
 
-      <h1 class="text-6xl text-display mb-8">{{ .Title }}</h1>
+      <h1 class="text-5xl lg:text-6xl text-grad text-display mb-8">{{ .Title }}</h1>
       <h2 class="text-xl text-green font-normal">{{ .Description }}</h2>
 
     </div>
@@ -14,9 +14,9 @@
 
       {{ range .Pages }}
         <div class="mb-12">
-          <h2 class="text-4xl font-bold mb-2"><a class="text-purple hover:text-orange" href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <time class="block text-sm text-green mb-2">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time>
-          <p class="text-lg">{{ .Description | safeHTML }}</p>
+          <h2 class="text-4xl font-bold mb-4"><a class="text-purple hover:text-orange" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <time class="block text-sm text-green mb-4">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time>
+          <p class="text-lg leading-normal">{{ .Description | safeHTML }}</p>
         </div>
       {{ end }}
 

@@ -6471,6 +6471,10 @@ p {
   text-anchor: left;
 }
 
+.nurse {
+  max-width: 250px;
+}
+
 .tagline span {
   -webkit-text-fill-color: #00a891;
 }
@@ -6696,14 +6700,14 @@ p {
 /* Blog / single post / storytelling sidebar
 =============================================================== */
 
-@media (min-width: 768px) {
-  .sidebar_storytelling {
-    top: 0%;
-  }
+.sidebar_storytelling {
+  position: relative;
+  top: 0%;
 }
 
 @media (min-width: 992px) {
   .sidebar_storytelling {
+    position: absolute;
     top: 50%;
   }
 }
@@ -6742,12 +6746,9 @@ p {
   margin-bottom: 1rem;
 }
 
-.form-input.form-horizontal {
-  border-right-width: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-bottom: 0;
-}
+/* .form-input.form-horizontal {
+  @apply rounded-r-none mb-0;
+} */
 
 .form-submit.form-horizontal {
   border-top-left-radius: 0;

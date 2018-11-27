@@ -1,27 +1,29 @@
 {{ define "main" }}
 
-<div id="post" class="container mx-auto mt-32 mb-32">
-  <div class="flex flex-wrap items-center md:-mx-6">
+<div id="blog" class="section border-t-0 pt-20 md:pt-40">
+  <div class="container">
+    <div class="columns">
 
-    <div class="w-full px-6 mb-24">
+      <div class="column px-6 mb-24">
 
-      <h1 class="text-5xl lg:text-6xl text-grad text-display mb-8">{{ .Title }}</h1>
-      <h2 class="text-xl text-green font-normal">{{ .Description }}</h2>
+        <h1 class="text-5xl lg:text-6xl text-grad text-display mb-8">{{ .Title }}</h1>
+        <h2 class="text-xl text-green font-normal">{{ .Description }}</h2>
+
+      </div>
+
+      <div class="column md:w-2/3 px-6">
+
+        {{ range .Pages }}
+          <div class="mb-12">
+            <h2 class="text-4xl font-bold mb-4"><a class="text-purple hover:text-orange" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <time class="block text-sm text-green mb-4">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time>
+            <p class="text-lg leading-normal">{{ .Description | safeHTML }}</p>
+          </div>
+        {{ end }}
+
+      </div>
 
     </div>
-
-    <div class="w-full md:w-2/3 px-6">
-
-      {{ range .Pages }}
-        <div class="mb-12">
-          <h2 class="text-4xl font-bold mb-4"><a class="text-purple hover:text-orange" href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <time class="block text-sm text-green mb-4">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time>
-          <p class="text-lg leading-normal">{{ .Description | safeHTML }}</p>
-        </div>
-      {{ end }}
-
-    </div>
-
   </div>
 </div>
 

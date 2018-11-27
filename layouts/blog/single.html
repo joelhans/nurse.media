@@ -3,7 +3,7 @@
 {{- end }}
 {{ define "main" }}
 
-<div id="post" class="section border-t-0">
+<div id="post" class="section border-t-0 pt-20 md:pt-40">
   <div class="container">
     <div class="columns">
 
@@ -20,11 +20,25 @@
 
         </article>
 
+        {{ $formType := "blog" }}
+        {{ $formText := "Send me updates" }}
+        {{ $formShape := "horizontal" }}
+        {{ $formBorder := "bordered" }}
+        {{ $buttonColor := "orange" }}
+        {{ partial "subscribe.html" (dict "emailType" $formType "formText" $formText "formShape" $formShape "formBorder" $formBorder "buttonColor" $buttonColor) }}
+        
+        <div class="column flex items-center mt-16">
+
+          <img class="w-32 h-32 rounded-full" src="/img/joel_hans_headshot_web.jpg" alt="A picture of Joel Hans" />
+          <p class="text-2xl italic ml-6">by <span class="text-green">Joel Hans</span></p>
+
+        </div>
+
       </div>
 
-      <div class="sidebar column relative lg:w-1/3">
+      <div class="sidebar column relative lg:w-1/3 mt-16 lg:mt-0">
 
-        <div class="sidebar_storytelling absolute border p-6 sm:relative sm:mt-16">
+        <div class="sidebar_storytelling relative lg:absolute border p-6 sm:mt-16">
 
           <p class="inline-block text-grey-darker font-bold mb-4" href="#" target="_blank">Free storytelling course<span class="block font-normal mt-1">I'll show you how to tell your brand's story to maximize conversions in 7 simple steps.</span></p>
           
@@ -43,23 +57,7 @@
 
     <footer class="columns items-center">
 
-      <div class="column lg:w-2/3">
-
-        {{ $formType := "blog" }}
-        {{ $formText := "Send me updates" }}
-        {{ $formShape := "horizontal" }}
-        {{ $formBorder := "bordered" }}
-        {{ $buttonColor := "orange" }}
-        {{ partial "subscribe.html" (dict "emailType" $formType "formText" $formText "formShape" $formShape "formBorder" $formBorder "buttonColor" $buttonColor) }}
       
-      </div>
-      
-      <div class="column flex items-center mt-16">
-
-        <img class="w-32 h-32 rounded-full" src="/img/joel_hans_headshot_web.jpg" alt="A picture of Joel Hans" />
-        <p class="text-2xl italic ml-6">by <span class="text-green">Joel Hans</span></p>
-
-      </div>
 
     </footer>
   </div>

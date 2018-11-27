@@ -94,6 +94,10 @@ h2, p {
   text-anchor: left; 
 }
 
+.nurse {
+  max-width: 250px;
+}
+
 .tagline span {
   -webkit-text-fill-color: config('colors.green');
 }
@@ -296,14 +300,14 @@ h2, p {
 /* Blog / single post / storytelling sidebar
 =============================================================== */
 
-@screen md {
-  .sidebar_storytelling {
-    top: 0%;
-  }
+.sidebar_storytelling {
+  @apply relative;
+  top: 0%;
 }
 
 @screen lg {
   .sidebar_storytelling {
+    @apply absolute;
     top: 50%;
   }
 }
@@ -337,9 +341,9 @@ h2, p {
   @apply mb-4;
 }
 
-.form-input.form-horizontal {
-  @apply border-r-0 rounded-r-none mb-0;
-}
+/* .form-input.form-horizontal {
+  @apply rounded-r-none mb-0;
+} */
 
 .form-submit.form-horizontal {
   @apply rounded-l-none;

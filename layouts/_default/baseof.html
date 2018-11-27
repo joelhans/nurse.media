@@ -10,6 +10,8 @@
       {{ .Site.Title }}
     {{ end }}</title>
 
+    {{ partial "meta.html" . }}
+
     {{ if .Site.Params.favicon }}
       <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />
     {{ end }}
@@ -35,6 +37,8 @@
   {{ partial "footer.html" . }}
 
   <script src="/js/main.js"></script>
+
+  {{ template "_internal/google_analytics_async.html" . }}
   
   </body>
 </html>

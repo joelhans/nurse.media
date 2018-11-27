@@ -1,9 +1,12 @@
 baseURL = "https://nurse.media/"
 languageCode = "en-us"
 title = "Nurse - Nurtured content for brands that need to grow"
+googleAnalytics = "UA-9959651-6"
 
 [params]
   favicon = "img/favicon.ico"
+  author = "Joel Hans"
   description = "It's a harsh world for content out there. Let's nurture yours. Nurse is content for brands that need to grow."
   images = ["site-feature-image.jpg"]
   title = "Nurse - Nurtured content for brands that need to grow"
+  tagline = "Nurtured content for brands that need to grow"

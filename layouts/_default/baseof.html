@@ -9,20 +9,21 @@
     <title>{{ block "title" . }}
       {{ .Site.Title }}
     {{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/schema.html" . }}
 
     {{ if .Site.Params.favicon }}
-      <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />
     {{ end }}
 
     <link rel="stylesheet" href="/css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:700|Karla:400,400i,700" rel="stylesheet">  
     
     {{ with .OutputFormats.Get "rss" -}}
-      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
   </head>

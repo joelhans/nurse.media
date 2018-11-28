@@ -7,7 +7,7 @@
       <div class="column px-6 mb-24">
 
         <h1 class="text-5xl lg:text-6xl text-grad text-display mb-8">{{ .Title }}</h1>
-        <h2 class="text-xl text-green font-normal">{{ .Description }}</h2>
+        <h2 class="text-xl text-green font-normal">{{ .Description | safeHTML }}</h2>
 
       </div>
 

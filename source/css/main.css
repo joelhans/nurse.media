@@ -341,9 +341,9 @@ h2, p {
   @apply mb-4;
 }
 
-/* .form-input.form-horizontal {
-  @apply rounded-r-none mb-0;
-} */
+.form-input.form-horizontal {
+  @apply border-r-0 rounded-r-none mb-0;
+}
 
 .form-submit.form-horizontal {
   @apply rounded-l-none;

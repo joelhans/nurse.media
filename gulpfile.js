@@ -3,6 +3,7 @@ var
   gulp        = require('gulp'),
   postcss     = require('gulp-postcss'),
   tailwindcss = require('tailwindcss'),
+  uglify      = require('gulp-uglify'),
 
   // Directories
   dir = {
@@ -23,6 +24,7 @@ gulp.task('style', function () {
     .pipe(postcss([
       tailwindcss('./tailwind.js'),
       require('autoprefixer'),
+      require('cssnano')
     ]))
     .pipe(gulp.dest(dir.css.dest));
 });
@@ -35,10 +37,8 @@ gulp.task('script', function() {
     };
   }
   return gulp.src(dir.js.src)
-    // .pipe(uglify())
-    // .on('error', createErrorHandler('uglify'))
+    .pipe(uglify())
     .pipe(gulp.dest(dir.js.dest))
-    // .pipe(reload({stream: true}))
 });
 
 // Default (watch) task

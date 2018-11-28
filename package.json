@@ -8,7 +8,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
+    "cssnano": "^4.1.7",
     "gulp-postcss": "^8.0.0",
-    "tailwindcss": "^0.6.6"
+    "gulp-uglify": "^3.0.1",
+    "tailwindcss": "^0.6.6",
+    "uglify": "^0.1.5"
   }
 }

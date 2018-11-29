@@ -1,5 +1,5 @@
 ---
-title: "How to start writing"
+title: "An exercise to help you start writing"
 date: 2018-11-26T08:01:15-07:00
 description: "Writers tend to struggle against three main sources of stress: 1) a disinterest in learning how or continuing to write on a regular basis, 2) a lack of time or energy, and 3) *worry*."
 cover: "start-writing.jpg"

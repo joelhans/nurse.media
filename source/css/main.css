@@ -7,7 +7,7 @@
 /* Custom utilities
 =============================================================== */
 
-a, button {
+a, .button {
   transition: 0.3s all ease;
   @apply no-underline;
 }

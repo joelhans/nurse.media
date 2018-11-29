@@ -103,17 +103,28 @@ h2, p {
 }
 
 .cta_course a {
-  width: 360px;
+  width: 326px;
   height: 66px;
 }
 
-.cta_course input[type=email] {
-  width: 360px;
-  height: 66px;
-  /* margin-right: -5px; */
+@screen lg {
+  .cta_course a {
+    width: 360px;
+  }
 }
 
-.cta_course input[type=submit] {
+.course_input input[type=email] {
+  width: 326px;
+  height: 66px;
+}
+
+@screen lg {
+  .course_input input[type=email] {
+    width: 360px;
+  }
+}
+
+.course_input input[type=submit] {
   height: 66px;
 }
 
@@ -342,7 +353,13 @@ h2, p {
 }
 
 .form-input.form-horizontal {
-  @apply border-r-0 rounded-r-none mb-0;
+  @apply border rounded-sm; 
+}
+
+@screen md {
+  .form-input.form-horizontal {
+    @apply border-r-0 rounded-r-none;
+  }
 }
 
 .form-submit.form-horizontal {
@@ -367,10 +384,6 @@ h2, p {
 
 .button-purple:hover {
   @apply bg-pink;
-}
-
-.form-borderless {
-
 }
 
 .mc-status.success-message {

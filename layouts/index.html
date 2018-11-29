@@ -12,13 +12,13 @@
         <div class="w-full">
           <a class="button inline-block text-lg lg:text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>
           
-          <div class="cta_course mt-8">
+          <div class="cta_course mt-8 -mb-2">
 
-            <a class="button inline-block text-grey-darker font-bold hover:text-orange" href="#" target="_blank">Free storytelling course<span class="block font-normal mt-1">I'll show you how to tell your brand's story to maximize conversions in 7 simple steps.</span></a>
+            <a class="button inline-block text-grey-darker font-bold hover:text-orange mb-2" href="#" target="_blank">Free storytelling course<span class="block font-normal mt-1">I'll give you 7-day crash course in brand storytelling to help you maximize conversions.</span></a>
 
-            <div class="course_input mt-4 hidden">
+            <div class="course_input hidden">
               {{ $formType := "storytelling" }}
-              {{ $formText := "Show me how ⚡" }}
+              {{ $formText := "Sign me up ⚡" }}
               {{ $formShape := "horizontal" }}
               {{ $formBorder := "bordered" }}
               {{ $buttonColor := "orange" }}

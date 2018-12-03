@@ -17,7 +17,7 @@
           <div class="mb-20">
             <h2 class="text-3xl lg:text-4xl font-bold mb-4"><a class="text-purple hover:text-orange" href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <time class="block text-sm text-green mb-4">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time>
-            <p class="text-lg leading-normal">{{ .Description | safeHTML }}</p>
+            <p class="text-lg leading-normal">{{ .Description | markdownify | safeHTML }}</p>
           </div>
         {{ end }}
 

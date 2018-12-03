@@ -1,14 +1,14 @@
 ---
 title: "Your writing toolkit should include Grammarly—here's why"
-date: 2018-12-04T06:00:00-07:00
 description: "Grammarly will help you finish what you've started, and teach you about your own writing along the way."
+date: 2018-12-04T06:00:00-07:00
+url: /blog/grammarly/
 cover: "grammarly.jpg"
 alt: "Grammarly: An image of the Grammarly homepage."
 images: 
 - "grammarly.jpg"
 tags: 
 - "grammarly, editors, writing tools, writing toolkit, writing"
-draft: true
 ---
 
 ## A professional in any form uses tools to make their job easier. Why not writers?

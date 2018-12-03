@@ -1,0 +1,21 @@
+{{ define "title" -}}
+  {{ .Title }} | Nurse
+{{- end }}
+{{ define "main" }}
+
+<div id="post" class="section border-t-0 pt-20 md:pt-40">
+  <div class="container">
+    <div class="columns">
+
+      <div class="column lg:w-2/3">
+
+        <h1 class="text-grad text-4xl lg:text-6xl font-display text-orange leading-tighter pb-8">{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{ end }}

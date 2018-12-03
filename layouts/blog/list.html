@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div id="blog" class="section border-t-0 pt-20 md:pt-40">
+<div id="blog" class="section border-t-0 pt-16 md:pt-32">
   <div class="container">
     <div class="columns">
 
@@ -14,12 +14,24 @@
       <div class="column md:w-2/3 px-6">
 
         {{ range .Pages }}
-          <div class="mb-12">
-            <h2 class="text-4xl font-bold mb-4"><a class="text-purple hover:text-orange" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <div class="mb-20">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4"><a class="text-purple hover:text-orange" href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <time class="block text-sm text-green mb-4">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time>
             <p class="text-lg leading-normal">{{ .Description | safeHTML }}</p>
           </div>
         {{ end }}
+
+        <h3 class="text-2xl lg:text-3xl text-green mt-24 mb-2">More posts</h3>
+        <p class="text-lg leading-normal mb-4">I post weekly. You'll get an email whenever I do, plus see what I'm working on next.</p>
+
+        {{ $formType := "blog" }}
+        {{ $formText := "Send me updates" }}
+        {{ $formShape := "horizontal" }}
+        {{ $formBorder := "bordered" }}
+        {{ $buttonColor := "orange" }}
+        {{ partial "subscribe.html" (dict "emailType" $formType "formText" $formText "formShape" $formShape "formBorder" $formBorder "buttonColor" $buttonColor) }}
+
+        <p class="text-lg leading-normal mt-8">Subscribe via <a class="text-green hover:text-orange" href="/blog/index.xml">RSS</a>.
 
       </div>
 

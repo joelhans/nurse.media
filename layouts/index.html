@@ -1,13 +1,13 @@
 {{ define "main" }}
 
-<div id="intro" class="section border-t-0 pt-20 md:pt-40">
+<div id="intro" class="section border-t-0 pt-16 md:pt-32">
   <div class="container">
     <div class="columns">
 
       <div class="column md:w-3/4">
 
-        <h1 class="tagline text-grad text-4xl lg:text-6xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
-        <p class="text-lg lg:text-2xl leading-normal mb-8">{{ .Params.subhead | safeHTML }}</p>
+        <h1 class="tagline text-grad text-4xl lg:text-6xl font-display text-orange leading-none mb-8">{{ .Params.header | safeHTML }}</h1>
+        <p class="text-lg lg:text-2xl leading-tight mb-8">{{ .Params.subhead | safeHTML }}</p>
 
         <div class="w-full">
           <a class="button inline-block text-lg lg:text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank">{{ .Params.cta_one | safeHTML }}</a>

@@ -20,7 +20,7 @@
     {{ end }}
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:700|Karla:400,400i,700" rel="stylesheet">  
+    {{/* <link href="https://fonts.googleapis.com/css?family=Poppins:700|Karla:400,400i,700" rel="stylesheet">   */}}
     
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

@@ -450,3 +450,8 @@ h2, p {
 .mc-status.error-message a:hover {
   @apply text-pink;
 }
+
+
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06 {
+  background-color: config(colors.green) !important;
+}

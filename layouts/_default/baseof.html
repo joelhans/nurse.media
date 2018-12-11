@@ -20,11 +20,12 @@
     {{ end }}
 
     <link rel="stylesheet" href="/css/main.css" />
-    {{/* <link href="https://fonts.googleapis.com/css?family=Poppins:700|Karla:400,400i,700" rel="stylesheet">   */}}
     
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
+
+    <meta name="google-site-verification" content="tGL7YijvzOLk_k93RcYAzN1SOSsZbxpailEW7Av2yK4" />
 
   </head>
   <body class="text-grey-darkest font-sans bg-grey-lightest">

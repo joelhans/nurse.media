@@ -19,13 +19,6 @@
           {{ .Content }}
 
         </article>
-
-        {{ $formType := "blog" }}
-        {{ $formText := "Send me updates" }}
-        {{ $formShape := "horizontal" }}
-        {{ $formBorder := "bordered" }}
-        {{ $buttonColor := "orange" }}
-        {{ partial "subscribe.html" (dict "emailType" $formType "formText" $formText "formShape" $formShape "formBorder" $formBorder "buttonColor" $buttonColor) }}
         
         <div class="column flex items-center mt-16">
 

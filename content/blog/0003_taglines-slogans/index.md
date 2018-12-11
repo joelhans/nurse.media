@@ -20,7 +20,6 @@ Time to set the record straight.
 
 We move ahead with these definitions keeping in mind a few caveats: Many writing and marketing terms are roughly interchangeable and depend on the writer in question, the business they're working for, and even the country itself. Not even Americans and Britons can agree on much when it comes to "proper" English.
 
-
 ## A tagline distills your entire brand into a short, catchy, memorable, and long-lasting phase.
 
 And that's no simple task, especially when most taglines land somewhere between 5-10 words.
@@ -60,3 +59,9 @@ Let's try our hand at some distillation. Taglines vs. slogans in as few points a
 ## Creating good taglines or slogans, much less using them effectively, are another matter entirely.
 
 In future posts, I'll guide you through brainstorming activities that will help you figure out your brand's next tagline and detail proven strategies for deploying taglines and slogans in the most effective way possible. Subscribe to get access to these guides before I publish them for everyone else.
+
+{{< mailchimp blog "Send me updates" "horizontal" "bordered" "orange" >}}
+
+Or, to get a head start on your next tagline or slogan development or deployment strategy, schedule a 20-minute strategy session with me. You'll take away some actionable items you can start working on right now, and we'll figure out if we're a right fit.
+
+{{< schedule "Get a head start now" >}}

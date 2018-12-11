@@ -71,4 +71,6 @@ By forcing you to write only by hand, and giving you no opportunities to either 
 
 Now you might be wondering: How do I convert this exercise into actionable writing for my business? Don't worry—I'll cover that question and more in future posts and guides.
 
-To read these guides before they're published, subscribe. I email every month.
+To read these guides before they're published, subscribe.
+
+{{< mailchimp blog "Send me updates" "horizontal" "bordered" "orange" >}}

@@ -88,4 +88,6 @@ Grammarly isn't just for those who are still learning English. Far from it, alth
 
 ---
 
-To learn about other tools and writing tips before they go public, subscribe. I email every week.
+To learn about other tools and writing tips before they go public, subscribe.
+
+{{< mailchimp blog "Send me updates" "horizontal" "bordered" "orange" >}}

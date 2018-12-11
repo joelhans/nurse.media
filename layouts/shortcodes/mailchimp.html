@@ -1,0 +1,6 @@
+{{ $formType := index .Params 0 }}
+{{ $formText := index .Params 1 }}
+{{ $formShape := index .Params 2 }}
+{{ $formBorder := index .Params 3 }}
+{{ $buttonColor := index .Params 4 }}
+{{ partial "subscribe.html" (dict "emailType" $formType "formText" $formText "formShape" $formShape "formBorder" $formBorder "buttonColor" $buttonColor) }}

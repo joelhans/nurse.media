@@ -173,6 +173,16 @@ h2, p {
   height: 66px;
 }
 
+/* Homepage / hero
+=============================================================== */
+
+#intro {
+  overflow-y: hidden;
+}
+
+.me {
+  top: -100px;
+}
 
 /* Homepage / explainer
 =============================================================== */
@@ -205,15 +215,23 @@ h2, p {
 /* Homepage / clients
 =============================================================== */
 
+.clients {
+  @apply absolute 
+}
+
 .client {
-  @apply max-w-xs ml-8 mr-8 mb-12;
-  max-height: 50px;
+  /* @apply max-w-xs ml-8 mr-8 mb-12; */
+  max-height: 24px;
   filter: grayscale(1) brightness(0.5);
 }
 
 .client-ibm {
-  max-height: 40px;
-} 
+  max-height: 20px;
+}
+
+/* .client-small.client-ibm {
+  
+}
 
 .client-autodesk {
   max-height: 40px;
@@ -221,7 +239,7 @@ h2, p {
 
 .client-redhat {
   height: 50px;
-}
+} */
 
 .client-ssdnodes {
   filter: grayscale(1) brightness(0.3);

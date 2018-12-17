@@ -8,7 +8,8 @@ alt: "Grammarly: An image of the Grammarly homepage."
 images: 
 - "grammarly.jpg"
 tags: 
-- "grammarly, editors, writing tools, writing toolkit, writing"
+- grammarly
+- writing tools
 ---
 
 ## A professional in any form uses tools to make their job easier. Why not writers?

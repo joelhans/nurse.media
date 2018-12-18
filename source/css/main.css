@@ -352,7 +352,7 @@ h2, p {
 .content h3,
 .content h4,
 .content h5 {
-  @apply leading-normal mt-10 mb-6;
+  @apply leading-tight mt-10 mb-6;
 }
 
 .content :first-child {
@@ -363,12 +363,37 @@ h2, p {
   @apply text-lg leading-normal mb-6;
 }
 
+.content a:not(.button) {
+  @apply text-orange;
+}
+
+.content a:not(.button):hover {
+  @apply text-green;
+}
+
+.content blockquote {
+  @apply relative;
+}
+
 .content blockquote p {
-  @apply text-2xl text-green font-bold leading-tight mb-6;
+  @apply text-3xl text-green font-bold leading-tight mb-6;
+}
+
+.content blockquote:before {
+  content: open-quote;
+  position: absolute;
+  left: -18px;
+  top: 2px;
+  @apply text-3xl text-green font-bold;
 }
 
 .content hr {
-  @apply border-grey-light border-t-2 mt-16 mb-16;
+  @apply border-grey-light border-t-2 mt-12 mb-12;
+}
+
+.content code {
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .content div.form-mc + p {

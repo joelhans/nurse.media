@@ -64,6 +64,6 @@ In future posts, I'll guide you through brainstorming activities that will help 
 
 {{< mailchimp blog "Send me updates" "horizontal" "bordered" "orange" >}}
 
-Or, to get a head start on your next tagline or slogan development or deployment strategy, schedule a 20-minute strategy session with me. You'll take away some actionable items you can start working on right now, and we'll figure out if we're a right fit.
+Or, to get a head start on your next tagline or slogan development or deployment strategy, schedule a 20-minute discovery meeting with me. You'll take away some actionable items you can start working on right now, and we'll figure out if we're a right fit.
 
 {{< schedule "Get a head start now" >}}

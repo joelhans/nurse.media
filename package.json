@@ -1,16 +1,17 @@
 {
   "dependencies": {
-    "bulma": "^0.7.1",
     "gulp": "^3.9.1",
     "gulp-cli": "^2.0.1",
-    "gulp-sass": "^4.0.1",
-    "spectre.css": "^0.5.2"
+    "gulp-sass": "^4.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "cssnano": "^4.1.7",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-uglify": "^3.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
     "tailwindcss": "^0.6.6",
     "uglify": "^0.1.5"
   }

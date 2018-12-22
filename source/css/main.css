@@ -1,52 +1,18 @@
-/* Initial tailwind imports
+/* Imports
 =============================================================== */
+
+/* Utilities (tailwind, fonts, grids, standards */
+
+@import "utility/_font";
+
+/* Other structure */
+@import "partials/_nav";
+
+/* Specific pages */
+
 
 @tailwind preflight;
 @tailwind components;
-
-/* Self-hosted fonts
-=============================================================== */
-
-/* karla-regular - latin */
-@font-face {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Karla'), local('Karla-Regular'),
-       url('../font/karla-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../font/karla-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* karla-italic - latin */
-@font-face {
-  font-family: 'Karla';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Karla Italic'), local('Karla-Italic'),
-       url('../font/karla-v6-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../font/karla-v6-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* karla-700 - latin */
-@font-face {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Karla Bold'), local('Karla-Bold'),
-       url('../font/karla-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../font/karla-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-
-/* poppins-700 - latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Poppins Bold'), local('Poppins-Bold'),
-       url('../font/poppins-v5-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../font/poppins-v5-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
 
 /* Custom utilities
 =============================================================== */
@@ -97,8 +63,8 @@ body {
 }
 
 .text-grad {
+  @apply pt-2;
   background: linear-gradient(to bottom right, config('colors.orange'), config('colors.purple'));
-  font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -113,35 +79,6 @@ h2, p {
 
 /* Homepage
 =============================================================== */
-
-@font-face {
-  font-family: 'Anders';
-  font-style: normal; 
-  font-weight: 400;
-  src: url('../font/Anders.woff') format('woff'), url('../font/Anders.ttf') format('ttf');
-}
-
-.logo {
-  max-height: 50px;
-}
-
-.cactus {
-  margin-left: -1px;
-}
-
-.logo svg {
-  max-height: 50px;
-  font-family: 'Anders';
-}
-
-.logo text {
-  dominant-baseline: middle;
-  text-anchor: left; 
-}
-
-.nurse {
-  max-width: 250px;
-}
 
 .tagline span {
   -webkit-text-fill-color: config('colors.green');
@@ -215,31 +152,33 @@ h2, p {
 /* Homepage / clients
 =============================================================== */
 
-.clients {
-  @apply absolute 
+.client {
+  @apply mr-8;
+  max-height: 22px;
 }
 
-.client {
-  /* @apply max-w-xs ml-8 mr-8 mb-12; */
-  max-height: 24px;
-  filter: grayscale(1) brightness(0.5);
+.client:last-of-type {
+  @apply mr-0;
 }
 
 .client-ibm {
-  max-height: 20px;
+  max-height: 24px;
 }
 
-/* .client-small.client-ibm {
-  
+.client-jj {
+  max-height: 28px;
+  transform: translateY(3px);
 }
 
 .client-autodesk {
-  max-height: 40px;
+  max-height: 16px;
 }
 
 .client-redhat {
-  height: 50px;
-} */
+  max-height: 24px;
+  height: 24px;
+  transform: translateY(-3px);
+}
 
 .client-ssdnodes {
   filter: grayscale(1) brightness(0.3);
@@ -255,6 +194,10 @@ h2, p {
 
 .client-logicgate {
   max-height: 38px;
+}
+
+#hi {
+  background: linear-gradient(to top right, config(colors.purple), config(colors.orange ));
 }
 
 /* Homepage / longform

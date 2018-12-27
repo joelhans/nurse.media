@@ -1,7 +1,7 @@
 ---
 title: "Does my brand really need a tagline?"
 description: ""
-date: 2019-01-01T07:00:00-07:00
+date: 2019-01-08T07:00:00-07:00
 url: /blog/brand-tagline-need/
 cover: "brand-tagline-need.jpg"
 alt: "."
@@ -18,4 +18,4 @@ In my last post I wrote about [the difference between taglines and slogans](http
 
 
 
-. With those semantics past us, we can start to answer the second-most pertinent question around taglines: *Does my brand really need 
+. With those semantics past us, we can start to answer the second-most pertinent question around taglines: *Does my brand really need

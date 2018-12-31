@@ -3,8 +3,8 @@ title: "You and the Brandless copywriting — Copy Break #1"
 description: "Brandless aims to produce high-quality, simple food products. Does their copywriting follow the same formula?"
 date: 2019-01-01T07:00:00-07:00
 url: /blog/copy-break-brandless/
-cover: ""
-alt: ""
+cover: "copy-break_brandless.png"
+alt: "Brandless aims to produce high-quality, simple food products. Does their copywriting follow the same formula?"
 images:
 - "copy-break_brandless.png"
 - "brandless_01.png"
@@ -14,8 +14,6 @@ images:
 - "brandless_05.png"
 tags:
 - "copy-break, branding, copywriting"
-draft: false
-
 ---
 
 It's the first edition of *Copy Break*—an ongoing series in which I look at a well-known brand's copywriting for the first time and offer my praise and constructive criticism on how they're writing about themselves.

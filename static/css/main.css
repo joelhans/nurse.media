@@ -65,7 +65,8 @@
 
 .cactus {
   margin-left: -1px;
-  /* transition: 0.3s all ease; */
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
 }
 
 .logo svg {
@@ -7501,6 +7502,14 @@ p {
 
 .me {
   top: -100px;
+}
+
+/* Homepage / three-point helper
+=============================================================== */
+
+#hi svg {
+  width: 64px;
+  height: 64px;
 }
 
 /* Homepage / explainer

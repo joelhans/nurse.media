@@ -48,6 +48,43 @@
   font-style: normal;
 }
 
+/* ===============================================================
+== 
+== Radii
+==
+=============================================================== */
+
+.rad {
+  display: block;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(-40%, #00a891), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right bottom, from(#442b75), to(#f27370));
+  background: linear-gradient(to bottom left, #00a891 -40%, transparent 50%), linear-gradient(to bottom right, #442b75, #f27370);
+  position: absolute;
+}
+
+/* Homepage / People fall in love...
+=============================================================== */
+
+.rad-love {
+  width: 800px;
+  height: 700px;
+  z-index: -1;
+  border-radius: 94% 40% 45% 81% / 97% 82% 48% 41%;
+  left: -600px;
+  top: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.rad-love:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-20%, transparent), color-stop(95%, #f8fafc));
+  background: linear-gradient(to right, transparent -20%, #f8fafc 95%);
+}
+
 /* Other structure */
 
 /* ===============================================================
@@ -683,7 +720,7 @@ ul {
 *:after {
   border-width: 0;
   border-style: solid;
-  border-color: #dae1e7;
+  border-color: #1f0d3c;
 }
 
 /**
@@ -1164,7 +1201,7 @@ a,
   background-color: #ffebef;
 }
 
-.bg-base {
+.bg-default {
   background-color: #1f0d3c;
 }
 
@@ -1460,7 +1497,7 @@ a,
   background-color: #ffebef;
 }
 
-.group:hover .group-hover\:bg-base {
+.group:hover .group-hover\:bg-default {
   background-color: #1f0d3c;
 }
 
@@ -1756,7 +1793,7 @@ a,
   background-color: #ffebef;
 }
 
-.hover\:bg-base:hover {
+.hover\:bg-default:hover {
   background-color: #1f0d3c;
 }
 
@@ -2052,7 +2089,7 @@ a,
   background-color: #ffebef;
 }
 
-.focus\:bg-base:focus {
+.focus\:bg-default:focus {
   background-color: #1f0d3c;
 }
 
@@ -2420,10 +2457,6 @@ a,
   border-color: #ffebef;
 }
 
-.border-base {
-  border-color: #1f0d3c;
-}
-
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
@@ -2716,10 +2749,6 @@ a,
   border-color: #ffebef;
 }
 
-.hover\:border-base:hover {
-  border-color: #1f0d3c;
-}
-
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -3010,10 +3039,6 @@ a,
 
 .focus\:border-pink-lightest:focus {
   border-color: #ffebef;
-}
-
-.focus\:border-base:focus {
-  border-color: #1f0d3c;
 }
 
 .rounded-none {
@@ -6401,7 +6426,7 @@ a,
   color: #ffebef;
 }
 
-.text-base {
+.text-default {
   color: #1f0d3c;
 }
 
@@ -6697,7 +6722,7 @@ a,
   color: #ffebef;
 }
 
-.group:hover .group-hover\:text-base {
+.group:hover .group-hover\:text-default {
   color: #1f0d3c;
 }
 
@@ -6993,7 +7018,7 @@ a,
   color: #ffebef;
 }
 
-.hover\:text-base:hover {
+.hover\:text-default:hover {
   color: #1f0d3c;
 }
 
@@ -7289,7 +7314,7 @@ a,
   color: #ffebef;
 }
 
-.focus\:text-base:focus {
+.focus\:text-default:focus {
   color: #1f0d3c;
 }
 
@@ -7739,10 +7764,15 @@ body {
 }
 
 .text-grad {
-  padding-top: 8px;
-  padding-top: .5rem;
   background: -webkit-gradient(linear, left top, right bottom, from(#f27370), to(#442b75));
   background: linear-gradient(to bottom right, #f27370, #442b75);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-grad-pink {
+  background: -webkit-gradient(linear, left top, right bottom, from(#f27370), to(#9f5b82));
+  background: linear-gradient(to bottom right, #f27370, #9f5b82);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -7792,51 +7822,47 @@ p {
 /* Homepage / hero
 =============================================================== */
 
-#intro {
+/* #intro {
   overflow-y: hidden;
 }
 
 .me {
   top: -100px;
-}
+} */
 
-/* Homepage / three-point helper
+/* Homepage / Hi, I'm Joel
 =============================================================== */
+
+#hi {
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(40%, #442b75), color-stop(120%, #f27370));
+  background: linear-gradient(to top right, #442b75 40%, #f27370 120%);
+}
 
 #hi svg {
   width: 64px;
   height: 64px;
 }
 
-/* Homepage / explainer
+/* Homepage / latest blog section
 =============================================================== */
 
-.rad {
-  display: block;
-  background: -webkit-gradient(linear, right top, left bottom, color-stop(-40%, #00a891), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right bottom, from(#442b75), to(#f27370));
-  background: linear-gradient(to bottom left, #00a891 -40%, transparent 50%), linear-gradient(to bottom right, #442b75, #f27370);
-  position: absolute;
+.blog_latest h3,
+.blog_latest button {
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
 }
 
-.rad-what {
-  width: 800px;
-  height: 700px;
-  z-index: -1;
-  border-radius: 94% 40% 45% 81% / 97% 82% 48% 41%;
-  left: -600px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+/* Homepage / People fall in love...
+=============================================================== */
+
+#love .columns {
+  /* background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%); */
 }
 
-.rad-what:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: -webkit-gradient(linear, left top, right top, color-stop(-20%, transparent), color-stop(95%, #f8fafc));
-  background: linear-gradient(to right, transparent -20%, #f8fafc 95%);
+#love code {
+  font-size: 14.4px;
+  font-size: .9rem;
+  color: #f27370;
 }
 
 /* Homepage / clients
@@ -7893,11 +7919,6 @@ p {
   max-height: 38px;
 }
 
-#hi {
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(40%, #442b75), color-stop(120%, #f27370));
-  background: linear-gradient(to top right, #442b75 40%, #f27370 120%);
-}
-
 /* Homepage / longform
 =============================================================== */
 
@@ -7920,15 +7941,6 @@ p {
   z-index: -1;
   -webkit-transform: scale(2);
           transform: scale(2);
-}
-
-/* Homepage / latest blog section
-=============================================================== */
-
-.blog_latest h3,
-.blog_latest button {
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
 }
 
 /* .blog_latest {
@@ -8511,7 +8523,7 @@ p {
     background-color: #ffebef;
   }
 
-  .sm\:bg-base {
+  .sm\:bg-default {
     background-color: #1f0d3c;
   }
 
@@ -8807,7 +8819,7 @@ p {
     background-color: #ffebef;
   }
 
-  .group:hover .sm\:group-hover\:bg-base {
+  .group:hover .sm\:group-hover\:bg-default {
     background-color: #1f0d3c;
   }
 
@@ -9103,7 +9115,7 @@ p {
     background-color: #ffebef;
   }
 
-  .sm\:hover\:bg-base:hover {
+  .sm\:hover\:bg-default:hover {
     background-color: #1f0d3c;
   }
 
@@ -9399,7 +9411,7 @@ p {
     background-color: #ffebef;
   }
 
-  .sm\:focus\:bg-base:focus {
+  .sm\:focus\:bg-default:focus {
     background-color: #1f0d3c;
   }
 
@@ -9759,10 +9771,6 @@ p {
     border-color: #ffebef;
   }
 
-  .sm\:border-base {
-    border-color: #1f0d3c;
-  }
-
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -10055,10 +10063,6 @@ p {
     border-color: #ffebef;
   }
 
-  .sm\:hover\:border-base:hover {
-    border-color: #1f0d3c;
-  }
-
   .sm\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -10349,10 +10353,6 @@ p {
 
   .sm\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
-  }
-
-  .sm\:focus\:border-base:focus {
-    border-color: #1f0d3c;
   }
 
   .sm\:rounded-none {
@@ -13287,7 +13287,7 @@ p {
     color: #ffebef;
   }
 
-  .sm\:text-base {
+  .sm\:text-default {
     color: #1f0d3c;
   }
 
@@ -13583,7 +13583,7 @@ p {
     color: #ffebef;
   }
 
-  .group:hover .sm\:group-hover\:text-base {
+  .group:hover .sm\:group-hover\:text-default {
     color: #1f0d3c;
   }
 
@@ -13879,7 +13879,7 @@ p {
     color: #ffebef;
   }
 
-  .sm\:hover\:text-base:hover {
+  .sm\:hover\:text-default:hover {
     color: #1f0d3c;
   }
 
@@ -14175,7 +14175,7 @@ p {
     color: #ffebef;
   }
 
-  .sm\:focus\:text-base:focus {
+  .sm\:focus\:text-default:focus {
     color: #1f0d3c;
   }
 
@@ -14910,7 +14910,7 @@ p {
     background-color: #ffebef;
   }
 
-  .md\:bg-base {
+  .md\:bg-default {
     background-color: #1f0d3c;
   }
 
@@ -15206,7 +15206,7 @@ p {
     background-color: #ffebef;
   }
 
-  .group:hover .md\:group-hover\:bg-base {
+  .group:hover .md\:group-hover\:bg-default {
     background-color: #1f0d3c;
   }
 
@@ -15502,7 +15502,7 @@ p {
     background-color: #ffebef;
   }
 
-  .md\:hover\:bg-base:hover {
+  .md\:hover\:bg-default:hover {
     background-color: #1f0d3c;
   }
 
@@ -15798,7 +15798,7 @@ p {
     background-color: #ffebef;
   }
 
-  .md\:focus\:bg-base:focus {
+  .md\:focus\:bg-default:focus {
     background-color: #1f0d3c;
   }
 
@@ -16158,10 +16158,6 @@ p {
     border-color: #ffebef;
   }
 
-  .md\:border-base {
-    border-color: #1f0d3c;
-  }
-
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -16454,10 +16450,6 @@ p {
     border-color: #ffebef;
   }
 
-  .md\:hover\:border-base:hover {
-    border-color: #1f0d3c;
-  }
-
   .md\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -16748,10 +16740,6 @@ p {
 
   .md\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
-  }
-
-  .md\:focus\:border-base:focus {
-    border-color: #1f0d3c;
   }
 
   .md\:rounded-none {
@@ -19686,7 +19674,7 @@ p {
     color: #ffebef;
   }
 
-  .md\:text-base {
+  .md\:text-default {
     color: #1f0d3c;
   }
 
@@ -19982,7 +19970,7 @@ p {
     color: #ffebef;
   }
 
-  .group:hover .md\:group-hover\:text-base {
+  .group:hover .md\:group-hover\:text-default {
     color: #1f0d3c;
   }
 
@@ -20278,7 +20266,7 @@ p {
     color: #ffebef;
   }
 
-  .md\:hover\:text-base:hover {
+  .md\:hover\:text-default:hover {
     color: #1f0d3c;
   }
 
@@ -20574,7 +20562,7 @@ p {
     color: #ffebef;
   }
 
-  .md\:focus\:text-base:focus {
+  .md\:focus\:text-default:focus {
     color: #1f0d3c;
   }
 
@@ -21309,7 +21297,7 @@ p {
     background-color: #ffebef;
   }
 
-  .lg\:bg-base {
+  .lg\:bg-default {
     background-color: #1f0d3c;
   }
 
@@ -21605,7 +21593,7 @@ p {
     background-color: #ffebef;
   }
 
-  .group:hover .lg\:group-hover\:bg-base {
+  .group:hover .lg\:group-hover\:bg-default {
     background-color: #1f0d3c;
   }
 
@@ -21901,7 +21889,7 @@ p {
     background-color: #ffebef;
   }
 
-  .lg\:hover\:bg-base:hover {
+  .lg\:hover\:bg-default:hover {
     background-color: #1f0d3c;
   }
 
@@ -22197,7 +22185,7 @@ p {
     background-color: #ffebef;
   }
 
-  .lg\:focus\:bg-base:focus {
+  .lg\:focus\:bg-default:focus {
     background-color: #1f0d3c;
   }
 
@@ -22557,10 +22545,6 @@ p {
     border-color: #ffebef;
   }
 
-  .lg\:border-base {
-    border-color: #1f0d3c;
-  }
-
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -22853,10 +22837,6 @@ p {
     border-color: #ffebef;
   }
 
-  .lg\:hover\:border-base:hover {
-    border-color: #1f0d3c;
-  }
-
   .lg\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -23147,10 +23127,6 @@ p {
 
   .lg\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
-  }
-
-  .lg\:focus\:border-base:focus {
-    border-color: #1f0d3c;
   }
 
   .lg\:rounded-none {
@@ -26085,7 +26061,7 @@ p {
     color: #ffebef;
   }
 
-  .lg\:text-base {
+  .lg\:text-default {
     color: #1f0d3c;
   }
 
@@ -26381,7 +26357,7 @@ p {
     color: #ffebef;
   }
 
-  .group:hover .lg\:group-hover\:text-base {
+  .group:hover .lg\:group-hover\:text-default {
     color: #1f0d3c;
   }
 
@@ -26677,7 +26653,7 @@ p {
     color: #ffebef;
   }
 
-  .lg\:hover\:text-base:hover {
+  .lg\:hover\:text-default:hover {
     color: #1f0d3c;
   }
 
@@ -26973,7 +26949,7 @@ p {
     color: #ffebef;
   }
 
-  .lg\:focus\:text-base:focus {
+  .lg\:focus\:text-default:focus {
     color: #1f0d3c;
   }
 
@@ -27708,7 +27684,7 @@ p {
     background-color: #ffebef;
   }
 
-  .xl\:bg-base {
+  .xl\:bg-default {
     background-color: #1f0d3c;
   }
 
@@ -28004,7 +27980,7 @@ p {
     background-color: #ffebef;
   }
 
-  .group:hover .xl\:group-hover\:bg-base {
+  .group:hover .xl\:group-hover\:bg-default {
     background-color: #1f0d3c;
   }
 
@@ -28300,7 +28276,7 @@ p {
     background-color: #ffebef;
   }
 
-  .xl\:hover\:bg-base:hover {
+  .xl\:hover\:bg-default:hover {
     background-color: #1f0d3c;
   }
 
@@ -28596,7 +28572,7 @@ p {
     background-color: #ffebef;
   }
 
-  .xl\:focus\:bg-base:focus {
+  .xl\:focus\:bg-default:focus {
     background-color: #1f0d3c;
   }
 
@@ -28956,10 +28932,6 @@ p {
     border-color: #ffebef;
   }
 
-  .xl\:border-base {
-    border-color: #1f0d3c;
-  }
-
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -29252,10 +29224,6 @@ p {
     border-color: #ffebef;
   }
 
-  .xl\:hover\:border-base:hover {
-    border-color: #1f0d3c;
-  }
-
   .xl\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -29546,10 +29514,6 @@ p {
 
   .xl\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
-  }
-
-  .xl\:focus\:border-base:focus {
-    border-color: #1f0d3c;
   }
 
   .xl\:rounded-none {
@@ -32484,7 +32448,7 @@ p {
     color: #ffebef;
   }
 
-  .xl\:text-base {
+  .xl\:text-default {
     color: #1f0d3c;
   }
 
@@ -32780,7 +32744,7 @@ p {
     color: #ffebef;
   }
 
-  .group:hover .xl\:group-hover\:text-base {
+  .group:hover .xl\:group-hover\:text-default {
     color: #1f0d3c;
   }
 
@@ -33076,7 +33040,7 @@ p {
     color: #ffebef;
   }
 
-  .xl\:hover\:text-base:hover {
+  .xl\:hover\:text-default:hover {
     color: #1f0d3c;
   }
 
@@ -33372,7 +33336,7 @@ p {
     color: #ffebef;
   }
 
-  .xl\:focus\:text-base:focus {
+  .xl\:focus\:text-default:focus {
     color: #1f0d3c;
   }
 

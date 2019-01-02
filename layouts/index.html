@@ -99,7 +99,7 @@
       <div class="column lg:w-full">
 
         <h2 class="text-4xl text-white font-display mix-none mb-4">Work with me—</h2>
-        <h3 class="text-xl text-orange font-normal mix-none mb-12">Get some shade, with copywriting that builds your brand and nets better customers.</h3>
+        <h3 class="text-xl text-orange font-normal mix-none mb-12">Get some shade with copy and content that strengthens your brand and nets better customers.</h3>
       
       </div>
       <div class="column lg:w-1/3">
@@ -161,7 +161,7 @@
       </div>      
 
       {{ range first 3 .Pages }}
-      <a class="blog_latest group column md:w-1/2 lg:w-1/3 mx-auto mb-12" href="{{ .Permalink }}">
+      <a class="blog_latest group column md:w-1/2 lg:w-1/3 mx-auto mb-12 lg:mb-0" href="{{ .Permalink }}">
 
         <img class="rounded-sm" src="{{ .RelPermalink }}{{ .Params.cover }}" alt="{{ .Params.alt }}" />
         <p class="text-sm text-black font-bold uppercase">
@@ -170,7 +170,7 @@
           {{ end }}
         </p>
         <h3 class="relative w-full text-2xl lg:text-3xl text-green mt-4 group-hover:text-orange">{{ .Title }}</h3>
-        <p class="text-base lg:text-lg text-grey-darkest leading-tight mt-4">{{ .Description }} <button class="block text-white bg-orange mt-4 p-1 rounded-sm group-hover:bg-pink">Read on &rarr;</button></p>
+        <p class="text-base lg:text-lg text-grey-darkest leading-tight mt-4">{{ .Description }} <button class="block text-white bg-green mt-4 p-1 rounded-sm group-hover:bg-orange">Read on &rarr;</button></p>
 
       </a>
       {{ end }}
@@ -179,37 +179,45 @@
   </div>
 </div>
 
-<div id="process" class="section">
+<div id="love" class="">
   <div class="container">
-    <div class="rad rad-what"></div>
 
-    <div class="columns">
-      <div class="column lg:w-2/3">
+    <div class="rad rad-love"></div>
+
+    <div class="columns bg-purple py-24 rounded-sm">
+      <div class="column lg:w-full">
+
+        <h2 class="text-4xl lg:text-5xl font-display text-orange leading-tighter mb-8 mix-none">People fall in love with stories, not features.</h2>
+
+      </div>
+      <div class="column lg:w-1/3">
         
-        <h2 class="text-4xl lg:text-5xl font-display text-grad leading-tighter mb-8">People fall in love with stories, not features or products.</h2>
-        <p class="text-xl lg:text-2xl leading-tight mb-8">If your brand gets visitors but not customers, it's probably because they don't understand your story.</p>
-        <p class="text-xl lg:text-2xl leading-tight mb-8">A brand's story is many things, but first and foremost it's a clear, simple message about how your product can help make someone's life better.</p>
-        <p class="text-xl lg:text-2xl leading-tight mb-8">Not sure how to tell your story? I use a proven framework that helps you create a clearer message that turns visitors into customers.</p>
-        <a class="button inline-block text-lg font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank" rel="noopener">{{ .Params.cta_one | safeHTML }}</a>
+        <p class="text-base lg:text-lg text-white leading-tight mb-6 mix-none">That's hard for tech businesses to hear, because they <em>know</em> their product's features are killer. They just finished a months-long push to finally move from <code>beta</code> to <code>1.0</code>.</p>
+        <p class="text-base lg:text-lg text-white leading-tight mix-none">But tech businesses are facing contstant competition and disruptive thinking. Those with the clearest stories will stand apart.</p>
 
       </div>
+      <div class="column lg:w-1/3">
+    
+        <p class="text-base lg:text-lg text-white leading-tight mb-6 mix-none">I'm here to help discover your brand's story and tell it in the most clear and compelling way possible. 
+        
+        To help supplement your story, I'll </p>
 
-      <div class="column lg:w-1/3 mt-20 lg:mt-2">
+      </div>
+      <div class="column lg:w-1/3">
       
-        <h3 class="text-2xl lg:text-3xl text-green mb-4">1. Develop a clear story.</h3>
-        <p class="text-xl leading-tight mb-6">Your brand has power. Leverage my proven framework to say what you do with clarity and confidence.</p>
-        <h3 class="text-2xl lg:text-3xl text-green mb-4">2. Free up your time.</h3>
-        <p class="text-xl leading-tight mb-6">You know how to run your business. Work with an expert so you can focus on the tasks you know best.</p>
-        <h3 class="text-2xl lg:text-3xl text-green mb-4">3. Find more customers.</h3>
-        <p class="text-xl leading-tight mb-6">When customers believe in you <em>and</em> your products, your marketing makes sense and your business grows.</p>
+        <h3 class="text-xl lg:text-2xl text-green mb-4">1. Develop a clear story.</h3>
+        <p class="text-base lg:text-lg text-white leading-tight mb-6 mix-none">Your brand has power. Leverage my proven framework to say what you do with clarity and confidence.</p>
+        <h3 class="text-xl lg:text-2xl text-green mb-4">2. Free up your time.</h3>
+        <p class="text-base lg:text-lg text-white leading-tight mb-6 mix-none">You know how to run your business. Work with an expert so you can focus on the tasks you know best.</p>
+        <h3 class="text-xl lg:text-2xl text-green mb-4">3. Find more customers.</h3>
+        <p class="text-base lg:text-lg text-white leading-tight mix-none">When customers believe in you <em>and</em> your products, your marketing makes sense and your business grows.</p>
 
       </div>
-
     </div>
   </div>
 </div>
 
-<div id="about" class="section">
+{{/* <div id="about" class="section">
   <div class="container">
     <div class="columns">
 
@@ -257,10 +265,9 @@
     
     </div>
   </div> 
-</div>
+</div> */}}
 
-
-<div id="explainer" class="section">
+{{/* <div id="explainer" class="section">
   <div class="container">
     <div class="rad rad-process"></div>
 
@@ -298,7 +305,7 @@
 
     </div>
   </div>
-</div>
+</div> */}}
 
 {{/* <div id="course" class="">
   <div class="container">

@@ -128,7 +128,7 @@ let colors = {
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
 
-  'base': '#1f0d3c',
+  'default': '#1f0d3c',
   'orange': '#f27370',
   'green': '#00a891',
   'pink': '#9F5B82',

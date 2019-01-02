@@ -4,6 +4,7 @@
 /* Utilities (tailwind, fonts, grids, standards */
 
 @import "utility/_font";
+@import "utility/_rad";
 
 /* Other structure */
 @import "partials/_nav";
@@ -63,8 +64,13 @@ body {
 }
 
 .text-grad {
-  @apply pt-2;
   background: linear-gradient(to bottom right, config('colors.orange'), config('colors.purple'));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-grad-pink {
+  background: linear-gradient(to bottom right, config('colors.orange'), config('colors.pink'));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -113,49 +119,44 @@ h2, p {
 /* Homepage / hero
 =============================================================== */
 
-#intro {
+/* #intro {
   overflow-y: hidden;
 }
 
 .me {
   top: -100px;
-}
+} */
 
-/* Homepage / three-point helper
+/* Homepage / Hi, I'm Joel
 =============================================================== */
+
+#hi {
+  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
+}
 
 #hi svg {
   width: 64px;
   height: 64px;
 }
 
-
-/* Homepage / explainer
+/* Homepage / latest blog section
 =============================================================== */
 
-.rad {
-  display: block;
-  background: linear-gradient(to bottom left, config('colors.green') -40%, transparent 50%), linear-gradient(to bottom right, config('colors.purple'), config('colors.orange'));
-  position: absolute;
+.blog_latest h3,
+.blog_latest button {
+  transition: 0.3s all ease;
 }
 
-.rad-what {
-  width: 800px;
-  height: 700px;
-  z-index: -1;
-  border-radius: 94% 40% 45% 81% / 97% 82% 48% 41%;
-  left: -600px;
-  top: 50%;
-  transform: translateY(-50%);
+/* Homepage / People fall in love...
+=============================================================== */
+
+#love .columns {
+  /* background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%); */
 }
 
-.rad-what:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(to right, transparent -20%, #f8fafc 95%);
+#love code {
+  font-size: 0.9rem;
+  color: config(colors.orange);
 }
 
 /* Homepage / clients
@@ -205,10 +206,6 @@ h2, p {
   max-height: 38px;
 }
 
-#hi {
-  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
-}
-
 /* Homepage / longform
 =============================================================== */
 
@@ -230,13 +227,6 @@ h2, p {
   transform: scale(2);
 }
 
-/* Homepage / latest blog section
-=============================================================== */
-
-.blog_latest h3,
-.blog_latest button {
-  transition: 0.3s all ease;
-}
 
 /* .blog_latest {
   min-height: 20rem;

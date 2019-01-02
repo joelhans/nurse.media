@@ -206,7 +206,7 @@ h2, p {
 }
 
 #hi {
-  background: linear-gradient(to top right, config(colors.purple), config(colors.orange ));
+  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
 }
 
 /* Homepage / longform
@@ -233,7 +233,12 @@ h2, p {
 /* Homepage / latest blog section
 =============================================================== */
 
-.blog_latest {
+.blog_latest h3,
+.blog_latest button {
+  transition: 0.3s all ease;
+}
+
+/* .blog_latest {
   min-height: 20rem;
 }
 
@@ -255,7 +260,7 @@ h2, p {
   background-repeat: no-repeat;
   transition: all 0.3s ease;
   min-height: 14rem;
-}
+} */
 
 /* .blog_latest:first-of-type a > div {
   border-radius: 32% 68% 47% 53% / 47% 22% 78% 53%;

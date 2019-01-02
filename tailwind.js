@@ -892,7 +892,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover', 'focus'],
+    backgroundColors: ['responsive', 'hover', 'focus', 'group-hover'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],

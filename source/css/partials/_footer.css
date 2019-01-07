@@ -1,0 +1,12 @@
+.footer-contact svg {
+  width: 16px;
+  height: 16px;
+  transform: translateY(2px);
+  @apply inline-block mr-1;
+}
+
+.footer-contact svg path,
+.footer-contact svg polygon,
+.footer-contact svg rect {
+  fill: url(#grad);
+}

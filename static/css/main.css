@@ -167,7 +167,25 @@
   color: #9f5b82;
 }
 
+.footer-contact svg {
+  width: 16px;
+  height: 16px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  display: inline-block;
+  margin-right: 4px;
+  margin-right: .25rem;
+}
+
+.footer-contact svg path,
+.footer-contact svg polygon,
+.footer-contact svg rect {
+  fill: url(#grad);
+}
+
 /* Specific pages */
+
+/* Tailwind */
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -7860,18 +7878,19 @@ p {
 }
 
 #love code {
+  color: #f27370;
   font-size: 14.4px;
   font-size: .9rem;
-  color: #f27370;
+  font-weight: 700;
 }
 
 /* Homepage / clients
 =============================================================== */
 
 .client {
+  max-height: 22px;
   margin-right: 32px;
   margin-right: 2rem;
-  max-height: 22px;
 }
 
 .client:last-of-type {
@@ -7893,121 +7912,76 @@ p {
 }
 
 .client-redhat {
-  max-height: 24px;
   height: 24px;
+  max-height: 24px;
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
 
 .client-ssdnodes {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.3" /><feFuncG type="linear" slope="0.3" /><feFuncB type="linear" slope="0.3" /></feComponentTransfer></filter></svg>#filter');
-  -webkit-filter: grayscale(1) brightness(.3);
-          filter: grayscale(1) brightness(.3);
+  max-height: 20px;
 }
 
 .client-imgsrvr {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="1 0" /><feFuncG type="table" tableValues="1 0" /><feFuncB type="table" tableValues="1 0" /></feComponentTransfer></filter></svg>#filter');
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  max-height: 42px;
 }
 
 .client-opentext {
-  max-height: 34px;
+  max-height: 28px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .client-logicgate {
-  max-height: 38px;
+  max-height: 20px;
 }
 
 /* Homepage / longform
 =============================================================== */
 
 .headshot img {
-  border-radius: 44% 100% 84% 64% / 90% 63% 85% 55%;
   position: relative;
+  border-radius: 44% 100% 84% 64% / 90% 63% 85% 55%;
 }
 
 .headshot:after {
-  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
   background: -webkit-gradient(linear, right top, left bottom, color-stop(-40%, #00a891), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right bottom, from(#442b75), to(#f27370));
   background: linear-gradient(to bottom left, #00a891 -40%, transparent 50%), linear-gradient(to bottom right, #442b75, #f27370);
   border-radius: 44% 100% 84% 64% / 90% 63% 85% 55%;
-  top: 0;
+  content: '';
   opacity: .05;
-  z-index: -1;
   -webkit-transform: scale(2);
           transform: scale(2);
-}
-
-/* .blog_latest {
-  min-height: 20rem;
-}
-
-.blog_latest a {
-  background: linear-gradient(to bottom, transparent 40%, rgba(0, 168, 145, 0.2));
-  background-position: 50% 220%;
-  background-size: 100% 50%;
-  background-repeat: no-repeat;
-  transition: all 0.5s ease;
-}
-
-.blog_latest a:hover {
-  background-position: 50% 100%;
-}
-
-.blog_latest a > div {
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  transition: all 0.3s ease;
-  min-height: 14rem;
-} */
-
-/* .blog_latest:first-of-type a > div {
-  border-radius: 32% 68% 47% 53% / 47% 22% 78% 53%;
-}
-
-.blog_latest:nth-of-type(2) a > div {
-  border-radius: 74% 26% 68% 32% / 26% 63% 37% 74%;
-}
-
-.blog_latest:nth-of-type(3) a > div {
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-} */
-
-.blog_latest a:hover > div {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  /* border-radius: 40% 60%; */
 }
 
 /* Homepage / process
 =============================================================== */
 
 .rad-process {
+  z-index: -1;
+  top: 50%;
+  right: -600px;
   width: 800px;
   height: 700px;
-  z-index: -1;
   border-radius: 94% 40% 45% 81% / 97% 82% 48% 41%;
-  right: -600px;
-  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 .rad-process:after {
-  content: '';
+  position: absolute;
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
   background: -webkit-gradient(linear, right top, left top, color-stop(-20%, transparent), color-stop(95%, #f8fafc));
   background: linear-gradient(to left, transparent -20%, #f8fafc 95%);
+  content: '';
 }
 
 /* Blog / single post
@@ -8062,10 +8036,10 @@ p {
 }
 
 .content blockquote:before {
-  content: open-quote;
   position: absolute;
-  left: -18px;
   top: 2px;
+  left: -18px;
+  content: open-quote;
   font-size: 30px;
   font-size: 1.875rem;
   color: #00a891;
@@ -8096,14 +8070,14 @@ p {
 =============================================================== */
 
 .sidebar_storytelling {
-  position: relative;
   top: 0%;
+  position: relative;
 }
 
 @media (min-width: 992px) {
   .sidebar_storytelling {
-    position: absolute;
     top: 50%;
+    position: absolute;
   }
 }
 
@@ -8120,19 +8094,19 @@ p {
 
 .form-input,
 .form-submit {
+  height: 66px;
   display: inline-block;
   font-weight: 700;
   padding: 24px;
   padding: 1.5rem;
-  height: 66px;
 }
 
 .form-input {
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #8795a1;
   border-width: 1px;
   border-color: #b8c2cc;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .form-submit {

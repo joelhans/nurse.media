@@ -6,6 +6,7 @@ var
   tailwindcss = require('tailwindcss'),
   cssimport   = require('postcss-import'),
   cssnext     = require('postcss-cssnext'),
+  imagemin    = require('gulp-imagemin'),
 
   // Directories
   dir = {
@@ -19,7 +20,7 @@ var
       dest: 'static/js/'
     },
     img: {
-      src: 'source/img/**.*',
+      src: 'source/img/**/**.*',
       dest: 'static/img/'
     }
   }
@@ -48,6 +49,7 @@ gulp.task('script', function() {
 
 gulp.task('image', function () {
   return gulp.src(dir.img.src)
+    .pipe(imagemin())
     .pipe(gulp.dest(dir.img.dest));
 });
 

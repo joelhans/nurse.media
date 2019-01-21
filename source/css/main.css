@@ -11,6 +11,7 @@
 @import "partials/_footer";
 
 /* Specific pages */
+@import "pages/_about";
 
 /* Tailwind */
 

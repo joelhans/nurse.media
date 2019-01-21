@@ -36,7 +36,7 @@ gulp.task('style', function () {
   return gulp.src(dir.css.src)
     .pipe(plumber())
     .pipe(postcss(plugins))
-    .pipe(gulp.dest(dir.css.dest));
+    .pipe(gulp.dest(dir.css.dest))
 });
 
 // JS processing

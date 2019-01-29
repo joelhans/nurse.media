@@ -1,3 +1,9 @@
+/* ===============================================================
+== 
+== NURSE MEDIA
+==
+=============================================================== */
+
 /* Imports
 =============================================================== */
 
@@ -5,18 +11,17 @@
 
 @import "utility/_font";
 @import "utility/_rad";
+@import "utility/_structure";
+@import "utility/_tailwind";
 
 /* Other structure */
 @import "partials/_nav";
 @import "partials/_footer";
+@import "partials/_quotes";
 
 /* Specific pages */
+@import "pages/_homepage";
 @import "pages/_about";
-
-/* Tailwind */
-
-@tailwind preflight;
-@tailwind components;
 
 /* Custom utilities
 =============================================================== */
@@ -29,35 +34,6 @@ a, .button {
 .button {
   @apply inline-block rounded-sm;
 }
-
-.section {
-  @apply border-t-2 py-40;
-}
-
-.container { 
-  @apply relative mx-auto; 
-}
-
-.columns { 
-  @apply relative flex flex-wrap; 
-}
-
-@screen md {
-  .columns { @apply -mx-10; }
-}
-
-.column {
-  @apply relative w-full px-4;
-}
-
-@screen md {
-  .column { @apply px-10; }
-}
-
-/* Tailwind utilities
-=============================================================== */
-
-@tailwind utilities;
 
 /* Other customizations/standards
 =============================================================== */
@@ -133,29 +109,23 @@ h2, p {
 /* Homepage / Hi, I'm Joel
 =============================================================== */
 
-#hi {
+/* #hi {
   background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
-}
+} */
 
-#hi svg {
+/* #hi svg {
   width: 64px;
   height: 64px;
-}
+} */
 
-/* Homepage / latest blog section
-=============================================================== */
 
-.blog_latest h3,
-.blog_latest button {
-  transition: 0.3s all ease;
-}
 
 /* Homepage / People fall in love...
 =============================================================== */
 
-#love .columns {
-  /* background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%); */
-}
+/* #love .columns {
+  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
+} */
 
 #love code {
   color: config(colors.orange);
@@ -166,50 +136,7 @@ h2, p {
 /* Homepage / clients
 =============================================================== */
 
-.client {
-  max-height: 22px;
-  @apply mr-8;
-}
 
-.client:last-of-type {
-  @apply mr-0;
-}
-
-.client-ibm {
-  max-height: 24px;
-}
-
-.client-jj {
-  max-height: 28px;
-  transform: translateY(3px);
-}
-
-.client-autodesk {
-  max-height: 16px;
-}
-
-.client-redhat {
-  height: 24px;
-  max-height: 24px;
-  transform: translateY(-3px);
-}
-
-.client-ssdnodes {
-  max-height: 20px;
-}
-
-.client-imgsrvr {
-  max-height: 42px;
-}
-
-.client-opentext {
-  max-height: 28px;
-  transform: translateY(2px);
-}
-
-.client-logicgate {
-  max-height: 20px;
-}
 
 /* Homepage / longform
 =============================================================== */

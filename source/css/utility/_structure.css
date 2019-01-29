@@ -1,0 +1,41 @@
+/* ===============================================================
+== 
+== STRUCTURE & GRID
+==
+=============================================================== */
+
+.container { 
+  @apply relative mx-auto; 
+}
+
+.section {
+  @apply border-t-2 py-40;
+}
+
+.columns { 
+  @apply relative flex flex-wrap;
+
+  @screen md {
+    @apply -mx-10;
+  }
+}
+
+.columns.-wide {
+  @screen md {
+    @apply -mx-20;
+  }
+}
+
+.columns.-wide .column {
+  @screen md {
+    @apply px-20;
+  }
+}
+
+.column {
+  @apply relative w-full px-4;
+
+  @screen md {
+    @apply px-10;
+  }
+}

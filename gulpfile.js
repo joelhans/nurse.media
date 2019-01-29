@@ -6,6 +6,7 @@ var
   tailwindcss = require('tailwindcss'),
   cssimport   = require('postcss-import'),
   cssnext     = require('postcss-cssnext'),
+  cssnano     = require('gulp-cssnano'),
   imagemin    = require('gulp-imagemin'),
 
   // Directories
@@ -36,6 +37,7 @@ gulp.task('style', function () {
   return gulp.src(dir.css.src)
     .pipe(plumber())
     .pipe(postcss(plugins))
+    .pipe(cssnano())
     .pipe(gulp.dest(dir.css.dest))
 });
 

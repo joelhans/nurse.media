@@ -1,0 +1,64 @@
+/* ===============================================================
+== 
+== HOMEPAGE
+==
+=============================================================== */
+
+/* Clients
+=============================================================== */
+
+.client {
+  max-height: 22px;
+  @apply mx-4 mt-4;
+}
+
+.client-ibm {
+  max-height: 24px;
+}
+
+.client-jj {
+  max-height: 28px;
+  transform: translateY(3px);
+}
+
+.client-autodesk {
+  max-height: 16px;
+}
+
+.client-redhat {
+  height: 24px;
+  max-height: 24px;
+  transform: translateY(-3px);
+}
+
+.client-ssdnodes {
+  max-height: 20px;
+}
+
+.client-imgsrvr {
+  max-height: 42px;
+}
+
+.client-opentext {
+  max-height: 28px;
+  transform: translateY(2px);
+}
+
+.client-logicgate {
+  max-height: 20px;
+}
+
+/* Hi, I'm Joel.
+=============================================================== */
+
+#hi {
+  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
+}
+
+/* Homepage / latest blog section
+=============================================================== */
+
+.blog_latest h3,
+.blog_latest button {
+  transition: 0.3s all ease;
+}

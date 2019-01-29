@@ -4,17 +4,17 @@
   <div class="container">
     <div class="columns">
 
-      <div class="column lg:w-3/5">
+      <div class="column lg:w-3/4">
 
-        <h1 class="tagline text-grad text-4xl lg:text-6xl font-display text-orange leading-none mb-8">{{ .Params.header | safeHTML }}</h1>
-        <p class="text-lg lg:text-2xl leading-tight mb-8">{{ .Params.subhead | safeHTML }}</p>
+        <h1 class="tagline text-grad text-4xl lg:text-6xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
+        <p class="text-xl lg:text-3xl leading-tight mb-8">{{ .Params.subhead | safeHTML }}</p>
 
         <a class="button inline-block text-lg lg:text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank" rel="noopener">{{ .Params.cta_one | safeHTML }}</a>
-        <a class="text-purple italic mt-4 ml-4 hover:text-orange" href="/discovery/">What will I learn?</a>
+        {{/* <a class="text-purple italic mt-4 ml-4 hover:text-orange" href="/discovery/">What will I learn?</a> */}}
 
       </div>
 
-      <div class="column lg:w-3/5 flex items-center space-between mt-24">
+      <div class="column lg:w-4/5 flex items-center flex-wrap justify-center md:justify-start mt-24">
 
           <img class="client client-ibm" src="/img/brands/ibm.svg" alt="The IBM logo" />
           <img class="client client-jj" src="/img/brands/johnson-and-johnson.svg" alt="The Johnson & Johnson logo" />
@@ -29,17 +29,27 @@
 
 <div id="hi" class="section py-24 border-t-0">
   <div class="container">
-    <div class="columns bg-white rounded-sm">
+    <div class="columns -wide bg-white rounded-sm">
 
-      <div class="column lg:w-3/5 pt-16">
+      <div class="column lg:w-4/5 pt-16">
 
-        <h2 class="text-3xl lg:text-4xl text-orange font-display mb-6">Hi, I'm Joel.</h2>
-        <p class="text-lg lg:text-xl leading-tight">I'm more than just a copywriter—I'm here help you grow despite the inhospitable world of product promotion and customer acquisition. I'm someone who can:</p>
+        <h2 class="text-3xl lg:text-5xl text-orange font-display mb-6">Hi, I'm Joel. I help tech brands effortlessly sell their products without learning how to write first.</h2>
 
       </div>
     </div>
+    <div class="columns -wide bg-white pb-16 rounded-tl-sm">
+      <div class="column lg:w-3/5">
 
-    <div class="columns bg-white rounded-sm pt-12 pb-16">
+        <p class="text-xl lg:text-2xl leading-tight mb-6">Let me tell you a story. Here in the Sonoran Desert, the legendary saguaro cactus can only survive its first few years under the cooling shade of a <em>nurse tree</em>.</p>
+        <p class="text-xl lg:text-2xl leading-tight mb-6">As a copywriter, my goal is the same: <span class="text-green">Give you and your company the things you need (copy, in this case) to grow.</span></p>
+
+        <p class="text-xl lg:text-2xl leading-tight">So, yes, I'm more than just a copywriter—I'm here help you grow within the inhospitable world of product promotion and customer acquisition.</p>
+
+      </div>
+    </div>
+    
+
+    {{/* <div class="columns -wide bg-white rounded-sm pt-12 pb-16">
       <div class="column lg:w-1/3 flex">
 
         <div class="w-1/5">
@@ -84,18 +94,10 @@
 
         </div>
 
-      </div>
-    </div>
+      </div> 
+    </div> */}}
 
-    <div class="columns bg-white rounded-sm">
-      <div class="column lg:w-3/5 mx-auto mt-12 mb-16">
-
-        <blockquote class="text-2xl lg:text-3xl text-grey-darker font-normal">Our experience with Joel was wonderful. He was very professional and took the time to really understand what we wanted. The communication about edits went very smoothly as well and we are really happy with the final copy. <cite class="block text-xl lg:text-2xl font-bold mt-4"><span class="font-bold text-orange">&mdash;</span> Cassidy Warren, <span class="text-green italic">Travelti</span></cite></blockquote>
-
-      </div>
-    </div>
-
-    <div class="columns mt-40">
+    {{/* <div class="columns mt-40">
       <div class="column lg:w-full">
 
         <h2 class="text-4xl text-white font-display mix-none mb-4">Work with me—</h2>
@@ -147,11 +149,32 @@
 
         </div>
       </div>
+    </div> */}}
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded-sm">
+
+        <div class="w-full md:w-3/5 lg:w-2/3 xl:w-3/4 pr-0 md:pr-6 ">
+
+          <blockquote class="text-2xl lg:text-3xl font-normal leading-tight">Joel was our first marketing hire and has been a key member of our marketing team since 2016. Joel is deeply and uniquely talented in voice and branding, design, copywriting, and front-end development. I strongly recommend taking the opportunity to work with him.<cite class="block text-xl lg:text-2xl font-bold mt-8"><span class="font-bold text-orange">&mdash;</span> Matt Connor, <span class="text-green italic">Strasmore & SSD Nodes</span></cite></blockquote>
+
+        </div>
+        <div class="w-full md:w-2/5 lg:w-1/3 xl:w-1/4">
+        
+          <img src="/img/clients/matt_connor.jpg" alt="Headshot of client Matt Connor" />
+
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
 
-<div id="blog" class="section">
+<div id="blog" class="section pt-0 border-t-0">
   <div class="container">
     <div class="columns">
       <div class="column lg:w-full">
@@ -170,7 +193,7 @@
           {{ end }}
         </p>
         <h3 class="relative w-full text-2xl lg:text-3xl text-green mt-4 group-hover:text-orange">{{ .Title }}</h3>
-        <p class="text-base lg:text-lg text-grey-darkest leading-tight mt-4">{{ .Description }} <button class="block text-white bg-green mt-4 p-1 rounded-sm group-hover:bg-orange">Read on &rarr;</button></p>
+        <p class="text-sm lg:text-base text-grey-darkest leading-tight mt-4">{{ .Description }} <button class="block text-white bg-green mt-4 p-2 rounded-sm group-hover:bg-orange">Read on &rarr;</button></p>
 
       </a>
       {{ end }}
@@ -372,7 +395,7 @@
         <a class="button inline-block text-lg lg:text-xl font-bold text-white bg-orange p-6 hover:bg-green" href="https://calendly.com/nurse-media/introductions" target="_blank" rel="noopener">{{ .Params.cta_one }}</a>
       
       </div>
-      <div class="final-about column lg:w-1/3 mx-auto bg-orange py-16 rounded-sm">
+      <div class="final-about column lg:w-2/5 mx-auto bg-orange py-16 rounded-sm">
 
         <h2 class="text-white font-display font-normal mb-4 mix-none">Writes a mean sentence.</h2>
         <h2 class="text-white font-display font-normal mb-4 mix-none">Real-world experience with geniune tech disruptors.</h2>
@@ -393,6 +416,22 @@
       
       </div>
 
+    </div>
+    <div class="columns mt-32">
+      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded-sm">
+
+        <div class="w-full md:w-3/5 lg:w-2/3 xl:w-3/4 pr-0 md:pr-6 ">
+
+          <blockquote class="text-2xl lg:text-3xl font-normal leading-tight">Our experience with Joel was wonderful. He was very professional and took the time to really understand what we wanted. The communication about edits went very smoothly as well and we are really happy with the final copy. <cite class="block text-xl lg:text-2xl font-bold mt-8"><span class="font-bold text-orange">&mdash;</span> Cassidy Warren, <span class="text-green italic">Travelti</span></cite></blockquote>
+
+        </div>
+        <div class="w-full md:w-2/5 lg:w-1/3 xl:w-1/4">
+        
+          <img src="/img/clients/cassidy_warren.jpg" alt="Headshot of client Matt Connor" />
+
+        </div>
+
+      </div>
     </div>
   </div>
 </div>

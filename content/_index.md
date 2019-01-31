@@ -2,9 +2,8 @@
 title: "Joel Hans Tech Copywriter: The nurturing your tech brand needs"
 date: 2018-06-11T20:25:26-07:00
 description: "Simple tech copywriting for long-lasting growth, with Joel Hans, Tucson-based tech copywriter."
-headerold: "I nurture tech brands with copywriting and content that makes them grow."
-header: "Effortlessly grow your tech brand with nurturing copy and content."
-subhead: "Let's tell your story, branch out your brand, attract your ideal customers, and <span class=\"text-green font-bold\">grow</span> your business."
+header: "I'm a tech/SaaS copywriter who nurtures idle brands into growing ones by telling their stories."
+subhead: "Your website can't help you grow with unenergized copy. I'll transform it with conversion-focused storytelling to reach your ideal customers, blossom your brand, and <span class=\"text-green font-bold\">grow</span> your business."
 cta_one: "Schedule a free discovery meeting"
 ---
 

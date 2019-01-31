@@ -55,6 +55,24 @@
   background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
 }
 
+#hi p {
+  @apply text-lg leading-tight mb-6;
+
+  @screen lg {
+    @apply text-xl;
+  }
+}
+
+/* #hi .column.pr-32 {
+  padding-right: 25rem;
+} */
+
+#hi code {
+  color: config(colors.orange);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 /* Homepage / latest blog section
 =============================================================== */
 

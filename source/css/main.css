@@ -127,11 +127,7 @@ h2, p {
   background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
 } */
 
-#love code {
-  color: config(colors.orange);
-  font-size: 0.9rem;
-  font-weight: 700;
-}
+
 
 /* Homepage / clients
 =============================================================== */

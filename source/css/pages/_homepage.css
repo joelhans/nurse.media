@@ -9,7 +9,7 @@
 
 .client {
   max-height: 22px;
-  @apply mx-4 mt-4;
+  @apply mt-4;
 }
 
 .client-ibm {
@@ -48,12 +48,54 @@
   max-height: 20px;
 }
 
+/* Explainer
+=============================================================== */
+
+.explainer-saguaro {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 0;
+
+  @screen lg {
+    display: block;
+  }
+}
+
+.explainer-saguaro:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to right, #f8fafc 50%, transparent);
+
+  @screen xl {
+    background: linear-gradient(to right, #f8fafc 60%, transparent);
+  }
+}
+
+.explainer-saguaro img {
+  max-height: 100%;
+  right: 0;
+  position: absolute;
+}
+
+/* Previous work
+=============================================================== */
+
+#work {
+  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
+}
+
 /* Hi, I'm Joel.
 =============================================================== */
 
-#hi {
-  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
-}
+
 
 #hi p {
   @apply text-lg leading-tight mb-6;

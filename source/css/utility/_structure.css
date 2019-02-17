@@ -4,19 +4,23 @@
 ==
 =============================================================== */
 
-.container { 
-  @apply relative mx-auto; 
+.section {
+  @apply relative py-24;
+
+  @screen md {
+    @apply py-40
+  }
 }
 
-.section {
-  @apply border-t-2 py-40;
+.container { 
+  @apply relative mx-auto; 
 }
 
 .columns { 
   @apply relative flex flex-wrap;
 
   @screen md {
-    @apply -mx-10;
+    @apply -mx-8;
   }
 }
 
@@ -36,6 +40,6 @@
   @apply relative w-full px-4;
 
   @screen md {
-    @apply px-10;
+    @apply px-8;
   }
 }

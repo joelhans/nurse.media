@@ -196,6 +196,10 @@ h2, p {
   @apply text-lg leading-normal mb-6;
 }
 
+.content p.-big {
+  @apply text-xl;
+}
+
 .content a:not(.button) {
   @apply text-orange;
 }

@@ -1,16 +1,16 @@
 {{ define "main" }}
 
-<div id="intro" class="section pt-16 md:pt-32 pb-16 border-b-0 border-t-0">
+<section id="intro" class="section">
   <div class="container">
     <div class="columns">
 
-      <div class="column lg:w-2/3">
+      <div class="column lg:w-3/4">
 
-        <h1 class="tagline text-grad text-4xl lg:text-5xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
+        <h1 class="tagline text-grad text-4xl md:text-5xl lg:text-6xl font-display text-orange leading-tighter mb-4">{{ .Params.header | safeHTML }}</h1>
+        <h2 class="text-lg md:text-xl font-normal italic">{{ .Params.subhead | safeHTML }}</h2>
 
       </div>
-
-      <div class="column lg:w-4/5 flex items-center flex-wrap justify-center md:justify-start mt-24">
+      <div class="column md:w-4/5 lg:w-3/5 xl:w-1/2 flex items-center flex-wrap justify-between md:justify-between space-between mt-24">
 
         <img class="client client-ibm" src="/img/brands/ibm.svg" alt="The IBM logo" />
         <img class="client client-jj" src="/img/brands/johnson-and-johnson.svg" alt="The Johnson & Johnson logo" />
@@ -19,13 +19,98 @@
 
       </div>
       
-      
+    </div>
+  </div>
+</section>
+
+<section id="explainer" class="section bg-grey-lightest">
+  <div class="container z-10">
+    <div class="columns">
+
+      <div class="explainer-text column content lg:w-3/5 py-12">
+
+        <h2 class="text-3xl lg:text-4xl text-orange font-display font-bold">Effortlessly grow your tech brand with impactful copywriting.</h2>
+        <p>Here in the Sonoran Desert, a young saguaro cactus can&#39;t grow without shade from a nurse tree. The climate is just too harsh.</p>
+        <p>Tech businesses are no different.</p>
+        <p>You&#39;re facing constant competition and disruptive thinking. Your website has to convince visitors in a matter of seconds.</p>
+        <p>You can&#39;t afford complacency or a pitch that isn&#39;t precision-focused on getting users to fall in love with tomorrow—<em>when they&#39;re getting real, life-changing value from your product</em>.</p>
+        <p><strong>You can&#39;t afford to be like everyone else.</strong></p>
+        <h3 class="text-2xl text-green font-display ">Smart people hire me to give them a helping hand with their conversion copywriting.</h3>
+        <p>I root my strategy in exhaustive research that eliminates guesswork. And then I used deeply-resonant storytelling techniques that inspire <em>the right people</em> to take action.</p>
+        <p>What do you get out of it? How about 2X conversion rates. Or calls to action that actually work. Or a website that inspires, not confuses. Or a brand that makes you stand out and grow.</p>
+        <p>That&#39;s nurtured copy.</p>
+        <p class="-big font-bold"><a href="mailto:joel@nurse.media">Email me</a>, <a href="/process/">learn about my process</a>, or <a href="/work/">see work I've already done</a>.</p>
+
+      </div>
       
     </div>
   </div>
 
-  <img class="absolute" src="/img/saguaro.jpg" />
+  <div class="explainer-saguaro ">
+    <img class="" src="/img/saguaro.jpg" />
+  </div>
 
-</div>
+</section>
+
+<section id="work" class="section">
+  <div class="container">
+    <div class="columns">
+
+      <div class="column text-center mb-12">
+
+        <h2 class="text-4xl text-white font-display mix-none">Previous work:</h2>
+
+      </div>
+      <div class="column lg:w-1/3">
+        <a class="group block bg-white rounded-sm" href="/work/#ssd-nodes">
+
+          <img class="border-b border-purple rounded-sm mb-4" src="/img/work/work_thumb_ssd-nodes.png" alt="">
+          <h3 class="text-default text-base uppercase mb-4 px-4">SSD Nodes</h3>
+          <p class="text-2xl text-orange font-display px-4 pb-6 group-hover:text-green">Doubling Black Friday sales with a conversion-focused new product landing page &rarr;</p>
+
+        </a>
+      </div>
+      <div class="column lg:w-1/3">
+        <a class="group block bg-white rounded-sm" href="/work/#img-srvr">
+
+          <img class="border-b border-purple rounded-sm mb-4" src="/img/work/work_thumb_img-srvr.png" alt="">
+          <h3 class="text-default text-base uppercase mb-4 px-4">IMG SRVR</h3>
+          <p class="text-2xl text-orange font-display px-4 pb-6 group-hover:text-green">Launching a SaaS business with a bold story: there's a better way for PR pros to pitch journalists &rarr;</p>
+
+        </a>
+      </div>
+      <div class="column lg:w-1/3">
+        <a class="group block bg-white rounded-sm" href="/work/#ibm-streaming">
+
+          <img class="border-b border-purple rounded-sm mb-4" src="/img/work/work_thumb_ibm.png" alt="">
+          <h3 class="text-default text-base uppercase mb-4 px-4">IBM</h3>
+          <p class="text-2xl text-orange font-display px-4 pb-6 group-hover:text-green">Promoting a tech giant's analytics breakthrough via targeted, nurtured content &rarr;</p>
+
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded-sm">
+
+        <div class="w-full md:w-3/5 lg:w-2/3 xl:w-3/4 pr-0 md:pr-6">
+
+          <blockquote class="text-2xl lg:text-3xl font-normal leading-tight">Joel was our first marketing hire and has been a key member of our marketing team since 2016. Joel is deeply and uniquely talented in voice, branding, and copywriting. I strongly recommend taking the opportunity to work with him.<cite class="block text-xl lg:text-2xl font-bold mt-8"><span class="font-bold text-orange">&mdash;</span> Matt Connor, <span class="text-green italic">Strasmore & SSD Nodes</span></cite></blockquote>
+
+        </div>
+        <div class="w-full md:w-2/5 lg:w-1/3 xl:w-1/4">
+        
+          <img src="/img/clients/matt_connor.jpg" alt="Headshot of client Matt Connor" />
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 {{ end }}

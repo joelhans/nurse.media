@@ -22,6 +22,7 @@
 /* Specific pages */
 @import "pages/_homepage";
 @import "pages/_about";
+@import "pages/_services";
 
 /* Custom utilities
 =============================================================== */

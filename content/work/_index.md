@@ -1,5 +1,5 @@
 ---
 title: "Work"
-description: "Look at my previous copywriting and content marketing work."
+description: "See examples of how nurtured copy and content has helped tech brands stand out and start growing."
 type: "work"
 ---

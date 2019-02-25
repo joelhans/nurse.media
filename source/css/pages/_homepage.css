@@ -92,6 +92,18 @@
   background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
 }
 
+#work a p {
+  transition: 0.3s all ease;
+}
+
+#work a img {
+  transition: 0.3s all ease;
+
+  &:hover {
+    filter: grayscale(0.5);
+  }
+}
+
 /* Hi, I'm Joel.
 =============================================================== */
 

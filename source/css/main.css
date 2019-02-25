@@ -189,12 +189,24 @@ h2, p {
   @apply leading-tight mt-10 mb-6;
 }
 
-.content :first-child {
+.content h2 {
+  @apply text-3xl text-purple font-display leading-tighter mb-6;
+
+  @screen lg {
+    @apply text-5xl;
+  }
+}
+
+.content:first-child {
   @apply mt-0;
 }
 
 .content p, .content ul, .content ol {
-  @apply text-lg leading-normal mb-6;
+  @apply text-lg leading-normal mb-4;
+
+  @screen lg {
+    @apply text-xl mb-6;
+  }
 }
 
 .content p.-big {
@@ -202,11 +214,27 @@ h2, p {
 }
 
 .content a:not(.button) {
-  @apply text-orange;
+  @apply relative text-orange font-bold;
+}
+
+.content a:not(.button)::after {
+  content: '';
+  width: 100%;
+  background: config(colors.orange);
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  transition: 0.3s all ease;
+  @apply rounded-sm;
 }
 
 .content a:not(.button):hover {
   @apply text-green;
+}
+
+.content a:not(.button):hover::after {
+  background: config(colors.green);
 }
 
 .content blockquote {

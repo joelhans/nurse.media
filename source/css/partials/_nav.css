@@ -46,7 +46,7 @@
 =============================================================== */
 
 .nav_items a {
-  @apply block text-xl font-bold mr-8 mt-8;
+  @apply block text-lg font-bold mr-8 mt-8;
 
   &:not(.button) {
     @apply text-orange;

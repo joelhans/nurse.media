@@ -1,0 +1,214 @@
+{{ define "main" }}
+
+<div id="intro" class="section pt-16 md:pt-32 pb-16 border-b-0 border-t-0">
+  <div class="container">
+    <div class="columns">
+
+      <div class="column lg:w-2/3">
+
+        <h1 class="tagline text-grad text-4xl lg:text-5xl font-display text-orange leading-tighter mb-8">{{ .Params.header | safeHTML }}</h1>
+        <p class="text-xl lg:text-2xl leading-tight mb-8">{{ .Params.subhead | safeHTML }}</p>
+
+        <a class="button inline-block text-lg lg:text-xl font-bold text-white bg-green p-6 hover:bg-orange" href="https://calendly.com/nurse-media/introductions" target="_blank" rel="noopener">{{ .Params.cta_one | safeHTML }}</a>
+        {{/* <a class="text-purple italic mt-4 ml-4 hover:text-orange" href="/discovery/">What will I learn?</a> */}}
+
+      </div>
+
+      <div class="column lg:w-4/5 flex items-center flex-wrap justify-center md:justify-start mt-24">
+
+          <img class="client client-ibm" src="/img/brands/ibm.svg" alt="The IBM logo" />
+          <img class="client client-jj" src="/img/brands/johnson-and-johnson.svg" alt="The Johnson & Johnson logo" />
+          <img class="client client-autodesk" src="/img/brands/autodesk.svg" alt="The AutoDesk logo" />
+          <img class="client client-redhat" src="/img/brands/redhat.svg" alt="The RedHat logo" />
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div id="hi" class="section border-t-0">
+  <div class="container">
+    <div class="columns -wide w-4/5 bg-white rounded-sm">
+
+      <div class="column pt-16">
+
+        <h2 class="text-3xl lg:text-4xl text-orange font-display mb-6">People believe in stories, not features. They spend their money that way, too.</h2>
+
+      </div>
+      <div class="column lg:w-4/5 pb-16">
+
+        <p>Is your website attracting visitors, but not turning them into customers? Maybe you're just visitors will click the *buy* button. Or you keep adding new features to keep up with your competitors, hoping the customers will suddenly come flocking.</p>
+        <p>If this sounds familiar, it's because they're not finding a story that resonates with them. They don't understand how you're going to make their life better. You only have a matter of seconds to tell visitors a story that convinces them to stick around and spend their money.</p>
+        <p>But I know one thing: You have vision.</p>
+        <p>Communicating that vision in a clear and resonant story? That's tough. The problem is that the tech world is a harsh one. You're facing constant competition and disruptive thinking. You can't afford to be idle.</p>
+        <p>*You can't afford to be like everyone else.*</p>
+        <h3 class="text-xl lg:text-2xl text-orange mb-6">Smart companies hire me to write words that inspires customers with their unique story.</h3>
+        <p>And 2X their conversion rates. Or drive more qualified leads. Or just make them money. All the good stuff.</p>
+        <p>Because tech brands with the clearest story, told in a resonant voice, will stand apart.</p>
+        <p>I do my research, discover the customer's needs and voice, and toss it back at them with a clear, resonant story about how your product will make their life better.</p>
+        <p>That's just what happens when you bring storytelling and conversion copywriting together.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded-sm">
+
+        <div class="w-full md:w-3/5 lg:w-2/3 xl:w-3/4 pr-0 md:pr-6">
+
+          <blockquote class="text-2xl lg:text-3xl font-normal leading-tight">Joel was our first marketing hire and has been a key member of our marketing team since 2016. Joel is deeply and uniquely talented in voice, branding, and copywriting. I strongly recommend taking the opportunity to work with him.<cite class="block text-xl lg:text-2xl font-bold mt-8"><span class="font-bold text-orange">&mdash;</span> Matt Connor, <span class="text-green italic">Strasmore & SSD Nodes</span></cite></blockquote>
+
+        </div>
+        <div class="w-full md:w-2/5 lg:w-1/3 xl:w-1/4">
+        
+          <img src="/img/clients/matt_connor.jpg" alt="Headshot of client Matt Connor" />
+
+        </div>
+      </div>
+      <div class="column lg:w-3/5 mx-auto mt-12 text-center">
+        
+        <p class="text-2xl font-bold"><a class="text-orange hover:text-green" href="/work/#ssdnodes">See how I helped Matt and SSD Nodes double Black Friday sales with a conversion-focused landing page &rarr;</a></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column lg:w-1/2 mx-auto mt-12 text-center">
+        
+        <h2>What to expect from a copywriter like me</h2>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="blog" class="section bg-white border-t-0">
+  <div class="container">
+    <div class="columns">
+      <div class="column lg:w-full">
+
+        <h2 class="relative w-full text-4xl lg:text-5xl text-orange font-display italic mb-16">The Sproutling: <span class="block text-xl text-grey-dark font-normal roman mt-2 ml-8">Learn about my growth-oriented copywriting and conversion processes</span></h2>
+
+      </div>      
+
+      {{ range first 3 .Pages }}
+      <a class="blog_latest group column md:w-1/2 lg:w-1/3 mx-auto mb-12 lg:mb-0" href="{{ .Permalink }}">
+
+        <img class="rounded-sm" src="{{ .RelPermalink }}{{ .Params.cover }}" alt="{{ .Params.alt }}" />
+        <p class="text-sm text-black font-bold uppercase">
+          {{ range .Params.tags }}
+          <span>#{{ . }}</span>
+          {{ end }}
+        </p>
+        <h3 class="relative w-full text-2xl lg:text-3xl text-green mt-4 group-hover:text-orange">{{ .Title }}</h3>
+        <p class="text-sm lg:text-base text-grey-darkest leading-tight mt-4">{{ .Description }} <button class="block text-white bg-green mt-4 p-2 rounded-sm group-hover:bg-orange">Read on &rarr;</button></p>
+
+      </a>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+
+{{/* <div id="love" class="">
+  <div class="container">
+
+    <div class="rad rad-love"></div>
+
+    <div class="columns bg-purple pt-16 pb-12 rounded-sm">
+      <div class="column">
+
+        <h2 class="text-4xl text-white mix-none">What a copywriter like me gives you:</h2>
+
+      </div>
+    </div>
+    <div class="columns bg-purple pb-16">
+      <div class="column lg:w-1/3">
+
+        <h3 class="text-xl lg:text-2xl text-orange mb-4">1. A clear story</h3>
+        <p class="text-base lg:text-lg text-white leading-tight mb-6 mix-none">Your brand has power. Leverage my proven framework to say what you do with clarity and confidence.</p>
+
+      </div>
+      <div class="column lg:w-1/3">
+
+        <h3 class="text-lg lg:text-xl text-green mb-4">2. Freedom</h3>
+        <p class="text-base lg:text-lg text-white leading-tight mb-6 mix-none">You know how to run your business. Work with an expert so you can focus on the tasks you know best.</p>
+
+      </div>
+      <div class="column lg:w-1/3">
+
+        <h3 class="text-lg lg:text-xl text-green mb-4">3. Better customers</h3>
+        <p class="text-base lg:text-lg text-white leading-tight mix-none">When customers believe in your brand, your story, <em>and then</em> your features, your marketing starts to actually makes sense. Your business even starts to grow again.</p>
+
+      </div>
+    </div>
+  </div>
+</div> */}}
+
+<div id="final" class="section border-t-0">
+  <div class="container">
+    <div class="columns items-center">
+
+      <div class="column lg:w-1/2">
+      
+        <h2 class="text-4xl lg:text-5xl text-grad font-display">Hire me to write your copy. Get back to doing what you do best.</h2>
+        <p class="text-xl lg:text-2xl mt-8">Let's use growth-centric content to turn your visitors into your users. After a 20-minute call, you'll walk away with some important new knowledge:</p>
+        <ul class="text-lg lg:text-xl mt-8 mb-12">
+          <li class="mb-2">A short-term path to growth</li>
+          <li class="mb-2">Pointers on what's working and what isn't with your copywriting and content</li>
+          <li>Whether we're right for each other!</li>
+        </ul>
+        <a class="button inline-block text-lg lg:text-xl font-bold text-white bg-orange p-6 hover:bg-green" href="https://calendly.com/nurse-media/introductions" target="_blank" rel="noopener">{{ .Params.cta_one }}</a>
+      
+      </div>
+      <div class="final-about column lg:w-2/5 mx-auto bg-orange py-16 rounded-sm">
+
+        <h2 class="text-white font-display font-normal mb-4 mix-none">Writes a mean sentence.</h2>
+        <h2 class="text-white font-display font-normal mb-4 mix-none">Real-world experience with geniune tech disruptors.</h2>
+        <h2 class="text-white font-display font-normal mb-4 mix-none">Lives for writing stories.</h2>
+        <h2 class="text-white font-display font-normal mb-4 mix-none">Loves to get dirty with a mountain bike.</h2>
+        <a class="button text-xl text-pink bg-white mt-4 p-4 hover:text-purple" href="/about/">Learn more about Joel</a>
+
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column flex items-center flex-wrap lg:w-full mt-32">
+
+        <h2 class="w-full flex-grow flex-no-shrink text-xl lg:text-2xl text-green font-display font-normal mb-8">Join other happy clients today</h2>
+        <img class="client client-ssdnodes" src="/img/brands/ssd-nodes.svg" alt="SSD Nodes logo" />
+        <img class="client client-imgsrvr" src="/img/brands/img-srvr.png" alt="The IMG SRVR logo" />
+        <img class="client client-opentext" src="/img/brands/open-text.svg" alt="The OpenText logo" />
+        <img class="client client-logicgate" src="/img/brands/logic-gate.svg"alt="The LogicGate logo"  />
+      
+      </div>
+
+    </div>
+    <div class="columns mt-32">
+      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded-sm">
+
+        <div class="w-full md:w-3/5 lg:w-2/3 xl:w-3/4 pr-0 md:pr-6 ">
+
+          <blockquote class="text-2xl lg:text-3xl font-normal leading-tight">Our experience with Joel was wonderful. He was very professional and took the time to really understand what we wanted. The communication about edits went very smoothly as well and we are really happy with the final copy. <cite class="block text-xl lg:text-2xl font-bold mt-8"><span class="font-bold text-orange">&mdash;</span> Cassidy Warren, <span class="text-green italic">Travelti</span></cite></blockquote>
+
+        </div>
+        <div class="w-full md:w-2/5 lg:w-1/3 xl:w-1/4">
+        
+          <img src="/img/clients/cassidy_warren.jpg" alt="Headshot of client Matt Connor" />
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}

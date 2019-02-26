@@ -1,52 +1,29 @@
-/* Initial tailwind imports
+/* ===============================================================
+== 
+== NURSE MEDIA
+==
 =============================================================== */
 
-@tailwind preflight;
-@tailwind components;
-
-/* Self-hosted fonts
+/* Imports
 =============================================================== */
 
-/* karla-regular - latin */
-@font-face {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Karla'), local('Karla-Regular'),
-       url('../font/karla-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../font/karla-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+/* Utilities (tailwind, fonts, grids, standards */
 
-/* karla-italic - latin */
-@font-face {
-  font-family: 'Karla';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Karla Italic'), local('Karla-Italic'),
-       url('../font/karla-v6-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../font/karla-v6-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+@import "utility/_font";
+@import "utility/_rad";
+@import "utility/_structure";
+@import "utility/_tailwind";
 
-/* karla-700 - latin */
-@font-face {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Karla Bold'), local('Karla-Bold'),
-       url('../font/karla-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../font/karla-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+/* Other structure */
+@import "partials/_nav";
+@import "partials/_footer";
+@import "partials/_quotes";
 
-
-/* poppins-700 - latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Poppins Bold'), local('Poppins-Bold'),
-       url('../font/poppins-v5-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../font/poppins-v5-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+/* Specific pages */
+@import "pages/_homepage";
+@import "pages/_about";
+@import "pages/_services";
+@import "pages/_contact";
 
 /* Custom utilities
 =============================================================== */
@@ -60,35 +37,6 @@ a, .button {
   @apply inline-block rounded-sm;
 }
 
-.section {
-  @apply border-t-2 py-40;
-}
-
-.container { 
-  @apply relative mx-auto; 
-}
-
-.columns { 
-  @apply relative flex flex-wrap; 
-}
-
-@screen md {
-  .columns { @apply -mx-10; }
-}
-
-.column {
-  @apply relative w-full px-4;
-}
-
-@screen md {
-  .column { @apply px-10; }
-}
-
-/* Tailwind utilities
-=============================================================== */
-
-@tailwind utilities;
-
 /* Other customizations/standards
 =============================================================== */
 
@@ -98,7 +46,12 @@ body {
 
 .text-grad {
   background: linear-gradient(to bottom right, config('colors.orange'), config('colors.purple'));
-  font-weight: 700;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-grad-pink {
+  background: linear-gradient(to bottom right, config('colors.orange'), config('colors.pink'));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -113,35 +66,6 @@ h2, p {
 
 /* Homepage
 =============================================================== */
-
-@font-face {
-  font-family: 'Anders';
-  font-style: normal; 
-  font-weight: 400;
-  src: url('../font/Anders.woff') format('woff'), url('../font/Anders.ttf') format('ttf');
-}
-
-.logo {
-  max-height: 50px;
-}
-
-.cactus {
-  margin-left: -1px;
-}
-
-.logo svg {
-  max-height: 50px;
-  font-family: 'Anders';
-}
-
-.logo text {
-  dominant-baseline: middle;
-  text-anchor: left; 
-}
-
-.nurse {
-  max-width: 250px;
-}
 
 .tagline span {
   -webkit-text-fill-color: config('colors.green');
@@ -173,184 +97,192 @@ h2, p {
   height: 66px;
 }
 
-
-/* Homepage / explainer
+/* Homepage / hero
 =============================================================== */
 
-.rad {
-  display: block;
-  background: linear-gradient(to bottom left, config('colors.green') -40%, transparent 50%), linear-gradient(to bottom right, config('colors.purple'), config('colors.orange'));
-  position: absolute;
+/* #intro {
+  overflow-y: hidden;
 }
 
-.rad-what {
-  width: 800px;
-  height: 700px;
-  z-index: -1;
-  border-radius: 94% 40% 45% 81% / 97% 82% 48% 41%;
-  left: -600px;
-  top: 50%;
-  transform: translateY(-50%);
-}
+.me {
+  top: -100px;
+} */
 
-.rad-what:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(to right, transparent -20%, #f8fafc 95%);
-}
+/* Homepage / Hi, I'm Joel
+=============================================================== */
+
+/* #hi {
+  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
+} */
+
+/* #hi svg {
+  width: 64px;
+  height: 64px;
+} */
+
+
+
+/* Homepage / People fall in love...
+=============================================================== */
+
+/* #love .columns {
+  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
+} */
+
+
 
 /* Homepage / clients
 =============================================================== */
 
-.client {
-  @apply max-w-xs ml-8 mr-8 mb-12;
-  max-height: 50px;
-  filter: grayscale(1) brightness(0.5);
-}
 
-.client-ibm {
-  max-height: 40px;
-} 
-
-.client-autodesk {
-  max-height: 40px;
-}
-
-.client-redhat {
-  height: 50px;
-}
-
-.client-ssdnodes {
-  filter: grayscale(1) brightness(0.3);
-}
-
-.client-imgsrvr {
-  filter: invert(1);
-}
-
-.client-opentext {
-  max-height: 34px;
-}
-
-.client-logicgate {
-  max-height: 38px;
-}
 
 /* Homepage / longform
 =============================================================== */
 
 .headshot img {
-  border-radius: 44% 100% 84% 64% / 90% 63% 85% 55%;
   position: relative;
+  border-radius: 44% 100% 84% 64% / 90% 63% 85% 55%;
 }
 
 .headshot:after {
-  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
   background: linear-gradient(to bottom left, config('colors.green') -40%, transparent 50%), linear-gradient(to bottom right, config('colors.purple'), config('colors.orange'));  border-radius: 44% 100% 84% 64% / 90% 63% 85% 55%;
-  top: 0;
+  content: '';
   opacity: 0.05;
-  z-index: -1;
   transform: scale(2);
-}
-
-/* Homepage / latest blog section
-=============================================================== */
-
-.blog_latest {
-  min-height: 20rem;
-}
-
-.blog_latest a {
-  background: linear-gradient(to bottom, transparent 40%, rgba(0, 168, 145, 0.2));
-  background-position: 50% 220%;
-  background-size: 100% 50%;
-  background-repeat: no-repeat;
-  transition: all 0.5s ease;
-}
-
-.blog_latest a:hover {
-  background-position: 50% 100%;
-}
-
-.blog_latest a > div {
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  transition: all 0.3s ease;
-  min-height: 14rem;
-}
-
-/* .blog_latest:first-of-type a > div {
-  border-radius: 32% 68% 47% 53% / 47% 22% 78% 53%;
-}
-
-.blog_latest:nth-of-type(2) a > div {
-  border-radius: 74% 26% 68% 32% / 26% 63% 37% 74%;
-}
-
-.blog_latest:nth-of-type(3) a > div {
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-} */
-
-.blog_latest a:hover > div {
-  filter: grayscale(1);
-  /* border-radius: 40% 60%; */
 }
 
 /* Homepage / process
 =============================================================== */
 
 .rad-process {
+  z-index: -1;
+  top: 50%;
+  right: -600px;
   width: 800px;
   height: 700px;
-  z-index: -1;
   border-radius: 94% 40% 45% 81% / 97% 82% 48% 41%;
-  right: -600px;
-  top: 50%;
   transform: translateY(-50%);
 }
 
 .rad-process:after {
-  content: '';
+  position: absolute;
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
   background: linear-gradient(to left, transparent -20%, #f8fafc 95%);
+  content: '';
 }
 
 /* Blog / single post
 =============================================================== */
 
-.content h1,
+.h-xl {
+  & h2 {
+    @apply text-3xl text-pink font-display mt-12 mb-6;
+    
+    @screen lg {
+      @apply text-4xl;
+    }
+  }
+
+  & h3 {
+    @apply text-2xl text-green font-display mt-4 mb-6;
+    
+    @screen lg {
+      @apply text-3xl;
+    }
+  }
+}
+
+.p-xl p {
+  @apply text-lg leading-normal mb-6;
+
+  @screen lg {
+    @apply text-xl;
+  }
+}
+
+.p-xl p:last-of-type {
+  @apply mb-0;
+}
+
+.content .hero {
+  @apply text-grad text-4xl font-display leading-none mt-0;
+
+  @screen md {
+    @apply text-5xl;
+  }
+
+  @screen lg {
+    @apply text-6xl;
+  }
+}
+
 .content h2,
 .content h3,
 .content h4,
 .content h5 {
-  @apply leading-tight mt-10 mb-6;
+  @apply leading-tight mt-0 mb-6;
+
+  & + p {
+    @apply mt-10;
+  }
 }
 
-.content :first-child {
+.content 
+
+.content h2 {
+  @apply text-3xl text-purple font-display leading-tighter mb-6;
+
+  @screen lg {
+    @apply text-5xl;
+  }
+}
+
+.content:first-child {
   @apply mt-0;
 }
 
 .content p, .content ul, .content ol {
-  @apply text-lg leading-normal mb-6;
+  @apply text-lg leading-normal mb-4;
+
+  @screen lg {
+    @apply text-xl mb-6;
+  }
+}
+
+.content p.-big {
+  @apply text-xl;
 }
 
 .content a:not(.button) {
-  @apply text-orange;
+  @apply relative text-orange font-bold;
+}
+
+.content a:not(.button)::after {
+  content: '';
+  width: 100%;
+  background: config(colors.orange);
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  transition: 0.3s all ease;
+  @apply rounded-sm;
 }
 
 .content a:not(.button):hover {
   @apply text-green;
+}
+
+.content a:not(.button):hover::after {
+  background: config(colors.green);
 }
 
 .content blockquote {
@@ -362,10 +294,10 @@ h2, p {
 }
 
 .content blockquote:before {
-  content: open-quote;
   position: absolute;
-  left: -18px;
   top: 2px;
+  left: -18px;
+  content: open-quote;
   @apply text-3xl text-green font-bold;
 }
 
@@ -386,14 +318,14 @@ h2, p {
 =============================================================== */
 
 .sidebar_storytelling {
-  @apply relative;
   top: 0%;
+  @apply relative;
 }
 
 @screen lg {
   .sidebar_storytelling {
-    @apply absolute;
     top: 50%;
+    @apply absolute;
   }
 }
 
@@ -409,13 +341,13 @@ h2, p {
 
 .form-input,
 .form-submit {
-  @apply inline-block font-bold p-6;
   height: 66px;
+  @apply inline-block font-bold p-6;
 }
 
 .form-input {
-  @apply text-grey-dark border border-grey;
   box-shadow: none;
+  @apply text-grey-dark border border-grey;
 }
 
 .form-submit {

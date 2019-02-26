@@ -1,0 +1,57 @@
+/* ===============================================================
+== 
+== Self-hosted fonts
+==
+=============================================================== */
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Karla'), local('Karla-Regular'),
+       url('../font/karla-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../font/karla-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Karla Italic'), local('Karla-Italic'),
+       url('../font/karla-v6-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../font/karla-v6-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* karla-700 - latin */
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Karla Bold'), local('Karla-Bold'),
+       url('../font/karla-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../font/karla-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('../font/geomanist-regular-webfont.eot');
+  src: url('../font/geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/geomanist-regular-webfont.woff2') format('woff2'),
+        url('../font/geomanist-regular-webfont.woff') format('woff'),
+        url('../font/geomanist-regular-webfont.ttf') format('truetype'),
+        url('../font/geomanist-regular-webfont.svg#geomanistregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('../font/geomanist-medium-webfont.eot');
+  src: url('../font/geomanist-medium-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/geomanist-medium-webfont.woff2') format('woff2'),
+        url('../font/geomanist-medium-webfont.woff') format('woff'),
+        url('../font/geomanist-medium-webfont.ttf') format('truetype'),
+        url('../font/geomanist-medium-webfont.svg#geomanistregular') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}

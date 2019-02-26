@@ -1,0 +1,136 @@
+/* ===============================================================
+== 
+== HOMEPAGE
+==
+=============================================================== */
+
+/* Clients
+=============================================================== */
+
+.client {
+  max-height: 22px;
+  @apply mx-2 mt-4;
+}
+
+.client-ibm {
+  max-height: 24px;
+}
+
+.client-jj {
+  max-height: 28px;
+  transform: translateY(3px);
+}
+
+.client-autodesk {
+  max-height: 16px;
+}
+
+.client-redhat {
+  height: 24px;
+  max-height: 24px;
+  transform: translateY(-3px);
+}
+
+.client-ssdnodes {
+  max-height: 20px;
+}
+
+.client-imgsrvr {
+  max-height: 42px;
+}
+
+.client-opentext {
+  max-height: 28px;
+  transform: translateY(2px);
+}
+
+.client-logicgate {
+  max-height: 20px;
+}
+
+/* Explainer
+=============================================================== */
+
+.explainer-saguaro {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 0;
+
+  @screen lg {
+    display: block;
+  }
+}
+
+.explainer-saguaro:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to right, #f8fafc 50%, transparent);
+
+  @screen xl {
+    background: linear-gradient(to right, #f8fafc 60%, transparent);
+  }
+}
+
+.explainer-saguaro img {
+  max-height: 100%;
+  right: 0;
+  position: absolute;
+}
+
+/* Previous work
+=============================================================== */
+
+#work {
+  background: linear-gradient(to top right, config(colors.purple) 40%, config(colors.orange) 120%);
+}
+
+#work a p {
+  transition: 0.3s all ease;
+}
+
+#work a img {
+  transition: 0.3s all ease;
+
+  &:hover {
+    filter: grayscale(0.5);
+  }
+}
+
+/* Hi, I'm Joel.
+=============================================================== */
+
+
+
+#hi p {
+  @apply text-lg leading-tight mb-6;
+
+  @screen lg {
+    @apply text-xl;
+  }
+}
+
+/* #hi .column.pr-32 {
+  padding-right: 25rem;
+} */
+
+#hi code {
+  color: config(colors.orange);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Homepage / latest blog section
+=============================================================== */
+
+.blog_latest h3,
+.blog_latest button {
+  transition: 0.3s all ease;
+}

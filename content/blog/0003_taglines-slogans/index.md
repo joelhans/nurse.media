@@ -9,7 +9,9 @@ images:
 - "bmw-ultimate-driving-machine.jpg"
 - "bmw-fasterpiece.jpg"
 tags:
-- "taglines, slogans, copywriting, marketing"
+- taglines
+- slogans
+- copywriting
 ---
 
 ## Do you need a tagline or a slogan? If you're asking, the answer is probably *both*, but let's clear up the copywriting jargon while we're at it.

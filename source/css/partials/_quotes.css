@@ -1,0 +1,27 @@
+
+.quote img {
+  @apply block w-64 mx-auto mt-12 rounded-full;
+  /* right: -4rem;
+  bottom: -4rem; */
+
+  @screen md {
+    @apply mt-0;
+  }
+}
+
+.border-grad {
+  @apply relative bg-white rounded-sm;
+  /* border-image: linear-gradient(config(colors.purple), config(colors.pink)) 30; */
+
+  &:after {
+    @apply rounded-sm;
+    position: absolute;
+    top: -4px; 
+    bottom: -4px;
+    left: -4px; 
+    right: -4px;
+    background: linear-gradient(config(colors.purple), config(colors.pink));
+    content: '';
+    z-index: -1;
+  }
+}

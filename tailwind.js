@@ -128,6 +128,7 @@ let colors = {
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
 
+  'default': '#1f0d3c',
   'orange': '#f27370',
   'green': '#00a891',
   'pink': '#9F5B82',
@@ -199,7 +200,8 @@ module.exports = {
 
   fonts: {
     'display': [
-      'Poppins',
+      'Geomanist',
+      'Noway',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -890,7 +892,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover', 'focus'],
+    backgroundColors: ['responsive', 'hover', 'focus', 'group-hover'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
@@ -926,7 +928,7 @@ module.exports = {
     svgStroke: [],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColors: ['responsive', 'hover', 'focus'],
+    textColors: ['responsive', 'hover', 'focus', 'group-hover'],
     textSizes: ['responsive'],
     textStyle: ['responsive', 'hover', 'focus'],
     tracking: ['responsive'],

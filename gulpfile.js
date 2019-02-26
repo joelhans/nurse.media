@@ -1,50 +1,65 @@
 var
   // Modules
   gulp        = require('gulp'),
+  plumber     = require('gulp-plumber'),
   postcss     = require('gulp-postcss'),
   tailwindcss = require('tailwindcss'),
-  uglify      = require('gulp-uglify'),
+  cssimport   = require('postcss-import'),
+  cssnext     = require('postcss-cssnext'),
+  cssnano     = require('gulp-cssnano'),
+  imagemin    = require('gulp-imagemin'),
 
   // Directories
   dir = {
     css: {
+      files: 'source/css/**/*.css',
       src: 'source/css/main.css',
       dest: 'static/css/'
     },
     js: {
       src: 'source/js/main.js',
       dest: 'static/js/'
+    },
+    img: {
+      src: 'source/img/**/**.*',
+      dest: 'static/img/'
     }
   }
 ;
 
 // CSS processing
 gulp.task('style', function () {
+  var plugins = [
+    cssimport(),
+    tailwindcss('./tailwind.js'),
+    cssnext(),
+  ];
   return gulp.src(dir.css.src)
-    .pipe(postcss([
-      tailwindcss('./tailwind.js'),
-      require('autoprefixer'),
-      require('cssnano')
-    ]))
-    .pipe(gulp.dest(dir.css.dest));
+    .pipe(plumber())
+    .pipe(postcss(plugins))
+    .pipe(cssnano())
+    .pipe(gulp.dest(dir.css.dest))
 });
 
 // JS processing
 gulp.task('script', function() {
-  function createErrorHandler(name) {
-    return function (err) {
-      console.error('Error from ' + name + ' in compress task', err.toString());
-    };
-  }
   return gulp.src(dir.js.src)
+    .pipe(plumber())
     .pipe(uglify())
     .pipe(gulp.dest(dir.js.dest))
+});
+
+gulp.task('image', function () {
+  return gulp.src(dir.img.src)
+    .pipe(imagemin())
+    .pipe(gulp.dest(dir.img.dest));
 });
 
 // Default (watch) task
 gulp.task('default', [], function() {
 
-  gulp.watch(dir.css.src, ['style']);
+  gulp.watch(dir.css.files, ['style']);
   gulp.watch(dir.js.src, ['script']);
+  gulp.watch(dir.img.src, ['image']);
 
 });

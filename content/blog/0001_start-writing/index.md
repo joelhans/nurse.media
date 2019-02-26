@@ -8,7 +8,8 @@ alt: "How to start writing: A practical guide"
 images: 
 - "start-writing.jpg"
 tags: 
-- "start writing, writing"
+- writing
+- exercises
 ---
 
 ## Why you're not writing

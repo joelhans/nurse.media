@@ -20,7 +20,7 @@
 /* Story area
 =============================================================== */
 
-.story_img-mabel {
+.story_img {
   @apply relative block mx-auto mb-6;
 
   @screen lg {
@@ -31,7 +31,7 @@
   }
 }
 
-.story_img-mabel:after {
+.story_img:after {
   position: absolute;
   z-index: -1;
   top: 0;

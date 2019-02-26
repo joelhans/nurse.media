@@ -8,6 +8,7 @@ var
   cssnext     = require('postcss-cssnext'),
   cssnano     = require('gulp-cssnano'),
   imagemin    = require('gulp-imagemin'),
+  uglify      = require('gulp-uglify'),
 
   // Directories
   dir = {

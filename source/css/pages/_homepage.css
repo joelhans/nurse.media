@@ -9,7 +9,7 @@
 
 .client {
   max-height: 22px;
-  @apply mt-4;
+  @apply mx-2 mt-4;
 }
 
 .client-ibm {

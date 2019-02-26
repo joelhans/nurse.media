@@ -23,6 +23,7 @@
 @import "pages/_homepage";
 @import "pages/_about";
 @import "pages/_services";
+@import "pages/_contact";
 
 /* Custom utilities
 =============================================================== */
@@ -181,13 +182,60 @@ h2, p {
 /* Blog / single post
 =============================================================== */
 
-.content h1,
+.h-xl {
+  & h2 {
+    @apply text-3xl text-pink font-display mt-12 mb-6;
+    
+    @screen lg {
+      @apply text-4xl;
+    }
+  }
+
+  & h3 {
+    @apply text-2xl text-green font-display mt-4 mb-6;
+    
+    @screen lg {
+      @apply text-3xl;
+    }
+  }
+}
+
+.p-xl p {
+  @apply text-lg leading-normal mb-6;
+
+  @screen lg {
+    @apply text-xl;
+  }
+}
+
+.p-xl p:last-of-type {
+  @apply mb-0;
+}
+
+.content .hero {
+  @apply text-grad text-4xl font-display leading-none mt-0;
+
+  @screen md {
+    @apply text-5xl;
+  }
+
+  @screen lg {
+    @apply text-6xl;
+  }
+}
+
 .content h2,
 .content h3,
 .content h4,
 .content h5 {
-  @apply leading-tight mt-10 mb-6;
+  @apply leading-tight mt-0 mb-6;
+
+  & + p {
+    @apply mt-10;
+  }
 }
+
+.content 
 
 .content h2 {
   @apply text-3xl text-purple font-display leading-tighter mb-6;

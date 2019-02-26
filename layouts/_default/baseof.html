@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ .Site.Title }} | {{ with .Title }}{{ . }}{{ end }}</title>
+    <title>{{ with .Title }}{{ . }}{{ end }} | {{ .Site.Title }}</title>
 
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
@@ -40,7 +40,7 @@
 
   {{ partial "footer.html" . }}
 
-  <script src="/js/main.js"></script>
+  {{/* <script src="/js/main.js"></script> */}}
 
   {{ template "_internal/google_analytics_async.html" . }}
   

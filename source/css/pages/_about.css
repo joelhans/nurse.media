@@ -21,10 +21,14 @@
 =============================================================== */
 
 .story_img-mabel {
-  position: absolute;
-  right: calc(-33.33333% - 2rem);
-  margin-left: 2rem;
-  margin-top: -10rem;
+  @apply relative block mx-auto mb-6;
+
+  @screen lg {
+    position: absolute;
+    right: calc(-33.33333% - 2rem);
+    margin-left: 2rem;
+    margin-top: -10rem;
+  }
 }
 
 .story_img-mabel:after {

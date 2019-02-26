@@ -1,0 +1,26 @@
+/* ===============================================================
+== 
+== CONTACT
+==
+=============================================================== */
+
+/* Form
+=============================================================== */
+
+form div {
+  @apply text-xl mb-6;
+}
+
+form input {
+  @apply text-default p-6 border border-purple;
+  width: 100%;
+
+  &:focus {
+    @apply border-orange;
+  }
+}
+
+form select {
+  @apply text-default p-6 bg-white border border-purple mt-4;
+  width: 100%;
+}

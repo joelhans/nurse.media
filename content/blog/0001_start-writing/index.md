@@ -70,7 +70,7 @@ By forcing you to write only by hand, and giving you no opportunities to either 
 
 ---
 
-Now you might be wondering: How do I convert this exercise into actionable writing for my business? Don't worry—I'll cover that question and more in future posts and guides.
+Now you might be wondering: *How do I use this exercise to create copy, blogs, or other writing that will help my business*?
 
 To read these guides before they're published, subscribe.
 

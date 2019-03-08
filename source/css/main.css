@@ -228,11 +228,7 @@ h2, p {
 .content h3,
 .content h4,
 .content h5 {
-  @apply leading-tight mt-0 mb-6;
-
-  & + p {
-    @apply mt-10;
-  }
+  @apply leading-tight mt-4 mb-6;
 }
 
 .content 

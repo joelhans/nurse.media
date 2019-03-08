@@ -1,0 +1,48 @@
+{{ define "title" -}}
+  {{ .Title }} | Nurse
+{{- end }}
+{{ define "main" }}
+
+<div id="post" class="section border-t-0 pt-16 md:pt-32">
+  <div class="container">
+    <div class="columns">
+
+      <div class="column lg:w-2/3">
+
+        <h1 class="text-grad text-4xl lg:text-6xl font-display text-orange leading-tighter pb-8">{{ .Title }}</h1>
+        <p class="text-sm mb-12">Published: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time> / Last modified: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .Lastmod }}</p>
+
+        <img class="mb-24" src="{{ .Params.cover }}" alt="{{ .Params.alt }}" />
+
+        <article class="content">
+
+          {{ .Content }}
+
+        </article>
+        
+        <div class="column flex items-center mt-16">
+
+          <img class="w-32 h-32 rounded-full" src="/img/joel_hans_headshot_web.jpg" alt="A picture of Joel Hans" />
+          <p class="text-2xl italic ml-6">by <span class="text-green">Joel Hans</span></p>
+
+        </div>
+
+      </div>
+
+      <div class="sidebar column relative lg:w-1/3 mt-16 lg:mt-0">
+
+        <h1>This is the sidebar</h1>
+
+      </div>
+
+    </div>
+
+    <footer class="columns items-center">
+
+      
+
+    </footer>
+  </div>
+</div>
+  
+{{ end }}

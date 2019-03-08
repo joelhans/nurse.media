@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Joel Hans & Nurse Media | Copywriter | Tucson, Arizona"
 googleAnalytics = "UA-9959651-6"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [author]
   name = "Joel Hans"
@@ -14,3 +15,8 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
   images = ["site-feature-image.jpg"]
   title = "Nurse - Nurtured content for brands that need to grow"
   tagline = "Nurtured content for brands that need to grow"
+
+# https://gohugo.io/getting-started/configuration/#configure-blackfriday
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true

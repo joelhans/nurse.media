@@ -7,11 +7,11 @@
 /* Form
 =============================================================== */
 
-form div {
+form.contact div {
   @apply text-xl mb-6;
 }
 
-form input {
+form.contact input {
   @apply text-default p-6 border border-purple;
   width: 100%;
 
@@ -20,7 +20,7 @@ form input {
   }
 }
 
-form select {
+form.contact select {
   @apply text-default p-6 bg-white border border-purple mt-4;
   width: 100%;
 }

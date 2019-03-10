@@ -6,7 +6,7 @@ url: /blog/copywriting-checklist/
 cover: ""
 alt: ""
 images:
-- 
+-
 tags:
 - "copywriting, checklist"
 draft: true
@@ -18,7 +18,7 @@ Whether you've been writing for decades or an indie hacker who's trying bootstra
 
 You need a reliable, repeatable process for making your copy foolproof. Enter the *copywriting checklist*.
 
-But this checklist is going to do things a little differently. All the other copywriting checklists ask vague questions you probably don't even understand in the first place. 
+But this checklist is going to do things a little differently. All the other copywriting checklists ask vague questions you probably don't even understand in the first place.
 
 > Sorry, *Copyblogger*, but what does "Is one dominant emotion (i.e., “mass desire”) powerfully verbalized?" mean?
 
@@ -62,7 +62,18 @@ There are two important items to note in this process.
 
 ## Look for an overabundance of "we"
 
-A lot of 
+A lot of copy in the tech/SaaS space focuses too heavily on the product that's been created or its specific features. It turns attention to the company—or even individuals within the company—instead of focusing on the customer.
+
+I call this we-centric copy.
+
+Take a look at this theoretical example of homepage text from a web hosting company:
+
+<span class="text-green font-bold">Host your website with Hostio.io because we built the fastest, most resilient cloud possible. We used top-of-the-line hardware and <span>
+
+
+## Avoid generalist language
+
+In fact, make sure your copy has as narrow a target audience as possible. But to start, make sure
 
 
 

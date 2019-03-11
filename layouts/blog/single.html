@@ -7,7 +7,7 @@
   <div class="container">
     <div class="columns">
 
-      <div class="column lg:w-2/3">
+      <div class="column md:w-4/5 lg:w-3/4 xl:w-2/3">
 
         <h1 class="text-grad text-4xl lg:text-6xl font-display text-orange leading-tighter pb-8">{{ .Title }}</h1>
         <p class="text-sm mb-12">Published: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</time> / Last modified: <time class="inline-block text-green">{{ dateFormat "Monday, Jan 2, 2006" .Lastmod }}</p>
@@ -29,7 +29,7 @@
 
       </div>
 
-      <div class="sidebar column relative lg:w-1/3 mt-16 lg:mt-0">
+      <div class="sidebar column relative lg:w-1/4 xl:w-1/3 mt-16 lg:mt-0">
 
         {{/* <div class="sidebar_storytelling relative lg:absolute border px-6 pt-6 pb-2 sm:mt-16">
 

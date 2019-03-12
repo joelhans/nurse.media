@@ -8,6 +8,9 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 [author]
   name = "Joel Hans"
 
+[permalinks]
+  post = "/blog/"
+
 [params]
   favicon = "img/favicon.ico"
   author = "Joel Hans"

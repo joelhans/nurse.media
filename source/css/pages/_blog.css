@@ -8,11 +8,9 @@
 =============================================================== */
 
 .checklist-pull {
-  @apply p-8;
+  @apply -mt-6 mb-0 px-8;
   left: 100%;
-  
   z-index: 10;
-  margin-top: -6rem;
   width: 33.333%;
 
   @screen xl {
@@ -21,9 +19,21 @@
 }
 
 .checklist-pull .inner {
-  @apply bg-grey-lightest border-2 border-orange rounded-sm;
+  @apply bg-grey-lightest p-4 border-2 border-orange rounded-sm;
 }
 
 .checklist-pull li {
   @apply text-sm;
+}
+
+.checklist-pull div {
+  @apply mb-2;
+}
+
+.content .checklist-pull p {
+  @apply mb-4;
+}
+
+.checklist-pull input {
+  @apply mr-1;
 }

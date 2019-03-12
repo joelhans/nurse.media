@@ -1,25 +1,46 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-   // This gives us simple dollar function and event binding
-  // var $ = document.querySelectorAll.bind(document);
-  // Element.prototype.on = Element.prototype.addEventListener;
-
+  //
   // Responsive show/hide
-
+  //
   document.querySelector('.nav_toggle').addEventListener("click", function(event) {
     document.querySelector('.nav_items').classList.toggle('hidden');
   });
 
-  // Course button
-  // var course = document.querySelector('.cta_course a');
+  //
+  // Copywriting checklist
+  //
+  var checklistPull = document.querySelectorAll('.checklist-pull');
+  var checklistItem = document.querySelectorAll('.content-copywriting-checklist input');
 
-  // if ( course !== null ) {
-  //   course.addEventListener("click", function(event) {
-  //     event.preventDefault();
-  //     this.classList.add('hidden');
-  //     this.nextElementSibling.classList.remove('hidden');
-  //   });
-  // }
+  // Pull the box upward based on its height and the default margin-bottom for paragraphs.
+  checklistPull.forEach(function(el) {
+    elHeight = el.clientHeight;
+    el.style.marginTop = ( -elHeight - 24 + 'px');
+  });
+
+  // Synchronize the checkboxes
+  checklistItem.forEach(function(el) {
+    el.addEventListener('click', function(ev) {
+      var origID      = ev.target.id;
+      var origChecked = ev.target.checked;
+
+      // Strip out the '_final' for inputs at the bottom of the checklist
+      if ( origID.indexOf('_') != -1 ) {
+        origID = origID.substring(0, origID.indexOf('_'));
+      }
+
+      // Loop through items again
+      checklistItem.forEach(function(el) {
+        var newID = el.id;
+
+        // If the IDs match up, match their checked status
+        if ( newID.indexOf(origID) != -1 ) {
+          el.checked = origChecked;
+        }
+      });
+    });
+  });
 
 });
 

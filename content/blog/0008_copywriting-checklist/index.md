@@ -7,7 +7,7 @@ url: /blog/copywriting-checklist/
 cover: ""
 alt: ""
 images:
--
+- "inverted-pyramid.svg"
 tags:
 - "copywriting, checklist"
 draft: true
@@ -72,17 +72,19 @@ There are two important items to note in this process.
 </div>
 
 
-## x. Use the inverted pyramid
+## 2. Use the inverted pyramid
 
-When writing new stories, journalists pratice what's called the *inverted pyramid*. 
+When writing news stories, journalists pratice what's called the *inverted pyramid*. 
 
 ![The Inverted pyramid technique of journalism writing.](inverted-pyramid.svg "The Inverted pyramid technique of journalism writing.")
 
-The goal is to convey as much essential information as quickly as possible. What happened? Where did the event happen? When? Who was involved? Why did it happen? How did it happen? Once the journalist has answered these essential questions, they can start including more contextual information and quotes from sources or observers.
+The goal is to convey as much essential information about the event as quickly as possible. What happened? Where did it happen? When? Who was involved? Why did it happen? How did it happen? 
 
-Your copy should do the same. 
+Once the journalist has answered these essential questions, they can start to include contextual information or quotes from sources/witnessses.
 
-Answering all [Five Ws](https://en.wikipedia.org/wiki/Five_Ws) in a single sentence—for example, a tagline that shows up on your website's homepage—is 
+Your copy should follow the same formula: Answer the [Five Ws](https://en.wikipedia.org/wiki/Five_Ws) as quickly as possible. The less scrolling, the better.
+
+But be realistic about how much information you can fit into a single sentence. Your tagline might only be able to answer *what* and *why*. The copy that immediately follows should take care of the rest.
 
 <div class="checklist-pull lg:absolute">
   <div class="inner">
@@ -98,7 +100,7 @@ Answering all [Five Ws](https://en.wikipedia.org/wiki/Five_Ws) in a single sente
   </div>
 </div>
 
-## x. Look for an overabundance of "we" or "us"
+## 3. Look for an overabundance of "we" or "us"
 
 A lot of copy in the tech/SaaS space focuses too heavily on the product that's been created or its specific features. It turns attention to the company—or even individuals within the company—instead of focusing on the customer.
 
@@ -108,18 +110,28 @@ Take a look at this theoretical example of homepage text from a web hosting comp
 
 <span class="text-green font-bold">People host their websites with Hostio.io because we built the fastest, most resilient cloud possible with top-of-the-line hardware and super-fast networking partners. We even built our own custom dashboard with 50+ one-click installers. We even have awesome engineers available 24/7 for when something goes wrong.</span>
 
-That's an exaggeration on a number of levels, but you get the point: The copy talks far too much about the company and not nearly enough about the customer. Because customers don't care about "50+ one-click installers" if they don't know what that means for them.
+That's an exaggeration on a number of levels, but you get the point: The copy talks far too much about the company and not nearly enough about the customer. Because customers don't care about "50+ one-click installers" if they don't immediately understand the value they'd get from it.
 
-A shortcut to fixing this issue is restructuring each sentence containing "we" to focus on the customer and instead use "you." Here's a rough translation:
+The way I recommend fixing this issue is to take a look at any sentence containing "we" or "us." Is there a way to use "you" and focus on the customer instead?
+
+Here's a rough translation using this principle:
 
 <span class="text-green font-bold">Host your website on top-of-the-line hardware and super-fast networking partners to get the fastest, most resilient cloud possible. You can deploy blogs or apps in a single click with 50+ installers. If you have questions or issues, awesome engineers are available 24/7.</span>
 
 That copy is *far* from perfect, but refocusing on "you" helps show visitors the value they would get from Hostio.io's solution instead of bragging about the company's hard work. It's more clear that they get a fast/reliable service, can deploy a site without knowing a ton of code, and can reach out to support if need be.
 
-Now that you've reduced your reliance on "we" and are focused on the visitor, you need to then showcase your *value*.
+<div class="checklist-pull lg:absolute">
+  <div class="inner">
+    <p>Look for an overabundance of "we" or "us":</p>
+    <div>
+      <input type="checkbox" id="3-1" name="3-1">
+      <label for="3-1">I refactored the copy to focus on "you" instead of "we".</label>
+    </div>
+  </div>
+</div>
 
 
-## x. Eliminate generalist language
+## 4. Eliminate generalist language
 
 It's tempting to write copy that tries to connect to as many people as possible. A business wants the most customers possible. Right?
 
@@ -158,9 +170,44 @@ Good for them.
 </div>
 
 
-## Remove unnecessary jargon but speak to what the audience cares about
+## 5. Remove unnecessary jargon
+
+Tech businesses love to talk about what's under the hood. It makes sense—they have pride in the product/solution/platform they've built.
+
+But too much jargon will dramatically narrow the pool of visitors who will keep reading or stick around long enough to convert. If they feel out of their league or don't understand the product's value, they won't stick around.
+
+Let's pick on a blockchain startup, because that's easy. Here's the first piece of copy on the [Auditchain](https://auditchain.com) homepage:
+
+<span class="text-green font-bold">Decentralized Continuous Audit & Reporting Protocol Ecosystem™</span>
+
+And the first piece of body copy:
+
+<span class="text-green font-bold">The reporting and disclosure framework for twenty first century business has arrived! Auditchain is the world's first decentralized continuous audit and real time reporting ecosystem for enterprise and token statistics disclosure. The science of continuous audit has been limited to enterprise internal audit and reporting up until now.</span>
+
+Jargon isn't just confusing. It doesn't just significantly narrow your field of interestd, understanding readers. It also masks the true value of the product or service.
+
+That said, your copy should reflect the words, ideas, and methodologies used by your target audience. You want to assure them you speak the same language. But instead of using technical jargon to get there, talk about the business problems they're having and the business solutions you're about to solve.
+
+<div class="checklist-pull lg:absolute" markdown="1">
+  <div class="inner" markdown="1">
+    <p>Remove unnecessary jargon:</p>
+    <div>
+      <input type="checkbox" id="5-1" name="5-1">
+      <label for="5-1">I eliminated technical, audience-reducing jargon from my copy.</label>
+    </div>
+    <div>
+      <input type="checkbox" id="5-2" name="5-2">
+      <label for="5-2">I ensured that I'm speaking the same language as my target audience by talking about their problems in ways they immediately understand.</label>
+    </div>
+  </div>
+</div>
 
 
+## 6. Know your keywords, distribute them evenly
+
+I'm not an advocate first writing copy to be SEO-friendly *and then* readable, but every website needs organic search traffic. Knowing the right keywords, and using them the right way, is essential.
+
+Knowing the right keywords is beyond the scope of this checklist. If you don't know at least a handful of the most important—either in terms of what currently gets you the most traffic or what you'd like to use to get more traffic—you should take a step back. Hop onto Google Analytics or your SEO tool of choice (such as [Moz]() )
 
 
 ## The rest
@@ -179,8 +226,6 @@ Good for them.
 - Run your work through an online grammar checker
     - Grammarly is my favorite
     - A free alternative: http://www.hemingwayapp.com/
-
-
 
 - Check for lack of conciseness
     - Remove phrases like "really" or "actually,"
@@ -212,6 +257,11 @@ https://www.enchantingmarketing.com/copywriting-essentials-checklist/
       <input type="checkbox" id="2-2_final" name="2-2">
       <label for="2-2_final">I answered all Five Ws.</label>
     </div>
+    <p>Look for an overabundance of "we" or "us":</p>
+    <div>
+      <input type="checkbox" id="3-1" name="3-1">
+      <label for="3-1">I refactored the copy to focus on "you" instead of "we".</label>
+    </div>
     <p>Eliminate generalist language:</p>
     <div>
       <input type="checkbox" id="4-1_final" name="4-1">
@@ -220,6 +270,15 @@ https://www.enchantingmarketing.com/copywriting-essentials-checklist/
     <div>
       <input type="checkbox" id="4-2_final" name="4-2">
       <label for="4-2_final">I removed other generalist language in favor of verbiage that targets my ideal audience.</label>
+    </div>
+    <p>Remove unnecessary jargon:</p>
+    <div>
+      <input type="checkbox" id="5-1_final" name="5-1">
+      <label for="5-1_final">I eliminated technical, audience-reducing jargon from my copy.</label>
+    </div>
+    <div>
+      <input type="checkbox" id="5-2_final" name="5-2">
+      <label for="5-2_final">I ensured that I'm speaking the same language as my target audience by talking about their problems in ways they immediately understand.</label>
     </div>
   </div>
 </div>

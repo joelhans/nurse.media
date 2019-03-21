@@ -4,6 +4,11 @@
 ==
 =============================================================== */
 
+.content img,
+.content svg {
+  @apply block mx-auto;
+}
+
 /* Copywriting checklist
 =============================================================== */
 
@@ -26,14 +31,22 @@
   @apply text-sm;
 }
 
-.checklist-pull div {
-  @apply mb-2;
+.checklist-pull div:not(.inner) {
+  @apply flex items-center mb-2;
 }
 
 .content .checklist-pull p {
-  @apply mb-4;
+  @apply mb-4 leading-tight;
 }
 
 .checklist-pull input {
-  @apply mr-1;
+  @apply mr-4;
+}
+
+.checklist-pull label {
+  @apply inline-block;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

@@ -25,6 +25,11 @@ But this checklist is going to do things a little differently. All the other cop
 
 In this checklist I'm dead-set on practical steps you can take to improve your copy. No fluffy questions. Just practical tips that you can apply to any piece of copywriting even without a lot of experience. We're going to start with some of the bigger-order items and then progress toward the more nuanced word choice and grammatical improvements.
 
+<div class="checklist-pull lg:absolute">
+  <div class="inner">
+    <p class="m-0">Be sure to check items off the checklist as you go! You can find helpful checkboxes in this sidebar and at the end of the post.</p>
+  </div>
+</div>
 
 ## 1. Ask the copy "why" 5 times
 
@@ -99,6 +104,7 @@ But be realistic about how much information you can fit into a single sentence. 
     </div>
   </div>
 </div>
+
 
 ## 3. Look for an overabundance of "we" or "us"
 
@@ -205,23 +211,53 @@ That said, your copy should reflect the words, ideas, and methodologies used by 
 
 ## 6. Know your keywords, distribute them evenly
 
-I'm not an advocate first writing copy to be SEO-friendly *and then* readable, but every website needs organic search traffic. Knowing the right keywords, and using them the right way, is essential.
+I'm not a big fan of prioritizing SEO optimization over readability. It doesn't matter if Google loves your copy if your customers don't understand it. But the reality is that every website needs organic search traffic.
 
-Knowing the right keywords is beyond the scope of this checklist. If you don't know at least a handful of the most important—either in terms of what currently gets you the most traffic or what you'd like to use to get more traffic—you should take a step back. Hop onto Google Analytics or your SEO tool of choice (such as [Moz]() )
+If you don't know your keywords, you should pause your copywriting and hop into [Google Analytics](https://analytics.google.com/analytics/web/), [Google Search Console](https://search.google.com/search-console/about), [Moz](https://moz.com/), [Ahrefs](https://ahrefs.com/), [Ubersuggest](https://neilpatel.com/ubersuggest/), or any other SEO tool of your choice and explore your keywords. You should be looking for keywords that your website might already rank for, what drives organic search traffic to visit your site, and phrases you'd *like* to do better with.
+
+Reframe and rebuilt your copy to target these keywords, but be careful and don't go overboard by jamming in too many keywords. Your first priority is value- and customer-focused copy that's easy to understand.
+
+And, depending on the length of copy you're working with, make sure you're dropping individual keywords and regular intervals. If there's eight paragraphs of text, you might want your keyword to naturally appear in paragraphs #1, #3, #6, and #8. If you're working on just a few short lines, your ability to distribute keywords multiple times will be limited.
+
+By selecting your keywords and inserting them regularly, you 1) reinforce to Google that these terms are important to your business, and 2) reinforce with visitors their problems, their goals, and the value of your solution.
+
+<div class="checklist-pull lg:absolute" markdown="1">
+  <div class="inner" markdown="1">
+    <p>Know your keywords, distribute them evenly:</p>
+    <div>
+      <input type="checkbox" id="key-1" name="key-1">
+      <label for="key-1">I researched the most important and valuable keywords to my business based on past success and future goals.</label>
+    </div>
+    <div>
+      <input type="checkbox" id="key-2" name="key-2">
+      <label for="key-2">I inserted keywords into my copy in a natural way that does not detract from readability.</label>
+    </div>
+    <div>
+      <input type="checkbox" id="key-3" name="key-3">
+      <label for="key-3">I distributed keywords evenly across my copy when applicable.</label>
+    </div>
+  </div>
+</div>
+
+
+## Make your copy scannable
+
+As tempting as long paragraphs of flowery, long, and prosaic sentences might be, they're not ideal for conversion copywriting.
+
+As someone who loves a good long sentence, this hurts. But a visitor's attention span is short and always looking for an excuse to hit the `Back` button.
+
+You want copy that's easy enough to read that someone could scan it and still get the gist. There are a few ways to help make that happen:
+
+**Use short(ish) paragraphs.** I aim for paragraphs of 2-3 sentences most of the time. Sometimes, a single-sentence paragraph can be a punchy attention-grabber, especially if the sentence is short too.
+
+**Keep paragraphs focused on one idea.** Remember topic sentences? They're relevant again. Focus your paragraphs on a single value/feature/benefit so visitors don't miss something important if they're scanning.
+
+**Vary your sentence length to create a dynamic rhythm.**
+
+**Use white space to make copy stand out.**
 
 
 ## The rest
-
-- Make the copy scannable
-    - Use short(ish) paragraphs 
-    - Keep your paragraphs relatively short and focused on one idea
-    - Vary the lengths of your sentences to create a changing rhythm
-    - Use white space to put some breathing room around your copy
-
-- Know your keywords and distribute them evenly
-    - Don't go overboard
-    - Make sure the copy doesn't forget about the important keywords by the end
-    - This also helps remind visitors of their goals and your solution
 
 - Run your work through an online grammar checker
     - Grammarly is my favorite
@@ -279,6 +315,19 @@ https://www.enchantingmarketing.com/copywriting-essentials-checklist/
     <div>
       <input type="checkbox" id="5-2_final" name="5-2">
       <label for="5-2_final">I ensured that I'm speaking the same language as my target audience by talking about their problems in ways they immediately understand.</label>
+    </div>
+    <p>Know your keywords, distribute them evenly:</p>
+    <div>
+      <input type="checkbox" id="key-1_final" name="key-1">
+      <label for="key-1_final">I researched the most important and valuable keywords to my business based on past success and future goals.</label>
+    </div>
+    <div>
+      <input type="checkbox" id="key-2_final" name="key-2">
+      <label for="key-2_final">I inserted keywords into my copy in a natural way that does not detract from readability.</label>
+    </div>
+    <div>
+      <input type="checkbox" id="key-3_final" name="key-3">
+      <label for="key-3_final">I distributed keywords evenly across my copy when applicable.</label>
     </div>
   </div>
 </div>

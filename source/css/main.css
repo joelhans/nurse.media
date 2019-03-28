@@ -229,20 +229,19 @@ h2, p {
 .content h3,
 .content h4,
 .content h5 {
-  @apply leading-tight mt-12 mb-6;
+  @apply leading-tight;
 }
 
 .content h2 {
-  @apply text-2xl text-purple font-display leading-tighter mb-6;
+  @apply text-2xl text-purple font-display leading-tighter mt-16 mb-6;
 
   @screen lg {
     @apply text-3xl;
   }
 }
 
-
 .content h3 {
-  @apply text-xl text-pink font-display leading-tighter mb-6;
+  @apply text-xl text-pink font-display leading-tighter mt-12 mb-6;
 
   @screen lg {
     @apply text-2xl;
@@ -271,9 +270,10 @@ h2, p {
 
 .content a:not(.button) {
   @apply relative text-purple font-bold;
+  box-shadow: 0 2px 0 0 config(colors.purple);
 }
 
-.content a:not(.button)::after {
+/* .content a:not(.button)::after {
   content: '';
   width: 100%;
   background: config(colors.purple);
@@ -283,7 +283,7 @@ h2, p {
   left: 0;
   transition: 0.3s all ease;
   @apply rounded-sm;
-}
+} */
 
 .content a:not(.button):hover {
   @apply text-green;

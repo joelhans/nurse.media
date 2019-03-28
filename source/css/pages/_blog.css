@@ -4,19 +4,46 @@
 ==
 =============================================================== */
 
+/* Content area
+=============================================================== */
+
 .content img,
 .content svg {
   @apply block mx-auto;
 }
 
+.content iframe {
+  @apply block mb-6 mx-auto;
+}
+
+/* Post footer
+=============================================================== */
+
+footer.content img {
+  @apply inline-block m-0;
+}
+
+footer.content p.bio {
+  @apply inline-block text-lg mb-0 ml-8;
+}
+
+footer.content p.cite {
+  @apply inline-block text-sm italic m-0 mt-8;
+}
+
+
 /* Copywriting checklist
 =============================================================== */
 
 .checklist-pull {
-  @apply -mt-6 mb-0 px-8;
-  left: 100%;
-  z-index: 10;
-  width: 33.333%;
+  position: relative;
+
+  @screen lg {
+    @apply -mt-6 mb-0 px-8;
+    left: 100%;
+    z-index: 10;
+    width: 33.333%;
+  }
 
   @screen xl {
     width: 50%;
@@ -31,7 +58,8 @@
   @apply text-sm;
 }
 
-.checklist-pull div:not(.inner) {
+.checklist-pull div:not(.inner),
+.checklist-final div:not(.inner) {
   @apply flex items-center mb-2;
 }
 
@@ -39,14 +67,32 @@
   @apply leading-tight;
 }
 
-.checklist-pull input {
-  @apply mt-4 mr-4;
+.content .checklist-pull-info p {
+  @apply m-0;
 }
 
-.checklist-pull label {
+.checklist-pull input,
+.checklist-final input {
+  @apply mr-4;
+}
+
+.checklist-pull label,
+.checklist-final label {
   @apply inline-block;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.content .checklist-final p {
+  @apply font-bold leading-tight mb-2;
+}
+
+.content .checklist-final div + p {
+  @apply mt-8;
+}
+
+.content .checklist-final label {
+  @apply text-base;
 }

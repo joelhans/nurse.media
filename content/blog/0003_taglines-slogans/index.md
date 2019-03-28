@@ -6,8 +6,9 @@ url: /blog/taglines-slogans/
 cover: "taglines-slogans.jpg"
 alt: "A cropped image of the 'Ultimate Driving Machine' tagline from BMW."
 images:
-- "bmw-ultimate-driving-machine.jpg"
-- "bmw-fasterpiece.jpg"
+- /blog/taglines-slogans/taglines-slogans.jpg
+- /blog/taglines-slogans/bmw-ultimate-driving-machine.jpg
+- /blog/taglines-slogans/bmw-fasterpiece.jpg
 tags:
 - taglines
 - slogans

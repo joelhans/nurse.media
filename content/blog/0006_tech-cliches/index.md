@@ -6,7 +6,7 @@ url: /blog/copywriting-cliches-tech/
 cover: "copywriting-cliches-tech.png"
 alt: "Image of text: 27 copywriting clichés tech businesses need to delete"
 images:
-- "copywriting-cliches-tech.png"
+- /blog/copywriting-cliches-tech/copywriting-cliches-tech.png
 tags:
 - "copywriting, cliches"
 ---

@@ -1,6 +1,6 @@
 baseURL = "https://nurse.media/"
 languageCode = "en-us"
-title = "Joel Hans & Nurse Media | Copywriter | Tucson, Arizona"
+title = "Joel Hans & Nurse Media | Conversion Copywriter | Tucson, Arizona"
 googleAnalytics = "UA-9959651-6"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 disableKinds = ["taxonomy", "taxonomyTerm"]
@@ -14,10 +14,10 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 [params]
   favicon = "img/favicon.ico"
   author = "Joel Hans"
-  description = "It's a harsh world for content out there. Let's nurture yours. Nurse is content for brands that need to grow."
+  description = "I write nurtured copy that makes businesses grow. Storytelling-driven conversion copywriting for SaaS/tech."
   images = ["site-feature-image.jpg"]
-  title = "Nurse - Nurtured content for brands that need to grow"
-  tagline = "Nurtured content for brands that need to grow"
+  title = "Joel Hans & Nurse Media | Conversion Copywriter"
+  tagline = "I write nurtured copy that makes businesses grow. Storytelling-driven conversion copywriting for SaaS/tech."
 
 # https://gohugo.io/getting-started/configuration/#configure-blackfriday
 [blackfriday]

@@ -4,17 +4,16 @@ description: "Write more inspiring and impactful copywriting—just like a profe
 date: 2019-03-28T08:40:00-07:00
 slug: "copywriting-checklist"
 url: /blog/copywriting-checklist/
-cover: "copywriting-checklist.jpg"
-alt: ""
 cite: "Share image by [Med Mhamdi](https://unsplash.com/photos/Q7dXQGJbZJ0) on Unsplash."
 images:
-- "copywriting-checklist.jpg"
-- "bellco-logo.png"
-- "spotify.png"
-- "inverted-pyramid.svg"
-- "grammarly.png"
+- /blog/copywriting-checklist/copywriting-checklist.jpg
+- /blog/copywriting-checklist/bellco-logo.png
+- /blog/copywriting-checklist/spotify.png
+- /blog/copywriting-checklist/inverted-pyramid.svg
+- /blog/copywriting-checklist/grammarly.png
 tags:
 - "copywriting, checklist"
+draft: false
 ---
 
 Your copywriting needs to engage visitors and teach them an essential lesson: How you'll offer them value. It needs to inspire them to take action. It needs to be fresh and insightful. And maybe even *fun*.

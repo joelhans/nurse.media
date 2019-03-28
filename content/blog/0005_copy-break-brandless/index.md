@@ -6,12 +6,12 @@ url: /blog/copy-break-brandless/
 cover: "copy-break_brandless.png"
 alt: "Brandless aims to produce high-quality, simple food products. Does their copywriting follow the same formula?"
 images:
-- "copy-break_brandless.png"
-- "brandless_01.png"
-- "brandless_02.png"
-- "brandless_03.png"
-- "brandless_04.png"
-- "brandless_05.png"
+- /blog/copy-break-brandless/copy-break_brandless.png
+- /blog/copy-break-brandless/brandless_01.png
+- /blog/copy-break-brandless/brandless_02.png
+- /blog/copy-break-brandless/brandless_03.png
+- /blog/copy-break-brandless/brandless_04.png
+- /blog/copy-break-brandless/brandless_05.png
 tags:
 - "copy-break, branding, copywriting"
 ---

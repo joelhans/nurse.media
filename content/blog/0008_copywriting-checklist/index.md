@@ -393,6 +393,8 @@ Look for redundancies or [tautologies](https://www.dictionary.com/browse/tautolo
 - almost never -> rarely
 - a number of -> many/some
 - first/#1 priority -> priority
+- over the course of -> over
+- oftentimes -> often
 
 All in all, find places where your copy snags the reader. Rewrite until it's seamless.
 

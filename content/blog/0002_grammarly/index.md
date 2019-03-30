@@ -6,7 +6,7 @@ url: /blog/grammarly/
 cover: "grammarly.jpg"
 alt: "Grammarly: An image of the Grammarly homepage."
 images: 
-- "grammarly.jpg"
+- /blog/grammarly/grammarly.jpg
 tags: 
 - grammarly
 - writing tools

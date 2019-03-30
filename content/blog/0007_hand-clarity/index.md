@@ -6,13 +6,14 @@ url: /blog/clarity-breaking-hand/
 cover: "clarity-breaking-hand.jpg"
 alt: "An X-ray image of a broken had. Sad face."
 images:
-- "clarity-breaking-hand.jpg"
+- /blog/clarity-breaking-hand/clarity-breaking-hand.jpg
 tags:
 - "copywriting, clarity"
-draft: false
 ---
 
 Last week, I fractured the 5th metacarpal bone in my left hand, a common break that's colloquially known as a [boxer's fracture](https://en.wikipedia.org/wiki/Boxer's_fracture).
+
+![An X-ray image of a broken had. Sad face.](clarity-breaking-hand.jpg "An X-ray image of a broken had. Sad face.")
 
 <h2 class="text-green">In simpler words: I broke my hand while mountain biking.</h2>
 

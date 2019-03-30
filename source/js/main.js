@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   //
+  // Important variables
+  //
+  var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+  window.addEventListener('resize', function(event) {
+    vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  });
+
+  //
   // Responsive show/hide
   //
   document.querySelector('.nav_toggle').addEventListener("click", function(event) {
@@ -10,14 +21,32 @@ document.addEventListener("DOMContentLoaded", function() {
   //
   // Copywriting checklist
   //
-  var checklistPull = document.querySelectorAll('.checklist-pull');
-  var checklistItem = document.querySelectorAll('.content-copywriting-checklist input');
+  var checklistPull  = document.querySelectorAll('.checklist-pull'),
+      checklistItem  = document.querySelectorAll('.content-copywriting-checklist input'),
+      chClear = document.querySelector('.checklist-clear');
 
-  // Pull the box upward based on its height and the default margin-bottom for paragraphs.
+  // Pull the box upward based on its height and the default margin-bottom for 
+  // paragraphs. But only if the client width is greater than 992px, or in the
+  // `lg` mode in Tailwind and there's the sidebar present.
+
   checklistPull.forEach(function(el) {
-    elHeight = el.clientHeight;
-    el.style.marginTop = ( -elHeight - 24 + 'px');
+    if ( vw >= 992 ) {
+      elHeight = el.clientHeight;
+      el.style.marginTop = ( -elHeight - 24 + 'px');
+    } else {
+      el.style.marginTop = 0;
+    }
+
+    window.addEventListener('resize', function(event) {
+      if ( vw >= 992 ) {
+        elHeight = el.clientHeight;
+        el.style.marginTop = ( -elHeight - 24 + 'px');
+      } else {
+        el.style.marginTop = 0;
+      }
+    });
   });
+
 
   // Synchronize the checkboxes
   checklistItem.forEach(function(el) {
@@ -39,6 +68,15 @@ document.addEventListener("DOMContentLoaded", function() {
           el.checked = origChecked;
         }
       });
+    });
+  });
+
+  // Clear the checkboxes
+  chClear.addEventListener('click', function(ev) {
+    
+    // Loop through the checkboxes and uncheck them
+    checklistItem.forEach(function(el) {
+      el.checked = false;
     });
   });
 

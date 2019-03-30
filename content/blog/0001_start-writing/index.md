@@ -6,7 +6,7 @@ url: /blog/start-writing/
 cover: "start-writing.jpg"
 alt: "How to start writing: A practical guide"
 images: 
-- "start-writing.jpg"
+- /blog/start-writing/start-writing.jpg
 tags: 
 - writing
 - exercises

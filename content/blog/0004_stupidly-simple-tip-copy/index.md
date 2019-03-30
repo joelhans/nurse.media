@@ -6,7 +6,7 @@ url: /blog/stupidly-simple-tip-copy/
 cover: "stupidly-simple-tip-copy.jpg"
 alt: "A picture of a woman reflected in a mirror."
 images:
-- "stupidly-simple-tip-copy.jpg"
+- /blog/stupidly-simple-tip-copy/stupidly-simple-tip-copy.jpg
 tags:
 - "copywriting, tips"
 ---

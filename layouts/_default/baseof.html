@@ -42,7 +42,10 @@
 
   <script src="/js/main.js"></script>
 
+  {{/* Disable Google Analytics on localhost */}}
+  {{ if ne (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
   {{ template "_internal/google_analytics_async.html" . }}
+  {{ end }}
   
   </body>
 </html>

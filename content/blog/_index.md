@@ -1,4 +1,4 @@
 ---
-title: "The Sproutling"
-description: "A blog about writing, marketing, and storytelling."
+title: "Articles"
+description: "Essential articles about writing, copywriting, content creation, and storytelling."
 ---

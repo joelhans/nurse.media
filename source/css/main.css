@@ -363,7 +363,7 @@ h2, p {
 }
 
 .form-input.form-vertical {
-  @apply mb-4;
+  @apply mb-2;
 }
 
 .form-input.form-horizontal {

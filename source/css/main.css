@@ -293,12 +293,20 @@ h2, p {
   background: config(colors.green);
 }
 
+.content img {
+  @apply border border-purple rounded-sm;
+}
+
 .content blockquote {
   @apply relative;
 }
 
 .content blockquote p {
-  @apply text-3xl text-green font-bold leading-tight mb-6;
+  @apply text-xl text-green font-bold leading-tight mb-6;
+
+  @screen lg {
+    @apply text-2xl;
+  }
 }
 
 .content blockquote:before {

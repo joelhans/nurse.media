@@ -5,10 +5,10 @@
 =============================================================== */
 
 .section {
-  @apply relative py-24;
+  @apply relative py-16;
 
-  @screen md {
-    @apply py-40
+  @screen lg {
+    @apply py-24;
   }
 }
 

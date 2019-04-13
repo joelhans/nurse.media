@@ -248,7 +248,7 @@ h2, p {
   }
 }
 
-.content:first-child {
+.content *:first-child {
   @apply mt-0;
 }
 

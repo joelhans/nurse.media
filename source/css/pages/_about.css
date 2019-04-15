@@ -21,13 +21,16 @@
 =============================================================== */
 
 .story-img {
-  @apply relative block mx-auto mb-6;
+  @apply relative block mx-auto mb-6 border-0;
+
+  & img {
+    border: none;
+  }
 
   @screen lg {
     position: absolute;
     right: calc(-33.33333% - 2rem);
-    margin-left: 2rem;
-    margin-top: -10rem;
+    transform: translateY(-50%);
   }
 }
 

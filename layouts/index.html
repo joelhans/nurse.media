@@ -4,12 +4,12 @@
   <div class="container">
     <div class="columns items-center">
 
-      <div class="column lg:w-2/3">
+      <div class="column lg:w-2/3 flex flex-wrap">
 
-        <h1 class="tagline text-grad text-3xl md:text-5xl lg:text-6xl font-display leading-none pb-6">{{ .Params.header | safeHTML }}</h1>
+        <h1 class="tagline text-grad text-3xl md:text-4xl lg:text-5xl font-display leading-none pb-6">{{ .Params.header | safeHTML }}</h1>
         <h2 class="text-lg md:text-xl font-normal italic">{{ .Params.subhead | safeHTML }}</h2>
 
-        <div class="w-4/5 flex items-center flex-wrap justify-between mt-16">
+        <div class="w-full lg:w-4/5 xl:w-3/4 flex items-center flex-wrap justify-around md:justify-between self-center mt-8">
 
           <img class="client client-ibm" src="/img/brands/ibm.svg" alt="The IBM logo" />
           <img class="client client-jj" src="/img/brands/johnson-and-johnson.svg" alt="The Johnson & Johnson logo" />
@@ -18,8 +18,12 @@
 
         </div>
 
+        <div class="lg:hidden w-4/5 sm:w-1/2 md:w-2/5 mx-auto mt-8 pl-0 md:pl-6 rounded">
+          <img class="rounded" src="/img/joel_hans.jpg" alt="A picture of Joel Hans, tech copywriter in Tucson, Arizona" />
+        </div>
+
       </div>
-      <div class="column w-full lg:w-1/3 rounded">
+      <div class="hidden lg:block column w-full lg:w-1/3 rounded">
         <img class="rounded" src="/img/joel_hans.jpg" alt="A picture of Joel Hans, tech copywriter in Tucson, Arizona" />
       </div>
 
@@ -71,27 +75,27 @@
 
       </div>
       <div class="column lg:w-1/3 mb-12 lg:mb-0">
-        <a class="group block bg-white rounded-sm" href="/work/#ssd-nodes">
+        <a class="group block bg-white rounded" href="/work/#ssd-nodes">
 
-          <img class="border-b border-purple rounded-sm mb-4" src="/img/work/work_thumb_ssd-nodes.png" alt="">
+          <img class="border-b border-purple rounded mb-4" src="/img/work/work_thumb_ssd-nodes.png" alt="">
           <h3 class="text-default text-base uppercase mb-4 px-4">SSD Nodes</h3>
           <p class="text-2xl text-purple font-display px-4 pb-6 group-hover:text-green">Doubling Black Friday sales with a conversion-focused new product landing page &rarr;</p>
 
         </a>
       </div>
       <div class="column lg:w-1/3 mb-12 lg:mb-0">
-        <a class="group block bg-white rounded-sm" href="/work/#img-srvr">
+        <a class="group block bg-white rounded" href="/work/#img-srvr">
 
-          <img class="border-b border-purple rounded-sm mb-4" src="/img/work/work_thumb_img-srvr.png" alt="">
+          <img class="border-b border-purple rounded mb-4" src="/img/work/work_thumb_img-srvr.png" alt="">
           <h3 class="text-default text-base uppercase mb-4 px-4">IMG SRVR</h3>
           <p class="text-2xl text-purple font-display px-4 pb-6 group-hover:text-green">Launching a SaaS business with a bold story: there's a better way for PR pros to pitch journalists &rarr;</p>
 
         </a>
       </div>
       <div class="column lg:w-1/3">
-        <a class="group block bg-white rounded-sm" href="/work/#ibm-streams">
+        <a class="group block bg-white rounded" href="/work/#ibm-streams">
 
-          <img class="border-b border-purple rounded-sm mb-4" src="/img/work/work_thumb_ibm.png" alt="">
+          <img class="border-b border-purple rounded mb-4" src="/img/work/work_thumb_ibm.png" alt="">
           <h3 class="text-default text-base uppercase mb-4 px-4">IBM</h3>
           <p class="text-2xl text-purple font-display px-4 pb-6 group-hover:text-green">Promoting a tech giant's analytics breakthrough via targeted, nurtured content &rarr;</p>
 
@@ -104,7 +108,7 @@
 <section class="section">
   <div class="container">
     <div class="columns">
-      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded-sm">
+      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded">
 
         <div class="w-full md:w-3/5 lg:w-2/3 xl:w-3/4 pr-0 md:pr-6">
 
@@ -141,7 +145,7 @@
       
       </div>
       <div class="column lg:w-2/5">
-        <div class="p-8 border-2 border-orange rounded-sm">
+        <div class="p-8 border-2 border-orange rounded">
       
         <p class="text-xl mb-4">Available for:</p>
         <ul class="text-base leading-tight mb-6 p-0">
@@ -168,7 +172,7 @@
       </div>
     </div>
     {{/* <div class="columns">
-      <div class="final-about column lg:w-3/5 mx-auto py-16 border-grad rounded-sm">
+      <div class="final-about column lg:w-3/5 mx-auto py-16 border-grad rounded">
 
         <p class="text-2xl text-orange font-display font-bold mb-4 mix-none">Writes a mean sentence.</p>
         <p class="text-2xl text-orange font-display font-bold mb-4 mix-none">Real-world experience with geniune tech disruptors.</p>
@@ -179,7 +183,7 @@
       </div>
     </div> */}}
     {{/* <div class="columns mt-32">
-      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded-sm">
+      <div class="quote column lg:w-3/4 flex flex-wrap items-center mx-auto py-12 border-grad rounded">
 
         <div class="w-full md:w-3/5 lg:w-2/3 xl:w-3/4 pr-0 md:pr-6 ">
 
@@ -200,7 +204,7 @@
 <section class="section">
   <div class="container">
     <div class="columns">
-      <div class="column lg:w-4/5 flex items-center flex-wrap mx-auto py-12 border-grad rounded-sm">
+      <div class="column lg:w-4/5 flex items-center flex-wrap mx-auto py-12 border-grad rounded">
 
         <div class="w-full md:w-2/3">
           <p class="text-3xl text-orange font-display font-bold leading-tight mb-6 md:mb-0">Writes a mean sentence. Real-world experience with geniune tech disruptors. Lives for writing stories. Loves to get dirty with a mountain bike.</p>

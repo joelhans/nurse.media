@@ -1,0 +1,39 @@
+{
+  "redirects": [
+    { 
+      "source": "/blog/start-writing/",
+      "destination": "https://joelhans.com/articles/start-writing/", 
+      "permanent": true
+    },
+    { 
+      "source": "/blog/grammarly/",
+      "destination": "https://joelhans.com/articles/grammarly/", 
+      "permanent": true
+    },
+    { 
+      "source": "/blog/taglines-slogans/",
+      "destination": "https://joelhans.com/articles/taglines-slogans/", 
+      "permanent": true
+    },
+    { 
+      "source": "/blog/stupidly-simply-tip-copy",
+      "destination": "https://joelhans.com/articles/stupidly-simple-tip-copy/", 
+      "permanent": true
+    },
+    { 
+      "source": "/blog/tech-cliches",
+      "destination": "https://joelhans.com/articles/tech-cliches/", 
+      "permanent": true
+    },
+    { 
+      "source": "/blog/copywriting-checklist",
+      "destination": "https://joelhans.com/articles/copywriting-checklist/", 
+      "permanent": true
+    },
+    { 
+      "source": "/blog/understand-your-value",
+      "destination": "https://joelhans.com/articles/understand-your-value/", 
+      "permanent": true
+    }
+  ]
+}

@@ -2,8 +2,6 @@ import headerNavLinks from '@data/headerNavLinks'
 import Link from './Link'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
-import RSS from './RSS'
 
 import Cactus from '/public/cactus.svg'
 

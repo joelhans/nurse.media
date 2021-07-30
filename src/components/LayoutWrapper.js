@@ -5,6 +5,8 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import RSS from './RSS'
 
+import Cactus from '/public/cactus.svg'
+
 const LayoutWrapper = ({ children }) => {
   return (
     <>
@@ -15,17 +17,18 @@ const LayoutWrapper = ({ children }) => {
               <div className="">
                 <Link href="/" aria-label="Nurse Media">
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-display text-sea font-bold mr-3">Nurse Media</div>
+                    <Cactus className="w-12" />
+                    <span className="text-2xl text-grad font-display font-bold ml-2">Nurse</span>
                   </div>
                 </Link>
               </div>
-              <div className="flex-grow lg:flex lg:items-center lg:w-auto ml-8">
+              <div className="flex-grow lg:flex lg:items-center lg:w-auto ml-12">
                 <div className="hidden sm:block">
                   {headerNavLinks.map((link) => (
                     <Link
                       key={link.title}
                       href={link.href}
-                      className="px-1 text-gray-900 text-lg font-medium sm:p-4 dark:text-gray-100"
+                      className="px-1 text-orange text-xl font-bold sm:p-4 hover:text-purple transition-all"
                     >
                       {link.title}
                     </Link>
@@ -33,8 +36,13 @@ const LayoutWrapper = ({ children }) => {
                 </div>
               </div>
               <div className="flex items-center w-auto lg:w-1/4 justify-end">
-                <ThemeSwitch />
-                <RSS />
+                <Link
+                  href="/contact"
+                  className="text-xl text-white font-bold px-6 py-4 bg-green rounded-sm hover:bg-orange transition-all"
+                >
+                  Get in touch
+                </Link>
+
                 <MobileNav />
               </div>
             </div>

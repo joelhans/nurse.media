@@ -1,25 +1,14 @@
 import Image from 'next/image'
 import CustomLink from './Link'
-import CodeBlock from '@components/mdx/CodeBlock'
-import Aside from '@components/mdx/Aside'
-import ChecklistProvider from '@components/mdx/ChecklistProvider'
-import Checklist from '@components/mdx/Checklist'
-import Checkbox from '@components/mdx/Checkbox'
-import Sidenote from '@components/mdx/Sidenote'
-import Video from '@components/mdx/Video'
-import SignUp from '@components/mdx/SignUp'
+import Button from '@components/mdx/Button'
+import Clients, { Client } from '@components/mdx/Clients'
 
 const MDXComponents = {
-  Aside,
-  Checkbox,
-  Checklist,
-  ChecklistProvider,
   Image,
-  Sidenote,
-  Video,
-  SignUp,
   a: CustomLink,
-  pre: CodeBlock,
+  Button,
+  Clients,
+  Client,
 }
 
 export default MDXComponents

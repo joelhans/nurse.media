@@ -11,45 +11,30 @@ module.exports = {
       './layouts/**/*.js',
       './lib/**/*.js',
     ],
-    // options: {
-    //   safelist: ['type'], // [type='checkbox']
-    // },
   },
   darkMode: 'class',
   theme: {
     extend: {
-      // spacing: {
-      //   '9/16': '56.25%',
-      // },
-      // lineHeight: {
-      //   11: '2.75rem',
-      //   12: '3rem',
-      //   13: '3.25rem',
-      //   14: '3.5rem',
-      // },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: [...defaultTheme.fontFamily.sans],
+        sans: ['Karla', ...defaultTheme.fontFamily.sans],
+        display: ['Geomanist', ...defaultTheme.fontFamily.sans],
         mono: ['Inconsolata', ...defaultTheme.fontFamily.mono],
       },
       colors: {
-        steel: '#4682B4',
-        sea: '#20B2AA',
-        blue: colors.lightBlue,
-        erin: '#48E499',
-        lilac: '#B596F8',
-        indigo: '#5790FF',
-        salmon: '#FCAF3B',
+        orange: '#f27370',
+        green: '#00a891',
+        pink: '#9F5B82',
+        purple: '#442b75',
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.900'),
+            color: '#1f0d3c',
             a: {
-              color: theme('colors.steel'),
+              color: theme('colors.purple'),
               textDecoration: 'none',
               '&:hover': {
-                color: theme('colors.sea'),
+                color: theme('colors.green'),
               },
               code: { color: theme('colors.blue.400') },
             },
@@ -62,29 +47,10 @@ module.exports = {
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.purple'),
             },
             h3: {
-              fontWeight: '600',
-              color: theme('colors.gray.900'),
-            },
-            'h4,h5,h6': {
-              color: theme('colors.gray.900'),
-            },
-            code: {
-              color: theme('colors.sea'),
-              backgroundColor: theme('colors.gray.100'),
-              paddingLeft: '4px',
-              paddingRight: '4px',
-              paddingTop: '2px',
-              paddingBottom: '2px',
-              borderRadius: '0.25rem',
-            },
-            'code:before': {
-              content: 'none',
-            },
-            'code:after': {
-              content: 'none',
+              color: theme('colors.pink'),
             },
             hr: { borderColor: theme('colors.gray.200') },
             'ol li:before': {
@@ -100,13 +66,6 @@ module.exports = {
             },
           },
         },
-        // xl: {
-        //   css: {
-        //     h2: {
-        //       marginTop: '1.2em',
-        //     },
-        //   },
-        // },
         dark: {
           css: {
             color: theme('colors.gray.100'),
@@ -126,11 +85,10 @@ module.exports = {
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.orange'),
             },
             h3: {
-              fontWeight: '600',
-              color: theme('colors.gray.100'),
+              color: theme('colors.green'),
             },
             'h4,h5,h6': {
               color: theme('colors.gray.100'),

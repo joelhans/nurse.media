@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .prose {
-  max-width: 100%;
-} */
+.text-grad {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to bottom right, #f27370, #442b75);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+}
 
 .prose p > img[src*='icon/assets/'] {
   @apply inline-block m-0;
@@ -20,32 +23,6 @@
   }
 }
 
-[aria-active='true'] {
-  @apply text-erin font-semibold;
-}
-
-.remark-code-title {
-  @apply px-5 py-3 font-mono text-sm font-bold text-erin bg-gray-700 rounded-t;
-}
-
-.remark-code-title + pre {
-  @apply mt-0 rounded-t-none;
-}
-
-.task-list-item:before {
-  @apply hidden;
-}
-
-.toc-item[aria-level='3'] {
-  @apply pl-4;
-}
-
 html {
   scroll-behavior: smooth;
-}
-
-/* ConvertKit */
-
-.formkit-form.clare {
-  max-width: 100% !important;
 }

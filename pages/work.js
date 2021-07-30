@@ -7,7 +7,7 @@ import siteMetadata from '@data/siteMetadata'
 import MDXComponents from '@components/MDXComponents'
 
 export async function getStaticProps() {
-  const content = await getSingleContent(BASE_CONTENT_PATH, 'fiction')
+  const content = await getSingleContent(BASE_CONTENT_PATH, 'work')
 
   return {
     props: {

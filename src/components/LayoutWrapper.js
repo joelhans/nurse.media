@@ -13,9 +13,9 @@ const LayoutWrapper = ({ children }) => {
           <header className="z-40 lg:z-50 px-6 lg:mx-auto">
             <div className="flex items-center justify-center lg:justify-between flex-wrap py-8 mx-auto">
               <div className="">
-                <Link href="/" aria-label="Tailwind CSS Blog">
+                <Link href="/" aria-label="Nurse Media">
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-display text-sea font-bold mr-3">Joel Hans</div>
+                    <div className="text-2xl font-display text-sea font-bold mr-3">Nurse Media</div>
                   </div>
                 </Link>
               </div>

@@ -15,7 +15,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Fiction({ mdxSource, frontMatter }) {
+export default function Index({ mdxSource, frontMatter }) {
   const content = hydrate(mdxSource, {
     components: MDXComponents,
   })

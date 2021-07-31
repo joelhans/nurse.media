@@ -1,12 +1,12 @@
 import Link from '@components/Link'
 
-const Button = ({ children }) => {
+const Button = ({ href, children }) => {
   return (
     <Link
-      href="/contact"
-      className="text-xl text-white font-bold px-6 py-4 bg-green rounded-sm hover:bg-orange transition-all"
+      href={href}
+      className="text-xl !text-white font-bold px-6 py-4 bg-green rounded-sm hover:bg-orange transition-all"
     >
-      Get in touch
+      {children}
     </Link>
   )
 }

@@ -5,7 +5,7 @@ import MDXComponents from '@components/MDXComponents'
 import PageLayout from '@/layouts/PageLayout'
 
 export async function getStaticProps() {
-  const content = await getSingleContent(BASE_CONTENT_PATH, 'about')
+  const content = await getSingleContent(BASE_CONTENT_PATH, 'contact')
 
   return {
     props: {
@@ -15,7 +15,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function About({ mdxSource, frontMatter }) {
+export default function Contact({ mdxSource, frontMatter }) {
   const content = hydrate(mdxSource, {
     components: MDXComponents,
   })

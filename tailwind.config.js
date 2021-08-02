@@ -29,13 +29,13 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: '#1f0d3c',
+            color: '#232128',
             a: {
-              color: theme('colors.purple'),
+              color: theme('colors.green'),
               fontWeight: '700',
               textDecoration: 'none',
               '&:hover': {
-                color: theme('colors.green'),
+                color: theme('colors.purple'),
               },
             },
             h1: {

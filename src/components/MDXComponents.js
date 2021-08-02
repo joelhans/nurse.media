@@ -3,7 +3,8 @@ import CustomLink from './Link'
 import Button from '@components/mdx/Button'
 import Clients, { Client } from '@components/mdx/Clients'
 import ContactForm from '@components/mdx/ContactForm'
-import { Subhead } from '@components/mdx/Typography'
+import { Subhead, Tags, Tag } from '@components/mdx/Typography'
+import WorkItem from '@components/mdx/WorkItem'
 
 const MDXComponents = {
   Image,
@@ -13,6 +14,9 @@ const MDXComponents = {
   Client,
   ContactForm,
   Subhead,
+  Tags,
+  Tag,
+  WorkItem,
 }
 
 export default MDXComponents

@@ -26,3 +26,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+.Tag:not(:last-of-type):after {
+  content: '•';
+  display: relative;
+  @apply ml-4;
+}

@@ -43,9 +43,9 @@ const ContactForm = () => {
         </p>
         <select id="type" name="type[]" aria-required="true">
           <option value="copy">Website copywriting</option>
-          <option value="content">Content engine package</option>
-          <option value="24-copy">24-hour copy package</option>
-          <option value="video-audit">Video audit package</option>
+          <option value="content">Content strategy</option>
+          <option value="content">Content writing</option>
+          <option value="content">Technical writing</option>
           <option value="retainer">Monthly retainer</option>
           <option value="retainer">Something else</option>
         </select>
@@ -56,7 +56,7 @@ const ContactForm = () => {
         </label>
         <p className="text-base text-grey-dark mt-2">
           This will help me guide you toward the best solutions within your budget. It's not a
-          committment, but rather a starting point.
+          commitment, but rather a starting point.
         </p>
         <select id="budget" name="budget[]" aria-required="true">
           <option value="Less than $3,000">Less than $3,000</option>

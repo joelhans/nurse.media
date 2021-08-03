@@ -4,7 +4,7 @@ import Button from '@components/mdx/Button'
 import Clients, { Client } from '@components/mdx/Clients'
 import ContactForm from '@components/mdx/ContactForm'
 import CTA from '@components/CTA'
-import { Callout, Subhead, Tags, Tag } from '@components/mdx/Typography'
+import { Callout, Subhead, Price, Tags, Tag } from '@components/mdx/Typography'
 import WorkItem from '@components/mdx/WorkItem'
 
 const MDXComponents = {
@@ -17,6 +17,7 @@ const MDXComponents = {
   ContactForm,
   CTA,
   Subhead,
+  Price,
   Tags,
   Tag,
   WorkItem,

@@ -85,7 +85,7 @@ const ContactForm = () => {
         </select>
       </div>
       <button
-        className="button inline-block text-lg lg:text-xl font-bold text-white bg-orange mt-12 px-6 py-4 hover:bg-green rounded-sm"
+        className="button inline-block text-lg lg:text-xl font-bold text-white bg-orange mt-12 px-6 py-4 hover:bg-green rounded-sm transition-all"
         type="submit"
       >
         Submit your project's details

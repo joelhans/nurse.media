@@ -3,6 +3,7 @@ import { getSingleContent } from '@/lib/mdx'
 import { BASE_CONTENT_PATH } from '@config/constants'
 import MDXComponents from '@components/MDXComponents'
 import PageLayout from '@/layouts/PageLayout'
+import CTA from '@components/CTA'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'work')
@@ -23,6 +24,7 @@ export default function Work({ mdxSource, frontMatter }) {
   return (
     <>
       <PageLayout frontMatter={frontMatter}>{content}</PageLayout>
+      <CTA />
     </>
   )
 }

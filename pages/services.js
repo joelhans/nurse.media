@@ -3,6 +3,7 @@ import { getSingleContent } from '@/lib/mdx'
 import { BASE_CONTENT_PATH } from '@config/constants'
 import MDXComponents from '@components/MDXComponents'
 import PageLayout from '@/layouts/PageLayout'
+import SectionContainer from '@components/SectionContainer'
 import Quote from '@components/Quote'
 import CTA from '@components/CTA'
 
@@ -24,15 +25,15 @@ export default function Services({ mdxSource, frontMatter }) {
 
   return (
     <>
-      <PageLayout frontMatter={frontMatter}>
-        {content}
+      <PageLayout frontMatter={frontMatter}>{content}</PageLayout>
+      <SectionContainer>
         <Quote client="Matt Connor, CEO, Strasmore &amp; SSD Nodes" image="matt-connor.jpg">
           Joel was our first marketing hire and has been a key member of our marketing team since
           2016. Joel is deeply and uniquely talented in voice, branding, and copywriting. I strongly
           recommend taking the opportunity to work with him.
         </Quote>
-      </PageLayout>
-      <CTA href="/contact/">blah</CTA>
+      </SectionContainer>
+      <CTA />
     </>
   )
 }

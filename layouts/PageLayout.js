@@ -4,7 +4,6 @@ import SectionContainer from '@components/SectionContainer'
 import ContentWrap from '@components/ContentWrap'
 import ContentHeader from '@components/ContentHeader'
 import ContentBody from '@components/ContentBody'
-import CTA from '@components/CTA'
 
 export default function PostLayout({ children, frontMatter }) {
   return (

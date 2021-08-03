@@ -9,8 +9,8 @@ const LayoutWrapper = ({ children }) => {
   return (
     <>
       <div className="flex flex-col h-screen">
-        <div className="flex-1 w-full max-w-screen-lg mx-auto">
-          <header className="z-40 lg:z-50 px-6 lg:mx-auto">
+        <div className="flex-1 w-full">
+          <header className="max-w-screen-lg mx-auto px-6">
             <div className="flex items-center justify-center lg:justify-between flex-wrap py-8 mx-auto">
               <div className="">
                 <Link href="/" aria-label="Nurse Media">
@@ -38,14 +38,13 @@ const LayoutWrapper = ({ children }) => {
                   href="/contact"
                   className="text-xl text-white font-bold px-6 py-4 bg-green rounded-sm hover:bg-orange transition-all"
                 >
-                  Get in touch
+                  Start your project
                 </Link>
-
                 <MobileNav />
               </div>
             </div>
           </header>
-          <main className="mb-auto px-6">{children}</main>
+          <main>{children}</main>
         </div>
         <Footer />
       </div>

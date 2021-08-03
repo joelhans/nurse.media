@@ -11,6 +11,7 @@ module.exports = {
       './layouts/**/*.js',
       './lib/**/*.js',
     ],
+    safelist: ['text-green'],
   },
   darkMode: 'class',
   theme: {

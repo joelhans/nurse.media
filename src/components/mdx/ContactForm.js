@@ -1,24 +1,71 @@
-const ContactForm = () => {
+import Link from '@components/Link'
+import Select from 'react-select'
+
+const ContactForm = ({ router }) => {
+  const query = router.query.type
+
+  const OptionsWork = [
+    { value: 'copywriting', label: 'Website copywriting' },
+    { value: 'content-strategy', label: 'Content strategy' },
+    { value: 'content-writing', label: 'Content writing' },
+    { value: 'audit', label: 'Website audit ($599)' },
+    { value: 'retainer', label: 'Monthly retainer' },
+    { value: 'custom', label: 'Custom' },
+  ]
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      borderRadius: '0.125rem',
+    }),
+    valueContainer: (provided) => ({
+      ...provided,
+      padding: '1rem',
+    }),
+  }
+
   return (
     <form
-      className="max-w-lg mt-24"
+      className="px-8 py-10 border border-gray-300 rounded-sm shadow-sm"
       name="contact"
       method="POST"
       action="/thanks/"
       data-netlify="true"
     >
+      <div className="mb-8">
+        <label htmlFor="type" className="block text-2xl font-bold">
+          What kind of work do you need done?
+        </label>
+        <p className="text-base text-grey-dark mt-2">
+          Knowing the type of work helps us align on what you need, your budget, and expectations on
+          a timeline. See my <Link href="/services/">services</Link> for details on packages, or
+          select <em>Custom</em> to design a project together.
+        </p>
+        <Select
+          value={OptionsWork.find((op) => {
+            return op.value === query
+          })}
+          styles={customStyles}
+          className="text-base rounded-sm"
+          id="type"
+          name="type[]"
+          options={OptionsWork}
+          aria-required="true"
+        />
+      </div>
+      <hr className="!mt-4 !mb-8" />
       <div>
         <input
-          className="w-full mb-4 p-4"
+          className="w-full mb-4 p-4 border-gray-300 rounded-sm"
           type="text"
           name="name"
-          placeholder="First name"
+          placeholder="Full name"
           aria-required="true"
         />
       </div>
       <div>
         <input
-          className="w-full mb-4 p-4"
+          className="w-full mb-4 p-4 border-gray-300 rounded-sm"
           type="email"
           name="email"
           placeholder="Email address"
@@ -27,30 +74,14 @@ const ContactForm = () => {
       </div>
       <div>
         <input
-          className="w-full mb-4 p-4"
+          className="w-full p-4 border-gray-300 rounded-sm"
           type="text"
           name="website"
           placeholder="Website address (optional)"
           aria-required="false"
         />
       </div>
-      <div>
-        <label htmlFor="type" className="block text-2xl font-bold mt-12">
-          What kind of work do you need done?
-        </label>
-        <p className="text-base text-grey-dark mt-2">
-          Give me an idea of what type of solution I'd deliver on this project.
-        </p>
-        <select id="type" name="type[]" aria-required="true">
-          <option value="copy">Website copywriting</option>
-          <option value="content">Content strategy</option>
-          <option value="content">Content writing</option>
-          <option value="content">Technical writing</option>
-          <option value="retainer">Monthly retainer</option>
-          <option value="retainer">Something else</option>
-        </select>
-      </div>
-      <div>
+      {/* <div>
         <label htmlFor="budget" className="block text-2xl font-bold mt-12">
           What's your budget for this engagement?
         </label>
@@ -58,32 +89,8 @@ const ContactForm = () => {
           This will help me guide you toward the best solutions within your budget. It's not a
           commitment, but rather a starting point.
         </p>
-        <select id="budget" name="budget[]" aria-required="true">
-          <option value="Less than $3,000">Less than $3,000</option>
-          <option value="$3,000 - $5,000" selected="selected">
-            $3,000 - $5,000
-          </option>
-          <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-          <option value="$10,000+">$10,000+</option>
-        </select>
-      </div>
-      <div>
-        <label htmlFor="timeframe" className="block text-2xl font-bold mt-12">
-          What's your timeframe for the project?
-        </label>
-        <p className="text-base text-grey-dark mt-2">
-          Let me know which timeframe best matches your needs and expectations.
-        </p>
-        <select id="timeframe" name="timeframe[]" aria-required="true">
-          <option value="Less than 2 weeks">Less than 2 weeks</option>
-          <option value="2 - 4 weeks" selected="selected">
-            2 - 4 weeks
-          </option>
-          <option value="1 - 3 months">1 - 3 months</option>
-          <option value="3 - 6 months">3 - 6 months</option>
-          <option value="More than 6 months">More than 6 months</option>
-        </select>
-      </div>
+        <Select className="text-base" id="type" name="budget[]" options={OptionsBudget} defaultSelected="3000-5000" aria-required="true" />
+      </div> */}
       <button
         className="button inline-block text-lg lg:text-xl font-bold text-white bg-orange mt-12 px-6 py-4 hover:bg-green rounded-sm transition-all"
         type="submit"
@@ -92,6 +99,10 @@ const ContactForm = () => {
       </button>
     </form>
   )
+}
+
+ContactForm.getInitialProps = ({ query }) => {
+  return { query }
 }
 
 export default ContactForm

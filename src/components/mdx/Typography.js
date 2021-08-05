@@ -24,7 +24,7 @@ export const Tag = ({ children }) => {
 
 export const Price = ({ children }) => {
   return (
-    <span className="relative -top-2 inline-block text-base text-green font-semibold bg-gray-100 ml-4 px-4 py-2 border border-gray-300 rounded-sm shadow-sm">
+    <span className="relative inline-block text-base text-green font-semibold bg-white px-4 py-2 border border-gray-300 rounded-sm shadow-sm">
       {children}
     </span>
   )

@@ -28,10 +28,12 @@ const ContactForm = ({ router }) => {
     <form
       className="px-8 py-10 border border-gray-300 rounded-sm shadow-sm"
       name="contact"
-      method="POST"
-      action="/thanks/"
+      method="post"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="/thanks/"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <div className="mb-8">
         <label htmlFor="type" className="block text-2xl font-bold">
           What kind of work do you need done?

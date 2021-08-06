@@ -21,7 +21,7 @@ const LayoutWrapper = ({ children }) => {
                   </div>
                 </Link>
               </div>
-              <div className="flex-grow lg:flex lg:items-center lg:w-auto ml-12">
+              <div className="flex-grow lg:flex lg:items-center lg:w-auto ml-4 md:ml-12">
                 <div className="hidden sm:block">
                   {headerNavLinks.map((link) => (
                     <Link
@@ -37,7 +37,7 @@ const LayoutWrapper = ({ children }) => {
               <div className="flex items-center w-auto lg:w-1/4 justify-end">
                 <Link
                   href="/contact"
-                  className="text-xl text-white font-bold px-6 py-4 bg-green rounded-sm hover:bg-orange transition-all"
+                  className="hidden sm:block text-lg md:text-xl text-white font-bold px-4 py-2 md:px-6 md:py-4 bg-green rounded-sm hover:bg-orange transition-all"
                 >
                   Start your project
                 </Link>

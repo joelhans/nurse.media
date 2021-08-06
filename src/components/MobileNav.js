@@ -69,6 +69,14 @@ const MobileNav = () => {
               </Link>
             </div>
           ))}
+          <div className="mt-4 px-12">
+            <Link
+              href="/contact"
+              className="text-lg text-white font-bold px-4 py-2 bg-green rounded-sm hover:bg-orange transition-all"
+            >
+              Start your project
+            </Link>
+          </div>
         </nav>
       </div>
     </div>

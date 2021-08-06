@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html className="light" lang="en">
         <Head>
           {/* <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" /> */}
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
@@ -30,7 +30,7 @@ class MyDocument extends Document {
             />
           </noscript>
         </Head>
-        <body className="antialiased font-sans text-gray-900 dark:bg-gray-900 dark:text-white">
+        <body className="antialiased font-sans text-gray-900">
           <Main />
           <NextScript />
         </body>

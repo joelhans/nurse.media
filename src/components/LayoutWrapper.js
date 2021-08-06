@@ -1,3 +1,4 @@
+import { useTheme } from 'next-themes'
 import headerNavLinks from '@data/headerNavLinks'
 import Link from './Link'
 import Footer from './Footer'

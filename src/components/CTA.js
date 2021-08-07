@@ -4,7 +4,7 @@ import Button from '@components/mdx/Button'
 
 const CTA = () => {
   return (
-    <div className="w-screen bg-orange bg-opacity-5 mt-24 py-16">
+    <div className="w-screen bg-green bg-opacity-5 mt-24 py-16">
       <SectionContainer>
         <div className="w-full lg:w-3/4 text-center mx-auto px-6">
           <h3 className="text-2xl lg:text-4xl font-bold mb-6">Next steps</h3>

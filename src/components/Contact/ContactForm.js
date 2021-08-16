@@ -1,5 +1,6 @@
 import Link from '@components/Link'
-import Select from 'react-select'
+import BaseSelect from 'react-select'
+import FixRequiredSelect from '@components/Contact/FixRequiredSelect'
 
 const ContactForm = ({ router }) => {
   const query = router.query.type
@@ -12,6 +13,10 @@ const ContactForm = ({ router }) => {
     { value: 'retainer', label: 'Monthly retainer' },
     { value: 'custom', label: 'Custom' },
   ]
+
+  const Select = (props) => (
+    <FixRequiredSelect {...props} SelectComponent={BaseSelect} options={props.options} />
+  )
 
   const customStyles = {
     control: (provided) => ({
@@ -33,7 +38,11 @@ const ContactForm = ({ router }) => {
       data-netlify-honeypot="bot-field"
       action="/thanks/"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <div className="hidden">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </div>
       <div className="mb-8">
         <label htmlFor="type" className="block text-2xl font-bold">
           What kind of work do you need done?
@@ -52,8 +61,19 @@ const ContactForm = ({ router }) => {
           id="type"
           name="type[]"
           options={OptionsWork}
-          aria-required="true"
+          required={true}
         />
+        {/* <Select
+          value={OptionsWork.find((op) => {
+            return op.value === query
+          })}
+          styles={customStyles}
+          className="text-base rounded-sm"
+          id="type"
+          name="type[]"
+          options={OptionsWork}
+          required="true"
+        /> */}
       </div>
       <hr className="!mt-4 !mb-8" />
       <div>
@@ -62,7 +82,7 @@ const ContactForm = ({ router }) => {
           type="text"
           name="name"
           placeholder="Full name"
-          aria-required="true"
+          required="true"
         />
       </div>
       <div>
@@ -71,7 +91,7 @@ const ContactForm = ({ router }) => {
           type="email"
           name="email"
           placeholder="Email address"
-          aria-required="true"
+          required="true"
         />
       </div>
       <div>

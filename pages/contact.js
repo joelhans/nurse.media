@@ -4,7 +4,7 @@ import { getSingleContent } from '@/lib/mdx'
 import { BASE_CONTENT_PATH } from '@config/constants'
 import MDXComponents from '@components/MDXComponents'
 import PageLayout from '@/layouts/PageLayout'
-import ContactForm from '@components/mdx/ContactForm'
+import ContactForm from '@components/Contact/ContactForm'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'contact')

@@ -23,7 +23,8 @@ export default function ListLayout({ posts, title }) {
         </header>
         <div className="max-w-none prose prose-md lg:prose-lg xl:prose-xl dark:prose-dark mt-4 mb-24">
           <p className="block text-xl lg:text-2xl text-gray-500 italic font-semibold mb-8">
-            Read the latest news, short essays, or long-form thoughts about my experiences in copywriting and technical writing.
+            Read the latest news, short essays, or long-form thoughts about my experiences in
+            copywriting and technical writing.
           </p>
           <div className="relative max-w-lg">
             <input

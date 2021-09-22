@@ -1,45 +1,48 @@
 import Link from './Link'
-import siteMetadata from '@data/siteMetadata'
-import SocialIcon from '@components/social-icons'
+import Cactus from './cactus.svg'
 
 export default function Footer() {
   return (
-    <footer className="font-sans bg-sea bg-opacity-10 dark:bg-gray-800 dark:bg-opacity-100 px-6 py-16">
-      <div className="flex flex-row max-w-screen-lg mx-auto px-6">
-        <div className="w-1/2">
-          <div className="block text-2xl font-display text-sea font-bold mb-2">Joel Hans</div>
-          <div className="block text-xs font-medium">
-            <p>
-              Thanks for stopping by!{' '}
-              <span role="img" aria-label="emoji wave">
-                👋
-              </span>
-            </p>
-            <p className="mt-2">Built with Next.js, MDX, Tailwind, and Vercel.</p>
-          </div>
+    <footer className="font-sans bg-purple px-6 py-16">
+      <div className="flex flex-wrap flex-row max-w-screen-lg mx-auto px-6 pl-0">
+        <div className="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-6 px-6">
+          <h3 className="text-lg text-white font-bold mb-2">Nurse Media</h3>
+          <p className="text-white">
+            Nurtured copywriting and content for SaaS &amp; tech. Based in Tucson, Arizona.
+          </p>
         </div>
-        <div className="w-1/4 mb-8 text-sm text-gray-500 dark:text-gray-200">
-          {/* <h3>Posts</h3> */}
-        </div>
-        <div className="w-1/4 mb-8 text-sm text-gray-500 dark:text-gray-200">
-          <h3 className="font-bold mb-2">Links</h3>
-          <Link
-            className="block font-medium mb-1 hover:text-steel"
-            href="https://twitter.com/joelhans"
-          >
-            Twitter
+        <div className="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-6 px-6">
+          <h3 className="text-lg text-white font-bold mb-2">Go</h3>
+          <Link className="block text-orange mb-1 hover:text-green" href="/work/">
+            Work
           </Link>
-          <Link className="block font-medium mb-1 hover:text-steel" href="/index.xml">
-            RSS
+          <Link className="block text-orange mb-1 hover:text-green" href="/services/">
+            Services
           </Link>
-          <Link className="block font-medium mb-1 hover:text-steel" href="mailto:j@joelhans.com">
-            Email
+          <Link className="block text-orange mb-1 hover:text-green" href="/about/">
+            About
           </Link>
         </div>
-      </div>
-      <div className="text-sm text-gray-900 dark:text-gray-200 font-medium max-w-screen-lg mx-auto px-6">
-        <div>
-          {`© ${new Date().getFullYear()}`} <Link href="/">{siteMetadata.title}</Link>
+        <div className="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0 px-6">
+          <h3 className="text-lg text-white font-bold mb-2">Contact</h3>
+          <Link className="block text-orange mb-1 hover:text-green" href="/contact/">
+            Start your project
+          </Link>
+          <Link className="block text-orange mb-1 hover:text-green" href="mailto:joel@nurse.media">
+            joel@nurse.media
+          </Link>
+          <Link className="block text-orange mb-1 hover:text-green" href="tel:6084438082">
+            608-443-8082
+          </Link>
+        </div>
+        <div className="w-full md:w-1/2 lg:w-1/4 text-white px-6">
+          <p className="mb-2">
+            <span className="font-semibold">
+              {`© 2016 - ${new Date().getFullYear()}`} Nurse Media.
+            </span>{' '}
+            All rights reserved. Website by Joel Hans.
+          </p>
+          <Cactus className="w-12" />
         </div>
       </div>
     </footer>

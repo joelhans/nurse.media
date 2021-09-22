@@ -1,4 +1,4 @@
-import ConvertKitForm from 'convertkit-react'
+// import ConvertKitForm from 'convertkit-react'
 
 const config = {
   formId: 2474731,
@@ -11,7 +11,7 @@ const config = {
 const SignUp = ({ heading }) => {
   return (
     <div className="flex items-center w-full bg-steel bg-opacity-10 p-6 rounded">
-      <ConvertKitForm {...config} />
+      {/* <ConvertKitForm {...config} /> */}
     </div>
   )
 }

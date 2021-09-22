@@ -5,7 +5,6 @@ import { BlogSeo } from '@components/SEO'
 import Tag from '@components/Tag'
 import siteMetdata from '@data/siteMetadata'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
-import ConvertKit from '@components/ConvertKit'
 
 import LinkData from '@data/links.json'
 

@@ -15,11 +15,15 @@ export default function ListLayout({ posts, title }) {
 
   return (
     <>
-      <div className="mt-24">
-        <PageTitle>{title}</PageTitle>
-        <div className="prose prose-md lg:prose-lg xl:prose-xl dark:prose-dark">
-          <p className="text-xl md:text-2xl lg:text-3xl text-steel">
-            Read my latest news, short essays, or long-form thoughts about how experiences in copywriting and technical writing.
+      <article id="content-wrapper" className="max-w-screen-lg mx-auto px-6">
+        <header className="mt-20">
+          <h1 className="text-4xl text-grad font-display font-bold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 pb-2">
+            {title}
+          </h1>
+        </header>
+        <div className="max-w-none prose prose-md lg:prose-lg xl:prose-xl dark:prose-dark mt-4 mb-24">
+          <p className="block text-xl lg:text-2xl text-gray-500 italic font-semibold mb-8">
+            Read the latest news, short essays, or long-form thoughts about my experiences in copywriting and technical writing.
           </p>
           <div className="relative max-w-lg">
             <input
@@ -44,31 +48,29 @@ export default function ListLayout({ posts, title }) {
               />
             </svg>
           </div>
-        </div>
-        <div className="mt-16 mb-24">
-          <ul>
+          <div className="mt-16 mb-24">
             {!filteredBlogPosts.length && 'No articles found.'}
             {filteredBlogPosts.map((frontMatter) => {
               const { slug, draft, date, title, summary, tags } = frontMatter
               return (
-                <li key={slug}>
+                <div key={slug}>
                   <CustomLink key={slug} href={`/articles/${slug}`} className="group block mb-16">
-                    <h3 className="text-xl lg:text-2xl font-display font-bold mb-4 group-hover:text-steel transition-all">
+                    <h3 className="text-xl lg:text-2xl font-display font-semibold mb-4 group-hover:text-green transition-all">
                       {title}
                     </h3>
-                    <p className="prose prose-md lg:prose-lg xl:prose-xl dark:prose-dark text-gray-500 dark:text-gray-400 mb-2">
+                    <p className="prose prose-md lg:prose-lg xl:prose-xl dark:prose-dark text-gray-500 dark:text-gray-400 font-normal !mb-2">
                       {summary}
                     </p>
-                    <span className="text-sm font-bold group-hover:text-steel transition-all">
+                    <span className="text-base font-bold group-hover:text-green transition-all">
                       Read more &rarr;
                     </span>
                   </CustomLink>
-                </li>
+                </div>
               )
             })}
-          </ul>
+          </div>
         </div>
-      </div>
+      </article>
     </>
   )
 }

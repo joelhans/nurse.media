@@ -5,7 +5,6 @@ import { BlogSeo } from '@components/SEO'
 import Tag from '@components/Tag'
 import siteMetdata from '@data/siteMetadata'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
-import ConvertKit from '@components/ConvertKit'
 
 import LinkData from '@data/links.json'
 
@@ -23,7 +22,7 @@ export default function PostLayout({ children, frontMatter }) {
   const { slug, fileName, date, title, lastmod, tags } = frontMatter
 
   // Filter `LinkData` to only the links that reference this page as the destination.
-  const LinkRefs = LinkData.filter(link => link.dest.includes(slug))
+  const LinkRefs = LinkData.filter((link) => link.dest.includes(slug))
 
   return (
     <SectionContainer>
@@ -44,14 +43,21 @@ export default function PostLayout({ children, frontMatter }) {
                       LinkRefs.map((link) => {
                         const { src, title, text } = link
                         return (
-                          <CustomLink href={src} className="p-4 bg-white border border-gray-200 rounded-sm">
+                          <CustomLink
+                            href={src}
+                            key={src}
+                            className="p-4 bg-white border border-gray-200 rounded-sm"
+                          >
                             <span className="block text-base font-medium mb-2">{title}</span>
                             <span className="block text-sm text-gray-500 font-normal">{text}</span>
                           </CustomLink>
                         )
                       })
-                      ) : <p className="text-sm text-gray-500 !-mt-4 !m-0">No linked references found.</p>
-                    }
+                    ) : (
+                      <p className="text-sm text-gray-500 !-mt-4 !m-0">
+                        No linked references found.
+                      </p>
+                    )}
                   </div>
                   <p className="text-base font-bold text-gray-500 dark:text-gray-400">
                     Last updated:{' '}

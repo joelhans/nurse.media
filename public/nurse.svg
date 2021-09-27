@@ -1,0 +1,1 @@
+<svg className="nurse" xmlns="http://www.w3.org/2000/svg" width="70" height="55"> <defs> <linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" stop-color="#f27370"></stop> <stop offset="160%" stop-color="#442b75"></stop> </linearGradient> </defs> <text id="text_nurse" x="0%" y="55%" fill="url(#a)"> Nurse </text> </svg>

@@ -1,21 +1,6 @@
-// const MDXComponents = {
-//   Aside,
-//   Checkbox,
-//   Checklist,
-//   ChecklistProvider,
-//   Image,
-//   Sidenote,
-//   Video,
-//   SignUp,
-//   a: CustomLink,
-//   pre: CodeBlock,
-// }
-
-// export default MDXComponents
-
 import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
-import Image from 'next/image'
+import Image from './Image'
 import CustomLink from './Link'
 import CodeBlock from '@components/mdx/CodeBlock'
 import Aside from '@components/mdx/Aside'
@@ -28,6 +13,11 @@ import Video from '@components/mdx/Video'
 import SignUp from '@components/mdx/SignUp'
 import Statement from '@components/mdx/Statement'
 import StoryQuote from '@components/mdx/StoryQuote'
+import ContactForm from '@components/Contact/ContactForm'
+import Clients, { Client } from '@components/mdx/Clients'
+import Package, { Body, Get } from '@components/mdx/Package'
+import { Callout, Subhead, Price, Tags, Tag } from '@components/mdx/Typography'
+import WorkItem from '@components/mdx/WorkItem'
 
 export const MDXComponents = {
   Image,
@@ -36,6 +26,7 @@ export const MDXComponents = {
   Aside,
   Checkbox,
   Checklist,
+  Callout,
   ChecklistProvider,
   FontLoader,
   Sidenote,
@@ -43,6 +34,18 @@ export const MDXComponents = {
   SignUp,
   Statement,
   StoryQuote,
+  Callout,
+  Clients,
+  Client,
+  Body,
+  Get,
+  Subhead,
+  Package,
+  Price,
+  Tags,
+  Tag,
+  WorkItem,
+  ContactForm,
   // wrapper: ({ components, layout, ...rest }) => {
   //   const Layout = require(`../layouts/${layout}`).default
   //   return <Layout {...rest} />
